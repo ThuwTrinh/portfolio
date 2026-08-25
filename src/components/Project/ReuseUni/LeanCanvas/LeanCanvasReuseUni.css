@@ -1,0 +1,226 @@
+.lean-canvas-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: "Manrope", sans-serif;
+}
+
+.canvas-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.canvas-tag {
+  font: 10.5px var(--mono, monospace);
+  font-weight: 700;
+  color: #0284c7;
+  background: #e0f2fe;
+  padding: 4px 12px;
+  border-radius: 99px;
+  letter-spacing: 0.06em;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.canvas-header h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px;
+}
+
+.canvas-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Lưới 5 Cột */
+.lean-canvas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.05);
+}
+
+.canvas-block {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.canvas-column-split {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.block-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font: 10.5px var(--mono, monospace);
+  font-weight: 800;
+  color: #475569;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.block-title.highlight {
+  color: #0284c7;
+}
+
+.canvas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.canvas-list li {
+  font-size: 12px;
+  color: #334155;
+  line-height: 1.45;
+  position: relative;
+  padding-left: 10px;
+}
+
+.canvas-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0284c7;
+  font-weight: bold;
+}
+
+.canvas-list code {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+/* UVP Block */
+.block-uvp {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+}
+
+.uvp-statement {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0369a1;
+  line-height: 1.5;
+  font-style: italic;
+  margin: auto 0;
+}
+
+.high-level-tag {
+  border-top: 1px dashed #bae6fd;
+  padding-top: 8px;
+  font-size: 11px;
+  color: #475569;
+}
+
+.high-level-tag strong {
+  color: #0f172a;
+}
+
+.early-adopters-pill {
+  margin-top: auto;
+  background: #ffffff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px dashed #cbd5e1;
+  font-size: 11px;
+  color: #475569;
+}
+
+/* Cost & Revenue */
+.block-cost {
+  grid-column: span 2;
+  background: #fafafa;
+}
+
+.block-revenue {
+  grid-column: span 3;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.block-revenue .block-title {
+  color: #15803d;
+}
+
+.bottom-row-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #334155;
+}
+
+/* Compact style khi gắn vào Showroom Card */
+.compact-canvas.lean-canvas-section {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.compact-canvas .canvas-header {
+  display: none;
+}
+
+.compact-canvas .lean-canvas-grid {
+  gap: 5px;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.compact-canvas .canvas-block {
+  padding: 6px;
+  gap: 4px;
+}
+
+.compact-canvas .block-title {
+  font-size: 8px;
+}
+
+.compact-canvas .canvas-list li {
+  font-size: 9px;
+  line-height: 1.3;
+  padding-left: 6px;
+}
+
+.compact-canvas .uvp-statement {
+  font-size: 9.5px;
+}
+
+.compact-canvas .high-level-tag,
+.compact-canvas .early-adopters-pill,
+.compact-canvas .bottom-row-items {
+  font-size: 8.5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .lean-canvas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .block-uvp,
+  .block-cost,
+  .block-revenue {
+    grid-column: span 2;
+  }
+}
