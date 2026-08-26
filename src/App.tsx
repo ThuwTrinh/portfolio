@@ -15,18 +15,18 @@ function App() {
           <span>Anh Thu / Product</span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#experience">Experience</a>
+          <a href="#about">Giới thiệu</a>
+          <a href="#work">Dự án</a>
+          <a href="#experience">Hành trình</a>
           <a className="nav-contact" href="#contact">
-            Let's talk <span aria-hidden="true">↗</span>
+            Liên hệ <span aria-hidden="true">↗</span>
           </a>
         </nav>
       </header>
       <main id="top">
         <Hero />
         <Snapshot />
-        <ReuseUniShowcase/>
+        <ReuseUniShowcase />
         <ZaloCaseStudy />
         <Experience />
         <Contact />

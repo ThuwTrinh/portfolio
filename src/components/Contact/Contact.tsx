@@ -1,8 +1,33 @@
-import { motion } from "framer-motion";
-import { Mail, ArrowUpRight, Copy, Check } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
+import { Mail, ArrowUpRight, Copy, Check, Sparkles } from "lucide-react";
 import { useState } from "react";
 import "./Contact.css";
 import avatarImg from "../../assets/img2.jpg";
+
+// Hiệu ứng container điều phối xuất hiện tuần tự
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.14, // Mỗi phần tử con xuất hiện cách nhau 0.14s
+      delayChildren: 0.1,
+    },
+  },
+};
+
+// Hiệu ứng lướt lên và hiện rõ của từng badge / block con
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.21, 0.47, 0.32, 0.98],
+    },
+  },
+};
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -16,33 +41,40 @@ export default function Contact() {
 
   return (
     <section className="contact-section" id="contact">
-      {/* ẢNH AVATAR: Chỉ hiển thị ở nửa bên phải màn hình */}
+      {/* ẢNH AVATAR: Nổi mượt mà từ góc phải */}
       <motion.img
         className="contact-avatar-bg"
         src={avatarImg}
         alt="Trịnh Thị Anh Thư"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2 }}
+        initial={{ opacity: 0, scale: 0.96 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
       />
 
       <div className="contact-container">
-        {/* NỘI DUNG CHỮ: Ép chặt vào cột bên trái */}
+        {/* NỘI DUNG CHỮ & BADGES XUẤT HIỆN TỪNG BƯỚC */}
         <motion.div
           className="contact-left-col"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
+          {/* Badge 1: Status Pill */}
+          <motion.div variants={itemVariants} className="status-pill-clean">
+            <span className="status-dot-clean" />
+            <span>Open to Product Opportunities</span>
+          </motion.div>
 
-          <h2 className="contact-title-clean">
+          {/* Badge 2: Tiêu đề chính */}
+          <motion.h2 variants={itemVariants} className="contact-title-clean">
             Let’s build <br />
             <em>something real.</em>
-          </h2>
+          </motion.h2>
 
-          <div className="contact-actions-clean">
+          {/* Badge 3: Cụm nút CTA & Copy */}
+          <motion.div variants={itemVariants} className="contact-actions-clean">
             <a href={`mailto:${email}`} className="btn-primary-clean">
               <Mail size={18} />
               <span>Email me</span>
@@ -59,10 +91,10 @@ export default function Contact() {
                 <Copy size={18} />
               )}
             </button>
-          </div>
+          </motion.div>
 
-          {/* Social Links Tối Giản */}
-          <div className="contact-socials-clean">
+          {/* Badge 4: Social Links */}
+          <motion.div variants={itemVariants} className="contact-socials-clean">
             <a
               href="https://www.linkedin.com/in/thuwtrinh/"
               target="_blank"
@@ -80,7 +112,7 @@ export default function Contact() {
             >
               GitHub <ArrowUpRight size={16} />
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

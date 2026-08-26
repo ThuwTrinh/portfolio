@@ -6,9 +6,9 @@ import Sparkles from "./Sparkles";
 
 
 const typewriterLines = [
-  "Solving Problems in Ambiguity",
-  "Turning User Insights into Priorities",
-  "Building Impactful Products with Intent",
+  "Gỡ rối bài toán giữa những điều mơ hồ",
+  "Biến insight người dùng thành ưu tiên phát triển",
+  "Xây dựng sản phẩm có chủ đích & tạo giá trị thật",
 ];
 
 function Hero() {
@@ -47,8 +47,8 @@ function Hero() {
   };
 
   return (
-    <section className="hero-section"  aria-labelledby="hero-title">
-        <Sparkles count={6} />
+    <section className="hero-section" aria-labelledby="hero-title">
+      <Sparkles count={6} />
       <motion.div
         className="hero-copy"
         initial={{ opacity: 0, y: 18 }}
@@ -56,28 +56,28 @@ function Hero() {
         transition={{ duration: 0.7, delay: 0.12 }}
       >
         <p className="eyebrow">
-          <span className="status-dot" /> Open to Product opportunities · Ho Chi
-          Minh City
+          <span className="status-dot" /> SẴN SÀNG CHO CƠ HỘI PRODUCT · Thành Phố Hồ Chí Minh
         </p>
         <h1 id="hero-title">
-          Hi, I’m <span className="hero-name">Trinh Thi Anh Thu</span>
+          Chào bạn, mình là <span className="hero-name">Anh Thư</span>
           <br />
-          <span className="hero-role">Product Manager</span>
+          <span className="hero-role">Technical Product Owner</span>
         </h1>
         <p className="typewriter" aria-live="polite">
           “{typedLine}
           <span className="caret" />”
         </p>
         <p className="hero-intro">
-          From a tech foundation to product thinking — I thrive on untangling
-          ambiguity and shaping it into simple, purposeful experiences.
+          Đi lên từ nền tảng kỹ thuật tới tư duy sản phẩm — mình thích gỡ rối
+          những bài toán mơ hồ và biến chúng thành trải nghiệm số đơn giản, hữu
+          ích.
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#experience">
-            Explore My Journey <span aria-hidden="true">↓</span>
+            Khám phá hành trình <span aria-hidden="true">↓</span>
           </a>
           <a className="text-link" href="#work">
-            Case Studies
+            Dự án tiêu biểu
           </a>
           <a
             className="text-link"
@@ -85,7 +85,7 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
           >
-            View CV <span aria-hidden="true">↗</span>
+            Xem CV <span aria-hidden="true">↗</span>
           </a>
         </div>
       </motion.div>
@@ -155,10 +155,10 @@ function Hero() {
           <span>User-Centric</span>
         </motion.div>
       </div>
-      <div className="scroll-note">
+      {/* <div className="scroll-note">
         <span>Scroll to explore</span>
         <span className="scroll-line" />
-      </div>
+      </div> */}
       <div className="hero-bottom-space" aria-hidden="true" />
     </section>
   );

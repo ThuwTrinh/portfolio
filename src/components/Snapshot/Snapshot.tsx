@@ -9,10 +9,10 @@ const snapshotData = [
     id: 1,
     size: "large",
     icon: <img src={bkuLogo} alt="HCMUT Logo" className="snapshot-logo-img" />,
-    title: "Excellent Honors",
-    sub: "HCMUT • Computer Science",
-    details: "GPA: 3.6 / 4.0 (8.32/10)\nGraduating Nov '26",
-    linkText: "View Transcript",
+    title: "Tốt nghiệp Xuất Sắc",
+    sub: "HCMUT • Khoa Học Máy Tính",
+    details: "GPA: 3.6 / 4.0 (8.32/10)\nTốt nghiệp T11/2026",
+    linkText: "Xem Bảng Điểm",
     linkUrl:
       "https://drive.google.com/file/d/13-fcWCkcF__h7Fv7qSqrjjtk-NJ29sSu/view?usp=sharing",
   },
@@ -20,10 +20,9 @@ const snapshotData = [
     id: 2,
     size: "medium",
     icon: <Languages size={24} strokeWidth={1.5} />,
-    title: "English Proficiency",
+    title: "Năng lực Ngoại ngữ",
     sub: "TOEIC 760 (Listening & Reading)",
-    details:
-      "Self-assessed: Speaking & Writing — Conversational to Professional",
+    details: "Giao tiếp tự tin & làm việc hiệu quả trong môi trường quốc tế",
   },
   {
     id: 3,
@@ -31,7 +30,8 @@ const snapshotData = [
     icon: <Target size={22} strokeWidth={1.5} />,
     title: "Product Mindset",
     sub: "Technical Feasibility",
-    details: "Bridging code & business with AI-driven execution.",
+    details:
+      "Cầu nối giữa kỹ thuật & bài toán kinh doanh, tối ưu hóa thực thi với AI.",
   },
 ];
 
@@ -71,9 +71,9 @@ export default function Snapshot() {
           transition={{ duration: 0.6 }}
         >
           <span className="snapshot-eyebrow">
-            <span className="snapshot-pulse" /> At a Glance
+            <span className="snapshot-pulse" /> TỔNG QUAN NHANH
           </span>
-          <h2>Quick Snapshot</h2>
+          <h2>Đôi Nét Nổi Bật Về Mình</h2>
         </motion.div>
 
         <motion.div

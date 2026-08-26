@@ -1,166 +1,263 @@
-import { useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Sparkles, Footprints, MapPin } from "lucide-react";
 import "./Experience.css";
 
+// Mảng tọa độ chuẩn của bạn
+const STAGE_OFFSETS = ["5%", "32%", "59%", "87%"];
 
-
-const editorialStories = [
+const roadStages = [
   {
+    index: 0,
     step: "01",
-    tag: "CHUYÊN QUANG TRUNG (TOÁN)",
-    lens: "First-Principles Thinking",
-    headline: "Bóc tách bài toán từ những ẩn số mơ hồ",
-    story:
-      "Những năm tháng học chuyên Toán không có sẵn công thức rập khuôn. Phải tự mò mẫm từ con số 0 rèn cho mình tính kỷ luật và phản xạ không sợ sự mơ hồ (ambiguity).",
-    takeawayLabel: "Tư duy cốt lõi",
+    km: "KM 0.0",
+    tag: "GỐC RỄ TƯ DUY",
+    title: "Những bài toán không có đáp án mẫu",
+    lens: "Chuyên Toán • THPT Chuyên Quang Trung",
+    shortDesc:
+      "Những năm tháng học chuyên Toán rèn cho em thói quen không ngại bài toán khó. Khi đối mặt với sự mơ hồ, phản xạ đầu tiên là đào sâu tìm bản chất chứ không học vẹt công thức.",
     takeaway:
-      "Luôn tìm về bản chất gốc rễ của vấn đề thay vì chạy theo bề nổi hay phụ thuộc vào các giải pháp mẫu có sẵn.",
+      "Tư duy gốc rễ: Luôn bóc tách vấn đề về những điều cơ bản nhất trước khi tìm lời giải.",
+    side: "left",
   },
   {
+    index: 1,
     step: "02",
-    tag: "BÁCH KHOA HCMUT (Computer Science)",
-    lens: "System & Feasibility",
-    headline: "Hiểu bản chất công nghệ và sức bền thực thi",
-    story:
-      "Đối mặt với những bài tập lớn dài hàng ngàn dòng code và áp lực debug rèn cho mình bản lĩnh làm chủ kỹ thuật và thấu hiểu cách một hệ thống vận hành.",
-    takeawayLabel: "Tư duy cốt lõi",
+    km: "KM 2.5",
+    tag: "NỀN TẢNG KỸ THUẬT",
+    title: "Làm chủ dòng code & Hệ thống",
+    lens: "Computer Science • Bách Khoa HCMUT",
+    shortDesc:
+      "Những đêm debug đồ án lớn ở Bách Khoa cho em cái nhìn thực tế về cách phần mềm vận hành: code chạy được là một chuyện, hệ thống chịu tải tốt và dễ bảo trì hay không lại là chuyện khác.",
     takeaway:
-      "Nắm chắc tính khả thi kỹ thuật (technical feasibility), hiểu rõ những đánh đổi (trade-offs) để làm việc và thấu cảm sâu sắc với đội ngũ kỹ sư.",
+      "Hiểu sâu về kỹ thuật để biết rõ giới hạn công nghệ và nói cùng ngôn ngữ với Dev.",
+    side: "right",
   },
   {
+    index: 2,
     step: "03",
-    tag: "STARTUP (MOBILE DEV)",
-    lens: "User-Centric Shift",
-    headline: "Code tối ưu đến mấy mà sai nhu cầu thì vẫn là con số 0",
-    story:
-      "Trực tiếp làm app thực chiến và quan sát biểu đồ drop-off của người dùng giúp mình nhận ra: một tính năng code rất kỳ công nhưng luồng trải nghiệm rối rắm thì người dùng vẫn rời bỏ.",
-    takeawayLabel: "Bước ngoặt chuyển dịch",
+    km: "KM 5.0",
+    tag: "BƯỚC NGOẶT THỰC TẾ",
+    title: "Khi tính năng tâm huyết bị ngó lơ",
+    lens: "Mobile App • Interlink Labs",
+    shortDesc:
+      "Làm app thực tế, nhìn người dùng drop-off ở những tính năng mình mất cả tháng để viết code, em mới vỡ lẽ: Code xịn đến đâu mà giải sai nhu cầu thì sản phẩm vẫn bị bỏ xó.",
     takeaway:
-      "Chuyển từ người thực thi thuần kỹ thuật sang người định hình giải pháp: xác định đúng bài toán đáng để giải, kiểm chứng tính khả thi và đảm bảo mỗi tính năng làm ra đều mang lại giá trị thực tế cho người dùng.",
+      "Chuyển dịch tư duy: Đừng chỉ hỏi 'làm như thế nào', hãy luôn tự hỏi 'tại sao người ta phải dùng?'.",
+    side: "left",
   },
   {
+    index: 3,
     step: "04",
-    tag: "ĐÍCH ĐẾN • PRODUCT MANAGEMENT",
-    lens: "AI-Driven & High Ownership",
-    headline:
-      "Nơi hội tụ giữa Logic toán, Năng lực kỹ thuật và Tư duy AI-First",
-    story:
-      "Mình không rời bỏ công nghệ mà dùng nền tảng CS để tiếp cận làn sóng AI một cách thực tế: hiểu rõ mô hình vận hành, đánh giá đúng tính khả thi và ứng dụng AI để tự động hóa, giải quyết những bài toán phức tạp cho người dùng.",
-    takeawayLabel: "Định vị bản thân",
+    km: "KM 10.0",
+    tag: "ĐÍCH ĐẾN HIỆN TẠI",
+    title: "Làm chủ sản phẩm từ đầu đến cuối",
+    lens: "Product Management & AI",
+    shortDesc:
+      "Em kết hợp logic toán học, nền tảng kỹ thuật và làn sóng AI để nhận trọn trách nhiệm cho sản phẩm—từ lúc bóc tách ý tưởng sơ khai cho đến trải nghiệm cuối cùng trên tay người dùng.",
     takeaway:
-      "Một Product Builder có nền tảng Tech & AI vững vàng — sẵn sàng nhận trọn trách nhiệm (End-to-End Ownership) để biến công nghệ thành trải nghiệm số đơn giản, mượt mà và tạo ra giá trị kinh doanh.",
+      "Biến những công nghệ phức tạp thành trải nghiệm số đơn giản và tạo ra giá trị thật.",
+    side: "right",
   },
 ];
 
 export default function Experience() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const [visibleStages, setVisibleStages] = useState<number[]>([0]);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start 75%", "end 25%"],
-  });
+  const handleStageEnter = (index: number) => {
+    setVisibleStages((prev) => Array.from(new Set([...prev, index])));
+  };
 
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 60,
-    damping: 20,
-    restDelta: 0.001,
-  });
+  const handleStageLeave = (index: number) => {
+    setVisibleStages((prev) => {
+      const next = prev.filter((i) => i !== index);
+      return next.length > 0 ? next : [index];
+    });
+  };
+
+  // Luôn lấy trạm lớn nhất đang hiển thị
+  const activeStage = visibleStages.length > 0 ? Math.max(...visibleStages) : 0;
 
   return (
-    <section className="editorial-section" id="experience" ref={sectionRef}>
-      <div className="editorial-ambient" aria-hidden="true" />
+    <section className="road-section" id="experience">
+      <div className="road-ambient-glow" aria-hidden="true" />
 
-      <header className="editorial-header">
-        <span className="editorial-badge">
-          <Sparkles size={14} className="inline mr-2 text-sky-500" />
-          THE PIVOT STORY
-        </span>
+      {/* Header */}
+      <header className="road-header">
+        <div className="road-badge">
+          <Sparkles size={14} className="text-sky-500" />
+          <span>THE PRODUCT ODYSSEY</span>
+        </div>
         <h2>
-          From Math &amp; Code to <br />
-          <em>Product Intuition</em>
+          Con Đường Chuyển Dịch <br />
+          <em>Từ Code sang Product</em>
         </h2>
         <p>
-          Hành trình từng bước chuyển hóa từ người trực tiếp gõ lệnh sang người
-          định hình chiến lược và trải nghiệm sản phẩm.
+          Hành trình từng bước định hình bản năng sản phẩm qua 4 cột mốc đáng nhớ.
         </p>
       </header>
 
-      <div className="editorial-stage">
-        <svg
-          className="thread-svg"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <defs>
-            <linearGradient id="thread-gradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#bae6fd" />
-              <stop offset="50%" stopColor="#38bdf8" />
-              <stop offset="100%" stopColor="#0284c7" />
-            </linearGradient>
-          </defs>
-          <path
-            className="thread-base"
-            d="M50 0 L50 100"
-            vectorEffect="non-scaling-stroke"
-          />
-          <path
-            className="thread-glow"
-            d="M50 0 L50 100"
-            vectorEffect="non-scaling-stroke"
-          />
-          <motion.path
-            className="thread-active"
-            d="M50 0 L50 100"
-            vectorEffect="non-scaling-stroke"
-            style={{ pathLength: smoothProgress }}
-          />
-        </svg>
+      {/* Sân khấu Roadmap */}
+      <div className="road-stage-arena">
+        {/* TRỤC ĐƯỜNG TRUNG TÂM */}
+        <div className="road-track-wrapper">
+          <svg
+            className="road-svg-canvas"
+            viewBox="0 0 100 1000"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="roadGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#38bdf8" />
+                <stop offset="35%" stopColor="#6366f1" />
+                <stop offset="70%" stopColor="#f43f5e" />
+                <stop offset="100%" stopColor="#f59e0b" />
+              </linearGradient>
+            </defs>
 
-        <div className="editorial-feed">
-          {editorialStories.map((item) => (
-            <article key={item.step} className="editorial-entry">
-              {/* CỘT 1: Bullet cố định, ẩn hiện 2 chiều mượt mà */}
-              <div className="editorial-node-col">
-                <motion.div
-                  className="thread-node"
-                  initial={{ opacity: 0, scale: 0.6 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: false, amount: 0.2 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                >
-                  <span className="thread-node-num">{item.step}</span>
-                </motion.div>
-              </div>
+            <line
+              x1="50"
+              y1="0"
+              x2="50"
+              y2="1000"
+              className="road-base-track"
+            />
+            <line x1="50" y1="0" x2="50" y2="1000" className="road-dash-line" />
 
-              {/* CỘT 2: Nội dung lướt lên/xuống và ẩn/hiện 2 chiều */}
-              <motion.div
-                className="editorial-content"
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
-                transition={{
-                  duration: 0.6,
-                  ease: [0.21, 0.47, 0.32, 0.98],
-                  delay: 0.1,
-                }}
+            <motion.line
+              x1="50"
+              y1="0"
+              x2="50"
+              y2="1000"
+              className="road-active-laser"
+              animate={{ pathLength: (activeStage + 0.6) / roadStages.length }}
+              transition={{ type: "spring", stiffness: 60, damping: 20 }}
+            />
+          </svg>
+
+          {/* BƯỚC CHÂN DỪNG CHUẨN OFFSET */}
+          <motion.div
+            className="road-traveler-avatar"
+            animate={{ top: STAGE_OFFSETS[activeStage] }}
+            transition={{ type: "spring", stiffness: 65, damping: 18 }}
+          >
+            <div className="traveler-pulse" />
+            <div className="traveler-core">
+              <Footprints size={15} className="text-sky-500" />
+            </div>
+            <span className="traveler-tag">STATION 0{activeStage + 1}</span>
+          </motion.div>
+        </div>
+
+        {/* DANH SÁCH 4 CHẶNG ĐƯỜNG */}
+        <div className="road-milestones-container">
+          {roadStages.map((stage) => {
+            const isLeft = stage.side === "left";
+            const isCurrentActive = activeStage === stage.index;
+
+            return (
+              <div
+                key={stage.step}
+                className={`road-milestone-row ${isLeft ? "row-left" : "row-right"}`}
               >
-                <div className="editorial-meta">
-                  <span className="editorial-tag">{item.tag}</span>
-                  <span className="editorial-lens">{item.lens}</span>
+                {/* VẾ TRÁI */}
+                <div className="road-col col-left">
+                  {isLeft ? (
+                    <motion.div
+                      className={`road-station-card ${isCurrentActive ? "card-highlight" : ""}`}
+                      initial={{ opacity: 0, x: -30, y: 20 }}
+                      whileInView={{ opacity: 1, x: 0, y: 0 }}
+                      onViewportEnter={() => handleStageEnter(stage.index)}
+                      onViewportLeave={() => handleStageLeave(stage.index)}
+                      viewport={{ amount: 0.35 }}
+                      transition={{ duration: 0.45, ease: "easeOut" }}
+                    >
+                      <div className="card-top-bar">
+                        <div className="card-badge-group">
+                          <span className="stage-pill-tag">{stage.tag}</span>
+                          <span className="stage-lens-tag">{stage.lens}</span>
+                        </div>
+                      </div>
+
+                      <h3 className="stage-title">{stage.title}</h3>
+                      <p className="stage-desc">{stage.shortDesc}</p>
+
+                      <div className="stage-takeaway-simple">
+                        <p className="takeaway-text">{stage.takeaway}</p>
+                      </div>
+                    </motion.div>
+                  ) : (
+                    /* BIỂN BÁO CÓ ANIMATION ĐỒNG BỘ */
+                    <motion.div
+                      className={`road-signpost signpost-left ${isCurrentActive ? "signpost-highlight" : ""}`}
+                      initial={{ opacity: 0, x: -20, y: 15 }}
+                      whileInView={{ opacity: 1, x: 0, y: 0 }}
+                      viewport={{ amount: 0.35 }}
+                      transition={{ duration: 0.45, ease: "easeOut" }}
+                    >
+                      <div className="signpost-head">
+                        <MapPin size={12} className="text-sky-500" />
+                        <span>{stage.km}</span>
+                      </div>
+                      <div className="signpost-body">
+                        <strong>STATION {stage.step}</strong>
+                      </div>
+                    </motion.div>
+                  )}
                 </div>
 
-                <h3 className="editorial-headline">“{item.headline}”</h3>
-                <p className="editorial-story">{item.story}</p>
+                {/* TIM ĐƯỜNG */}
+                <div className="road-col col-center" />
 
-                <div className="editorial-takeaway">
-                  <span className="takeaway-label">{item.takeawayLabel}: </span>
-                  <span className="takeaway-text">{item.takeaway}</span>
+                {/* VẾ PHẢI */}
+                <div className="road-col col-right">
+                  {!isLeft ? (
+                    <motion.div
+                      className={`road-station-card ${isCurrentActive ? "card-highlight" : ""}`}
+                      initial={{ opacity: 0, x: 30, y: 20 }}
+                      whileInView={{ opacity: 1, x: 0, y: 0 }}
+                      onViewportEnter={() => handleStageEnter(stage.index)}
+                      onViewportLeave={() => handleStageLeave(stage.index)}
+                      viewport={{ amount: 0.35 }}
+                      transition={{ duration: 0.45, ease: "easeOut" }}
+                    >
+                      <div className="card-top-bar">
+                        <div className="card-badge-group">
+                          <span className="stage-pill-tag">{stage.tag}</span>
+                          <span className="stage-lens-tag">{stage.lens}</span>
+                        </div>
+                      </div>
+
+                      <h3 className="stage-title">{stage.title}</h3>
+                      <p className="stage-desc">{stage.shortDesc}</p>
+
+                      <div className="stage-takeaway-simple">
+                        <p className="takeaway-text">{stage.takeaway}</p>
+                      </div>
+                    </motion.div>
+                  ) : (
+                    /* BIỂN BÁO CÓ ANIMATION ĐỒNG BỘ */
+                    <motion.div
+                      className={`road-signpost signpost-right ${isCurrentActive ? "signpost-highlight" : ""}`}
+                      initial={{ opacity: 0, x: 20, y: 15 }}
+                      whileInView={{ opacity: 1, x: 0, y: 0 }}
+                      viewport={{ amount: 0.35 }}
+                      transition={{ duration: 0.45, ease: "easeOut" }}
+                    >
+                      <div className="signpost-head">
+                        <MapPin size={12} className="text-sky-500" />
+                        <span>{stage.km}</span>
+                      </div>
+                      <div className="signpost-body">
+                        <strong>STATION {stage.step}</strong>
+                      </div>
+                    </motion.div>
+                  )}
                 </div>
-              </motion.div>
-            </article>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
