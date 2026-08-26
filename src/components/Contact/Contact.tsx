@@ -1,5 +1,5 @@
 import { motion, type Variants } from "framer-motion";
-import { Mail, ArrowUpRight, Copy, Check, Sparkles } from "lucide-react";
+import { Mail, ArrowUpRight, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import "./Contact.css";
 import avatarImg from "../../assets/img2.jpg";
