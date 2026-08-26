@@ -9,15 +9,21 @@ const roadmapData = [
     tracks: [
       {
         name: "A. Re-notify",
-        m1: ["Xác định trigger logic", "Internal testing"],
-        m2: ["A/B test 10–20% mobile"],
-        m3: ["Expand 50%+ (nếu đạt)", "Tune threshold"],
+        m1: [
+          "Xác định logic kích hoạt (Trigger Logic)",
+          "Thử nghiệm nội bộ (Internal Test)",
+        ],
+        m2: ["Chạy thử nghiệm A/B test 10–20% user"],
+        m3: [
+          "Mở rộng Rollout 50%+ (nếu đạt chuẩn)",
+          "Tinh chỉnh ngưỡng kích hoạt (Threshold)",
+        ],
       },
       {
         name: "B. Reply Later",
-        m1: ["Map flow & BA logic"],
-        m2: ["Build + internal testing"],
-        m3: ["Beta opt-in"],
+        m1: ["Xây dựng luồng trải nghiệm & Logic nghiệp vụ"],
+        m2: ["Phát triển tính năng & Test nội bộ"],
+        m3: ["Mở thử nghiệm Beta cho người dùng"],
       },
     ],
   },
@@ -28,9 +34,9 @@ const roadmapData = [
     tracks: [
       {
         name: "",
-        m1: ["Wireframe / define UX"],
-        m2: ["Build MVP"],
-        m3: ["Start mobile A/B test"],
+        m1: ["Thiết kế Wireframe & Định hình UX"],
+        m2: ["Phát triển bản thử nghiệm (Build MVP)"],
+        m3: ["Bắt đầu chạy thử nghiệm A/B trên mobile"],
       },
     ],
   },
@@ -41,9 +47,12 @@ const roadmapData = [
     tracks: [
       {
         name: "",
-        m1: ["Design banner / onboarding", "Ship quick win"],
-        m2: ["Measure banner performance"],
-        m3: ["Iterate copy if needed"],
+        m1: [
+          "Thiết kế banner hướng dẫn (Onboarding)",
+          "Triển khai nhanh tính năng sẵn có (Quick Win)",
+        ],
+        m2: ["Đo lường hiệu quả tương tác banner"],
+        m3: ["Tinh chỉnh lại câu chữ (Copywriting)"],
       },
     ],
   },
@@ -53,8 +62,8 @@ export default function ZaloRoadmap() {
   return (
     <div className="roadmap-section" id="roadmap">
       <div className="roadmap-header">
-        <h3>Roadmap 3 Tháng</h3>
-        <p>Từ Validate Idea đến Launch & Iterate</p>
+        <h3>Lộ Trình Thực Thi 3 Tháng</h3>
+        <p>Từ Kiểm chứng Ý tưởng đến Phát hành &amp; Tối ưu</p>
       </div>
 
       <div className="gantt-container">
@@ -63,15 +72,15 @@ export default function ZaloRoadmap() {
           <div className="gantt-corner"></div>
           <div className="gantt-month">
             <strong>Tháng 1</strong>
-            <span>Validate & Build</span>
+            <span>Kiểm chứng &amp; Xây dựng</span>
           </div>
           <div className="gantt-month">
             <strong>Tháng 2</strong>
-            <span>Launch & Measure</span>
+            <span>Phát hành &amp; Đo lường</span>
           </div>
           <div className="gantt-month">
             <strong>Tháng 3</strong>
-            <span>Iterate & Expand</span>
+            <span>Tối ưu &amp; Mở rộng</span>
           </div>
         </div>
 
@@ -95,12 +104,12 @@ export default function ZaloRoadmap() {
               <div className="gantt-tracks-wrapper">
                 {category.tracks.map((track, tIndex) => (
                   <div className="gantt-track-row" key={tIndex}>
-                    {/* Sub-label (nếu có, VD: A. Re-notify) */}
+                    {/* Sub-label (A. Re-notify / B. Reply Later) */}
                     <div className="track-sub-label">
                       {track.name && <span>{track.name}</span>}
                     </div>
 
-                    {/* M1, M2, M3 Cells */}
+                    {/* Khối nhiệm vụ Tháng 1, 2, 3 */}
                     <div className="track-cell">
                       <div className="task-bar m1-bar">
                         <ul>

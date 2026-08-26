@@ -89,6 +89,7 @@ const exhibits = [
     icon: <Terminal size={14} />,
     title: "Bức Tranh 06 — Kiểm Thử Giao Diện & Test Automation",
     desc: "Thiết lập hàng rào kiểm thử tự động trên Jest; đạt 82.5% Line Coverage (306/308 tests pass) nhằm triệt tiêu rủi ro lỗi giao diện và đảm bảo sản phẩm vận hành ổn định khi đến tay người dùng.",
+    align: "align-right", // <-- Đã bổ sung thuộc tính này để Bức tranh 06 lệch sang phải
     image: testImg,
     alt: "Test Coverage Terminal",
     isTerminal: true,
@@ -280,7 +281,7 @@ export default function ReuseUniShowcase() {
           <div className="seal-line-bottom" />
         </motion.div>
 
-        {/* TIÊU ĐỀ & LỜI DẪN STORYTELLING (ĐÃ ĐIỀU CHỈNH CHUẨN XÁC) */}
+        {/* TIÊU ĐỀ & LỜI DẪN STORYTELLING */}
         <motion.div
           className="outcomes-header"
           variants={itemVariants}
@@ -297,7 +298,7 @@ export default function ReuseUniShowcase() {
           </p>
         </motion.div>
 
-        {/* 3 THẺ METRICS GỌN GÀNG (ĐÃ BỎ ICON THỪA) */}
+        {/* 3 THẺ METRICS GỌN GÀNG */}
         <div className="outcomes-cards-grid">
           {/* Cột 1: Hiệu năng */}
           <motion.div
