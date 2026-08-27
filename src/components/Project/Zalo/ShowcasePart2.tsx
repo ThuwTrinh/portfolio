@@ -1,10 +1,4 @@
 import {
-  Zap,
-  SlidersHorizontal,
-  Bell,
-  BellOff,
-  Activity,
-  FileWarning,
   Users,
   ListOrdered,
   TrendingUp,
@@ -171,9 +165,6 @@ export default function ShowcasePart2() {
 
         <div className="card-row">
           <div className="card blue">
-            <span className="card-icon">
-              <Zap size={16} />
-            </span>
             <span className="card-title">#1 Smart Reply Reminder</span>
             <span className="card-tag">STRATEGIC BET</span>
             <p>
@@ -182,9 +173,6 @@ export default function ShowcasePart2() {
             </p>
           </div>
           <div className="card green">
-            <span className="card-icon">
-              <SlidersHorizontal size={16} />
-            </span>
             <span className="card-title">2. Conversation Organization</span>
             <span className="card-tag">QUICK WIN</span>
             <p>
@@ -193,9 +181,6 @@ export default function ShowcasePart2() {
             </p>
           </div>
           <div className="card red">
-            <span className="card-icon">
-              <Bell size={16} />
-            </span>
             <span className="card-title">3. Focus Mode</span>
             <span className="card-tag">BETA LATER</span>
             <p>
@@ -375,7 +360,6 @@ export default function ShowcasePart2() {
                 marginBottom: "8px",
               }}
             >
-              <BellOff size={16} color="#ef4444" />
               <span className="risk-name" style={{ fontWeight: 700 }}>
                 1. Gây phiền (Spam Fatigue)
               </span>
@@ -422,7 +406,6 @@ export default function ShowcasePart2() {
                 marginBottom: "8px",
               }}
             >
-              <Activity size={16} color="#ef4444" />
               <span className="risk-name" style={{ fontWeight: 700 }}>
                 2. Tăng áp lực (Anxiety)
               </span>
@@ -469,7 +452,6 @@ export default function ShowcasePart2() {
                 marginBottom: "8px",
               }}
             >
-              <FileWarning size={16} color="#ef4444" />
               <span className="risk-name" style={{ fontWeight: 700 }}>
                 3. Tóm tắt sai ngữ cảnh
               </span>

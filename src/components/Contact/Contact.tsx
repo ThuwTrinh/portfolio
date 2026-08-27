@@ -64,7 +64,7 @@ export default function Contact() {
           {/* Badge 1: Status Pill */}
           <motion.div variants={itemVariants} className="status-pill-clean">
             <span className="status-dot-clean" />
-            <span>Open to Product Opportunities</span>
+            <span>SẴN SÀNG CHO CƠ HỘI MỚI</span>
           </motion.div>
 
           {/* Badge 2: Tiêu đề chính */}
@@ -77,7 +77,7 @@ export default function Contact() {
           <motion.div variants={itemVariants} className="contact-actions-clean">
             <a href={`mailto:${email}`} className="btn-primary-clean">
               <Mail size={18} />
-              <span>Email me</span>
+              <span>Gửi email</span>
             </a>
 
             <button

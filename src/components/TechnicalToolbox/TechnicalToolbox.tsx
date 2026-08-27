@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, type Variants } from "framer-motion";
 import {
   CheckCircle2,
   ArrowUpRight,
@@ -7,6 +8,7 @@ import {
   Network,
 } from "lucide-react";
 import "./TechnicalToolbox.css";
+import Sparkles from "../Sparkles";
 
 import sspsUseCaseImg from "../../assets/ssps_usecase_diagram.png";
 import sqlResultImg from "../../assets/restaurant_sql_revenue_result.png";
@@ -71,27 +73,58 @@ const skillsList: SkillProof[] = [
   },
 ];
 
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.25, 0.8, 0.25, 1],
+    },
+  },
+};
+
 export default function TechnicalToolbox() {
   return (
-    <section className="toolbox-section">
+    <section
+      className="toolbox-section"
+      id="skills"
+      aria-label="Skill Showcase"
+    >
+      <Sparkles count={8} />
+
       <div className="toolbox-container">
         {/* Header Block */}
-        <div className="toolbox-header">
+        <motion.div
+          className="toolbox-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="toolbox-tag">
             <span className="toolbox-tag-dot" />
-            <span>KỸ NĂNG KHÁC</span>
+            <span>SKILL SHOWCASE</span>
           </div>
-          <h2>Other Skills</h2>
+          <h2>Năng Lực Bổ Trợ</h2>
           <p>
             Những kỹ năng thực chiến khác được kiểm chứng qua sản phẩm và công
             việc thực tế.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Danh sách Skills */}
+        {/* Danh sách Skills: Mỗi Card tự canh Scroll riêng */}
         <div className="toolbox-list">
           {skillsList.map((skill) => (
-            <div key={skill.id} className="toolbox-item-card">
+            <motion.div
+              key={skill.id}
+              className="toolbox-item-card"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+            >
               {/* CỘT TRÁI */}
               <div className="toolbox-content-col">
                 <div className="toolbox-meta-row">
@@ -100,11 +133,10 @@ export default function TechnicalToolbox() {
                     {skill.category}
                   </span>
 
-                  {/* Link dẫn tới tài liệu Drive hoặc Github Repo */}
                   <a
                     href={skill.projectUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noreferrer"
                     className="toolbox-source-project"
                   >
                     <span>{skill.project}</span>
@@ -137,7 +169,7 @@ export default function TechnicalToolbox() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

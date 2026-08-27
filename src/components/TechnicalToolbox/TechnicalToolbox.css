@@ -1,10 +1,10 @@
 /* ==========================================================================
-   TECHNICAL PM TOOLBOX / OTHER SKILLS (BOTTOM-ALIGNED TAKEAWAY)
+   TECHNICAL PM TOOLBOX (SYNCHRONIZED WITH SNAPSHOT SECTION)
    ========================================================================== */
 
 .toolbox-section {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Giữ các hạt sparkles không bị tràn ra ngoài */
   z-index: 10;
   padding: 60px 5vw 90px;
   display: flex;
@@ -13,15 +13,15 @@
   width: 100%;
   box-sizing: border-box;
 
+  /* Nền gradient & viền đồng bộ với Snapshot */
   background-color: var(--sky, #f0f9ff);
   background-image: radial-gradient(
     ellipse at 50% 50%,
-    rgba(219, 234, 254, 0.9) 0%,
-    rgba(224, 242, 254, 0.45) 30%,
-    transparent 85%
+    rgba(219, 234, 254, 1) 0%,
+    rgba(224, 242, 254, 0.5) 25%,
+    transparent 90%
   );
-  border-top: 1px solid rgba(186, 230, 253, 0.6);
-  border-bottom: 1px solid rgba(186, 230, 253, 0.6);
+  border-bottom: 1px solid rgba(186, 230, 253, 0.5);
 }
 
 .toolbox-container {
@@ -35,7 +35,7 @@
 /* Header */
 .toolbox-header {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,12 +48,12 @@
   font: 11px var(--mono, monospace);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: #0284c7;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 99px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(186, 230, 253, 0.9);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(186, 230, 253, 0.8);
   margin-bottom: 16px;
   backdrop-filter: blur(8px);
 }
@@ -69,7 +69,7 @@
 .toolbox-header h2 {
   margin: 0 0 10px 0;
   font-family: "Manrope", sans-serif;
-  font-size: clamp(26px, 3.2vw, 36px);
+  font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 800;
   color: #0f172a;
   letter-spacing: -0.02em;
@@ -83,7 +83,7 @@
   max-width: 600px;
 }
 
-/* List Items */
+/* --- LIST ITEMS --- */
 .toolbox-list {
   display: flex;
   flex-direction: column;
@@ -91,13 +91,13 @@
   width: 100%;
 }
 
-/* Card Split: alignItems: stretch để 2 cột có cùng chiều cao */
+/* Single Split Card */
 .toolbox-item-card {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
   gap: 32px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: 22px;
   padding: 28px;
   box-shadow: 0 12px 35px -10px rgba(2, 132, 199, 0.08);
@@ -109,13 +109,13 @@
 }
 
 .toolbox-item-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(56, 189, 248, 0.8);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(56, 189, 248, 0.9);
   box-shadow: 0 18px 40px -10px rgba(2, 132, 199, 0.15);
 }
 
-/* Cột Trái: display flex và hướng cột */
+/* Cột Trái: Content */
 .toolbox-content-col {
   display: flex;
   flex-direction: column;
@@ -145,10 +145,18 @@
 .toolbox-source-project {
   font-size: 12px;
   font-weight: 600;
-  color: #94a3b8;
+  color: #64748b;
+  text-decoration: none !important;
   display: inline-flex;
   align-items: center;
   gap: 3px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.toolbox-source-project:hover {
+  color: #0284c7;
+  text-decoration: none !important;
+  transform: translateX(1px);
 }
 
 .toolbox-item-title {
@@ -168,12 +176,11 @@
   margin: 0;
 }
 
-/* Tự động căn sát xuống đáy cột */
 .toolbox-takeaway-box {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: auto; /* Đẩy khối này xuống cuối */
+  margin-top: auto;
   padding: 12px 14px;
   background: rgba(248, 250, 252, 0.9);
   border: 1px dashed rgba(203, 213, 225, 0.9);
@@ -189,7 +196,7 @@
   flex-shrink: 0;
 }
 
-/* Cột Phải: Preview Window */
+/* Cột Phải: Artifact Window */
 .toolbox-preview-col {
   display: flex;
   width: 100%;
@@ -252,7 +259,7 @@
   transform: scale(1.02);
 }
 
-/* Responsive */
+/* --- RESPONSIVE CHO TABLET & MOBILE --- */
 @media (max-width: 900px) {
   .toolbox-section {
     padding: 50px 5vw 70px;
@@ -273,19 +280,61 @@
   }
 }
 
-.toolbox-source-project {
-  font-size: 12px;
-  font-weight: 600;
-  color: #64748b;
-  text-decoration: none !important;
-  display: inline-flex;
+/* Đường viền ngăn cách gradient trên & dưới */
+.toolbox-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  padding: 60px 5vw 90px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 3px;
-  transition: color 0.2s ease, transform 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: var(--sky, #f0f9ff);
+  background-image: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(219, 234, 254, 1) 0%,
+    rgba(224, 242, 254, 0.5) 25%,
+    transparent 90%
+  );
 }
 
-.toolbox-source-project:hover {
-  color: #0284c7;
-  text-decoration: none !important;
-  transform: translateX(1px);
+/* Đường gạch ngang gradient mép trên */
+.toolbox-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(186, 230, 253, 0.9) 25%,
+    rgba(56, 189, 248, 0.8) 50%,
+    rgba(186, 230, 253, 0.9) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Đường gạch ngang gradient mép dưới */
+.toolbox-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(186, 230, 253, 0.9) 25%,
+    rgba(56, 189, 248, 0.8) 50%,
+    rgba(186, 230, 253, 0.9) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
