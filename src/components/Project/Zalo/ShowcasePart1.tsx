@@ -1,4 +1,12 @@
-import { Shield, Zap, Folder } from "lucide-react";
+import {
+  Shield,
+  Zap,
+  Folder,
+  Target,
+  Search,
+  Scale,
+  LineChart,
+} from "lucide-react";
 import { CommitLayout } from "./ZaloCaseStudy";
 
 import flow1 from "../../../assets/flow_page1.jpg";
@@ -10,7 +18,18 @@ export default function ShowcasePart1() {
   return (
     <>
       {/* ================= COMMIT 01: INIT ================= */}
-      <CommitLayout hash="#a1f9c2" cmd="init(mindset)" tag="điểm chạm">
+      <CommitLayout
+        hash="#a1f9c2"
+        cmd="init(mindset)"
+        tag={
+          <span className="tag-wrap">
+            <span>điểm chạm</span>
+            <span className="skill-pill">
+              <Target size={12} /> Problem Framing
+            </span>
+          </span>
+        }
+      >
         <h2>Khi "chạy đúng" không còn là thước đo duy nhất</h2>
 
         <p>
@@ -76,7 +95,14 @@ export default function ShowcasePart1() {
       <CommitLayout
         hash="#b4e819"
         cmd="explore(gap)"
-        tag="assignment 01 · discovery"
+        tag={
+          <span className="tag-wrap">
+            <span>assignment 01</span>
+            <span className="skill-pill">
+              <Search size={12} /> Product Sense
+            </span>
+          </span>
+        }
       >
         <h2>Đi tìm khoảng trống trong một hệ thống đã quá hoàn chỉnh</h2>
 
@@ -106,16 +132,37 @@ export default function ShowcasePart1() {
           vừa gác máy, trải nghiệm ấy cũng dừng lại và để người dùng tự nhớ, tự
           ghi chép.
         </p>
-        <div className="icon-strip">
+
+        <div
+          className="icon-strip"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            margin: "20px 0",
+            flexWrap: "wrap",
+          }}
+        >
           <span className="icon-pill">🎙️ Voice-to-text</span>
           <span style={{ color: "var(--ink-faint)" }}>·</span>
           <span className="icon-pill">💬 Subtitle</span>
           <span style={{ color: "var(--ink-faint)" }}>·</span>
           <span className="icon-pill">🌐 Dịch tin</span>
-          <span style={{ color: "var(--ink-faint)", fontSize: "16px" }}>
+          <span
+            style={{
+              color: "var(--ink-faint)",
+              fontSize: "16px",
+              margin: "0 8px",
+            }}
+          >
             ┄┄→
           </span>
-          <span className="icon-gap">?</span>
+          <span
+            className="icon-gap"
+            style={{ fontSize: "20px", fontWeight: 700, color: "var(--ink)" }}
+          >
+            ?
+          </span>
         </div>
 
         <p className="callout-line">
@@ -129,7 +176,14 @@ export default function ShowcasePart1() {
         type="warm"
         hash="#7d2e88"
         cmd="feat(trust)"
-        tag="assignment 01 · solution"
+        tag={
+          <span className="tag-wrap">
+            <span>assignment 01</span>
+            <span className="skill-pill">
+              <Scale size={12} /> Trade-off Thinking
+            </span>
+          </span>
+        }
       >
         <h2>Cân bằng giữa dữ liệu và niềm tin</h2>
 
@@ -176,8 +230,7 @@ export default function ShowcasePart1() {
           </div>
         </div>
 
-        {/* CÂU NỐI DẪN VÀO 3 NGUYÊN TẮC / RÀNG BUỘC */}
-        <p style={{ color: "var(--ink-soft)" }}>
+        <p style={{ color: "var(--ink-soft)", marginTop: "16px" }}>
           Thay vì tối ưu độ "xịn" của công nghệ bằng cách thu thập tối đa dữ
           liệu, mình đặt ra 3 ranh giới thiết kế để đặt sự riêng tư lên hàng
           đầu:
@@ -217,19 +270,16 @@ export default function ShowcasePart1() {
           </div>
         </div>
 
-        {/* CÂU DẪN VÀO WIREFRAME FLOW */}
-        <div className="wf-flow-eyebrow " style={{ marginTop: "20px" }}>
-        Toàn bộ nguyên tắc này được cụ thể hóa qua luồng trải
-          nghiệm 4 bước:
-        </div>
+        <p style={{ marginTop: "20px", fontWeight: 600 }}>
+          Toàn bộ nguyên tắc này được cụ thể hóa qua luồng trải nghiệm 4 bước:
+        </p>
 
-        {/* WIREFRAME FLOW 4 THẺ */}
         <div className="wf-grid-container">
           <div className="wf-card">
             <div className="wf-card-header">
               <span className="wf-step-badge">01</span>
               <div className="wf-step-info">
-                <h4>1. Bật AI Call Note trong cuộc gọi</h4>
+                <h4>Bật AI Call Note trong cuộc gọi</h4>
                 <p>
                   Người dùng chủ động bật tính năng trong giao diện cuộc gọi.
                 </p>
@@ -240,7 +290,7 @@ export default function ShowcasePart1() {
             </div>
             <div className="wf-card-note">
               <ul>
-                <li>Nút AI Call Note đặt cạnh các nút điều khiển cuộc gọi.</li>
+                <li>Nút đặt cạnh các nút điều khiển cuộc gọi.</li>
                 <li>
                   Chỉ báo hiển thị khi AI đang hoạt động để đảm bảo minh bạch.
                 </li>
@@ -252,7 +302,7 @@ export default function ShowcasePart1() {
             <div className="wf-card-header">
               <span className="wf-step-badge">02</span>
               <div className="wf-step-info">
-                <h4>2. Các thành viên đồng ý</h4>
+                <h4>Các thành viên đồng ý</h4>
                 <p>Tất cả thành viên xác nhận đồng ý sử dụng tính năng.</p>
               </div>
             </div>
@@ -261,9 +311,6 @@ export default function ShowcasePart1() {
             </div>
             <div className="wf-card-note">
               <ul>
-                <li>
-                  AI Call Note chỉ kích hoạt khi tất cả thành viên đồng ý.
-                </li>
                 <li>
                   Nếu có người từ chối hoặc không phản hồi sau 1 phút, tính năng
                   không bắt đầu.
@@ -276,7 +323,7 @@ export default function ShowcasePart1() {
             <div className="wf-card-header">
               <span className="wf-step-badge">03</span>
               <div className="wf-step-info">
-                <h4>3. Summary Card trong khung chat</h4>
+                <h4>Summary Card trong khung chat</h4>
                 <p>
                   Sau khi cuộc gọi kết thúc, AI gửi Summary Card vào khung chat.
                 </p>
@@ -286,10 +333,7 @@ export default function ShowcasePart1() {
               <img src={flow3} alt="Summary Card trong khung chat" />
             </div>
             <div className="wf-card-note single-text">
-              <p>
-                Summary Card hiển thị tóm tắt và các thông tin quan trọng được
-                AI trích xuất từ cuộc gọi.
-              </p>
+              <p>Hiển thị tóm tắt và thông tin quan trọng được trích xuất.</p>
             </div>
           </div>
 
@@ -297,23 +341,222 @@ export default function ShowcasePart1() {
             <div className="wf-card-header">
               <span className="wf-step-badge">04</span>
               <div className="wf-step-info">
-                <h4>4. User nhấn “Đặt lịch ngay”</h4>
-                <p>
-                  Zalo tự động điền sẵn thông tin nhắc hẹn để xác nhận và lưu.
-                </p>
+                <h4>User nhấn "Đặt lịch ngay"</h4>
+                <p>Zalo tự động điền sẵn thông tin nhắc hẹn.</p>
               </div>
             </div>
             <div className="wf-img-box">
               <img src={flow4} alt="User nhấn Đặt lịch ngay" />
             </div>
             <div className="wf-card-note single-text">
-              <p>
-                Mở màn hình Nhắc hẹn với thông tin đã điền sẵn. Người dùng chỉ
-                cần kiểm tra và bấm Lưu.
-              </p>
+              <p>Người dùng chỉ cần kiểm tra và bấm Lưu.</p>
             </div>
           </div>
         </div>
+
+        <p className="callout-line" style={{ marginTop: "24px" }}>
+          Bốn bước này không phải để "cho đẹp demo" — mỗi bước đều là một lần
+          hỏi lại: liệu người dùng có đang cảm thấy an toàn ở bước này không?
+        </p>
+      </CommitLayout>
+
+      {/* ================= COMMIT 04: MEASURE ================= */}
+      <CommitLayout
+        hash="#9c3fa0"
+        cmd="measure(trust)"
+        tag={
+          <span className="tag-wrap">
+            <span>assignment 01</span>
+            <span className="skill-pill">
+              <LineChart size={12} /> Metrics Design
+            </span>
+          </span>
+        }
+      >
+        <h2>Một tính năng "chạy được" chưa chắc là một tính năng "đáng tin"</h2>
+
+        <p>
+          Thiết kế xong 4 bước là lúc phản xạ kỹ thuật trong mình muốn dừng lại
+          — mọi thứ đã "hoạt động đúng". Nhưng tư duy product hỏi tiếp một câu
+          khó hơn: làm sao biết người dùng có thực sự tin và dùng lại tính năng
+          này, hay chỉ bấm thử một lần rồi thôi?
+        </p>
+
+        <div
+          className="metrics-stat-grid"
+          style={{
+            marginTop: "24px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "12px",
+          }}
+        >
+          <div
+            className="stat-card primary"
+            style={{
+              background: "rgba(37, 99, 235, 0.04)",
+              border: "1px solid rgba(37, 99, 235, 0.2)",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <span
+              className="stat-badge"
+              style={{ fontSize: "10px", fontWeight: 700, color: "#2563eb" }}
+            >
+              NORTH STAR
+            </span>
+            <div
+              className="stat-value"
+              style={{ fontSize: "28px", fontWeight: 800, margin: "4px 0" }}
+            >
+              60%
+            </div>
+            <div
+              className="stat-label"
+              style={{ fontWeight: 600, fontSize: "13px" }}
+            >
+              Summary Engagement Rate
+            </div>
+            <p
+              className="stat-sub"
+              style={{
+                fontSize: "12px",
+                color: "var(--ink-soft)",
+                margin: "4px 0 0 0",
+              }}
+            >
+              % người mở xem hoặc chỉnh sửa Note sau khi cuộc gọi kết thúc. Đây
+              là North Star, không phải Adoption, vì mở lại xem mới chứng minh
+              nội dung tóm tắt thực sự hữu ích.
+            </p>
+          </div>
+
+          <div
+            className="stat-card"
+            style={{
+              background: "var(--bg-muted)",
+              border: "1px solid var(--border-subtle)",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <span
+              className="stat-badge"
+              style={{ fontSize: "10px", fontWeight: 700, color: "#16a34a" }}
+            >
+              ADOPTION
+            </span>
+            <div
+              className="stat-value"
+              style={{ fontSize: "28px", fontWeight: 800, margin: "4px 0" }}
+            >
+              20%
+            </div>
+            <div
+              className="stat-label"
+              style={{ fontWeight: 600, fontSize: "13px" }}
+            >
+              Call Note Adoption
+            </div>
+            <p
+              className="stat-sub"
+              style={{
+                fontSize: "12px",
+                color: "var(--ink-soft)",
+                margin: "4px 0 0 0",
+              }}
+            >
+              % cuộc gọi thoại có tất cả thành viên đồng ý bật AI Call Note.
+            </p>
+          </div>
+
+          <div
+            className="stat-card"
+            style={{
+              background: "var(--bg-muted)",
+              border: "1px solid var(--border-subtle)",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <span
+              className="stat-badge"
+              style={{ fontSize: "10px", fontWeight: 700, color: "#16a34a" }}
+            >
+              CONVERSION
+            </span>
+            <div
+              className="stat-value"
+              style={{ fontSize: "28px", fontWeight: 800, margin: "4px 0" }}
+            >
+              25%
+            </div>
+            <div
+              className="stat-label"
+              style={{ fontWeight: 600, fontSize: "13px" }}
+            >
+              Reminder Conversion
+            </div>
+            <p
+              className="stat-sub"
+              style={{
+                fontSize: "12px",
+                color: "var(--ink-soft)",
+                margin: "4px 0 0 0",
+              }}
+            >
+              % bấm "Đặt lịch ngay" và lưu thành công vào Lịch Zalo.
+            </p>
+          </div>
+
+          <div
+            className="stat-card guardrail"
+            style={{
+              background: "rgba(239, 68, 68, 0.04)",
+              border: "1px solid rgba(239, 68, 68, 0.2)",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <span
+              className="stat-badge guard"
+              style={{ fontSize: "10px", fontWeight: 700, color: "#ef4444" }}
+            >
+              GUARDRAIL
+            </span>
+            <div
+              className="stat-value"
+              style={{ fontSize: "28px", fontWeight: 800, margin: "4px 0" }}
+            >
+              &lt; 30%
+            </div>
+            <div
+              className="stat-label"
+              style={{ fontWeight: 600, fontSize: "13px" }}
+            >
+              Opt-out / Dismiss Rate
+            </div>
+            <p
+              className="stat-sub"
+              style={{
+                fontSize: "12px",
+                color: "var(--ink-soft)",
+                margin: "4px 0 0 0",
+              }}
+            >
+              Tỷ lệ từ chối bật tính năng hoặc gạt bỏ thông báo. Vượt ngưỡng này
+              nghĩa là cơ chế xin quyền đang có vấn đề — dừng lại xem trước khi
+              mở rộng.
+            </p>
+          </div>
+        </div>
+
+        <p className="callout-line" style={{ marginTop: "24px" }}>
+          Vì với một tính năng đụng vào lòng tin, con số quan trọng nhất không
+          phải là bao nhiêu người bấm thử, mà là bao nhiêu người quay lại lần
+          thứ hai.
+        </p>
       </CommitLayout>
     </>
   );

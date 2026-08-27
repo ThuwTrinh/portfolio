@@ -1,0 +1,291 @@
+/* ==========================================================================
+   TECHNICAL PM TOOLBOX / OTHER SKILLS (BOTTOM-ALIGNED TAKEAWAY)
+   ========================================================================== */
+
+.toolbox-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  padding: 60px 5vw 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: var(--sky, #f0f9ff);
+  background-image: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(219, 234, 254, 0.9) 0%,
+    rgba(224, 242, 254, 0.45) 30%,
+    transparent 85%
+  );
+  border-top: 1px solid rgba(186, 230, 253, 0.6);
+  border-bottom: 1px solid rgba(186, 230, 253, 0.6);
+}
+
+.toolbox-container {
+  width: 100%;
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.toolbox-header {
+  text-align: center;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toolbox-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 11px var(--mono, monospace);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #0284c7;
+  padding: 6px 16px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(186, 230, 253, 0.9);
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.toolbox-tag-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #0284c7;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+}
+
+.toolbox-header h2 {
+  margin: 0 0 10px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.toolbox-header p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* List Items */
+.toolbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+}
+
+/* Card Split: alignItems: stretch để 2 cột có cùng chiều cao */
+.toolbox-item-card {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 12px 35px -10px rgba(2, 132, 199, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+  align-items: stretch;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toolbox-item-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 18px 40px -10px rgba(2, 132, 199, 0.15);
+}
+
+/* Cột Trái: display flex và hướng cột */
+.toolbox-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.toolbox-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbox-category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #0284c7;
+  padding: 4px 10px;
+  background: rgba(224, 242, 254, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 6px;
+}
+
+.toolbox-source-project {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.toolbox-item-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.toolbox-item-desc {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tự động căn sát xuống đáy cột */
+.toolbox-takeaway-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto; /* Đẩy khối này xuống cuối */
+  padding: 12px 14px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px dashed rgba(203, 213, 225, 0.9);
+  border-radius: 10px;
+  font-size: 12.5px;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.toolbox-takeaway-icon {
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+/* Cột Phải: Preview Window */
+.toolbox-preview-col {
+  display: flex;
+  width: 100%;
+}
+
+.toolbox-preview-window {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.04);
+}
+
+.toolbox-window-header {
+  height: 32px;
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 6px;
+}
+
+.toolbox-window-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.toolbox-window-title {
+  font: 10.5px var(--mono, monospace);
+  color: #94a3b8;
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.toolbox-window-canvas {
+  height: 320px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.toolbox-window-canvas img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  transition: transform 0.25s ease;
+}
+
+.toolbox-item-card:hover .toolbox-window-canvas img {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .toolbox-section {
+    padding: 50px 5vw 70px;
+  }
+
+  .toolbox-item-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 20px;
+  }
+
+  .toolbox-takeaway-box {
+    margin-top: 10px;
+  }
+
+  .toolbox-window-canvas {
+    height: 240px;
+  }
+}
+
+.toolbox-source-project {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.toolbox-source-project:hover {
+  color: #0284c7;
+  text-decoration: none !important;
+  transform: translateX(1px);
+}

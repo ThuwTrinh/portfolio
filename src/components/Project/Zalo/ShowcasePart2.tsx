@@ -1,16 +1,35 @@
-import { Zap, SlidersHorizontal, Bell } from "lucide-react";
+import {
+  Zap,
+  SlidersHorizontal,
+  Bell,
+  BellOff,
+  Activity,
+  FileWarning,
+  Users,
+  ListOrdered,
+  TrendingUp,
+  ShieldCheck,
+  Lightbulb,
+} from "lucide-react";
 import { CommitLayout } from "./ZaloCaseStudy";
 import ZaloRoadmap from "./ZaloRoadmap/ZaloRoadmap";
-import loopDiagram from "../../../assets/loop_diagram.png"; 
+import loopDiagram from "../../../assets/loop_diagram.png";
 
 export default function ShowcasePart2() {
   return (
     <>
-      {/* ================= COMMIT 04: EMPATHIZE ================= */}
+      {/* ================= COMMIT 05: EMPATHIZE ================= */}
       <CommitLayout
         hash="#c93a15"
         cmd="empathize(pain)"
-        tag="assignment 02 · critical thinking"
+        tag={
+          <span className="tag-wrap">
+            <span>assignment 02</span>
+            <span className="skill-pill">
+              <Users size={12} /> User Research
+            </span>
+          </span>
+        }
       >
         <h2>Reply Anxiety — Đối diện với nỗi đau của chính mình</h2>
 
@@ -19,19 +38,18 @@ export default function ShowcasePart2() {
             <span className="label">ĐỀ BÀI 02</span>
             <span className="val">
               Chọn 1 trong 4 nhánh sản phẩm, chứng minh hiệu quả trong 3 tháng
-              với nguồn lực giới hạn[cite: 3].
+              với nguồn lực giới hạn.
             </span>
           </div>
           <div className="row">
             <span className="label">GIẢI PHÁP</span>
             <span className="val">
               <b>Mindful Context Workspace</b> — Quản lý ngữ cảnh hội thoại,
-              giảm quá tải thông báo[cite: 3].
+              giảm quá tải thông báo.
             </span>
           </div>
         </div>
 
-        {/* STORYTELLING: LÝ DO CHỌN NHÁNH CHAT & KHỞI NGUỒN TỪ NỖI ĐAU THẬT */}
         <p>
           Đứng trước 4 cánh cửa mở của Zalo, cám dỗ lớn nhất là lao vào làm
           Social hay Video vì chúng dễ tạo ra những ý tưởng hào nhoáng, dễ
@@ -52,12 +70,11 @@ export default function ShowcasePart2() {
         {/* PERSONA CARD */}
         <div className="persona">
           <div className="persona-head">
-            <span className="persona-badge">02 · NGƯỜI DÙNG MỤC TIÊU</span>
+            <span className="persona-badge">"THE CONTEXT SWITCHERS"</span>
           </div>
-          <div className="persona-title">The Context Switchers</div>
           <p className="persona-sub">
             Người trẻ phải liên tục chuyển đổi vai trò giữa học tập, công việc,
-            gia đình mỗi ngày[cite: 3].
+            gia đình mỗi ngày.
           </p>
           <div className="persona-chats">
             <span className="persona-chip">🏠 Gia đình</span>
@@ -69,29 +86,29 @@ export default function ShowcasePart2() {
             <div className="persona-col">
               <span className="pc-label">HỌ LÀ</span>
               <ul>
-                <li>Sinh viên năm cuối[cite: 3]</li>
-                <li>Intern / Fresher[cite: 3]</li>
+                <li>Sinh viên năm cuối</li>
+                <li>Intern / Fresher</li>
               </ul>
             </div>
             <div className="persona-col">
               <span className="pc-label">HỌ MUỐN</span>
               <ul>
-                <li>Không bỏ sót việc quan trọng[cite: 3]</li>
-                <li>Phản hồi đúng lúc[cite: 3]</li>
+                <li>Không bỏ sót việc quan trọng</li>
+                <li>Phản hồi đúng lúc</li>
               </ul>
             </div>
             <div className="persona-col">
               <span className="pc-label">HỌ LO NGẠI</span>
               <ul>
-                <li>Spam notification[cite: 3]</li>
-                <li>Bị đánh giá thiếu trách nhiệm[cite: 3]</li>
+                <li>Spam notification</li>
+                <li>Bị đánh giá thiếu trách nhiệm</li>
               </ul>
             </div>
             <div className="persona-col">
               <span className="pc-label">HỌ KỲ VỌNG</span>
               <ul>
-                <li>App nhắc nhẹ, đúng lúc[cite: 3]</li>
-                <li>Không xâm phạm riêng tư[cite: 3]</li>
+                <li>App nhắc nhẹ, đúng lúc</li>
+                <li>Không xâm phạm riêng tư</li>
               </ul>
             </div>
           </div>
@@ -105,21 +122,27 @@ export default function ShowcasePart2() {
 
         <div className="zalo-mock">
           <span className="badge">23</span> tin nhắn chưa đọc — nhìn vào là thấy
-          mệt, và... né luôn[cite: 3].
+          mệt, và... né luôn.
         </div>
 
-        {/* VÒNG LẶP HÌNH ẢNH */}
         <div className="loop-image-wrap">
           <img src={loopDiagram} alt="Vòng lặp tâm lý Reply Anxiety" />
         </div>
       </CommitLayout>
 
-      {/* ================= COMMIT 05: PLAN ================= */}
+      {/* ================= COMMIT 06: PLAN ================= */}
       <CommitLayout
         type="mint"
         hash="#f3a021"
         cmd="plan(cut)"
-        tag="3-month execution"
+        tag={
+          <span className="tag-wrap">
+            <span>assignment 02</span>
+            <span className="skill-pill">
+              <ListOrdered size={12} /> Prioritization
+            </span>
+          </span>
+        }
       >
         <h2>Nghệ thuật cắt gọt khi nguồn lực chỉ có 3 tháng</h2>
 
@@ -139,27 +162,6 @@ export default function ShowcasePart2() {
           </em>
           .
         </p>
-
-        <div className="diff">
-          <div className="diff-row minus">
-            <span className="sign">−</span>
-            <span>
-              build(fullEcosystem){" "}
-              <span className="code-comment">
-                // tham vọng ôm đồm nhưng bất khả thi trong 3 tháng
-              </span>
-            </span>
-          </div>
-          <div className="diff-row plus">
-            <span className="sign">+</span>
-            <span>
-              bet(onePainPoint) + reuse(existing){" "}
-              <span className="code-comment">
-                // dùng ICE: đánh cược nỗi đau lớn nhất, tái sử dụng cái có sẵn
-              </span>
-            </span>
-          </div>
-        </div>
 
         <p style={{ margin: "18px 0 10px" }}>
           Sử dụng khung đánh giá{" "}
@@ -186,8 +188,8 @@ export default function ShowcasePart2() {
             <span className="card-title">2. Conversation Organization</span>
             <span className="card-tag">QUICK WIN</span>
             <p>
-              Tận dụng tính năng phân loại chat sẵn có từ Desktop đưa lên Mobile
-              nhằm giải phóng hòm thư nhanh nhất với chi phí dev thấp.
+              Tận dụng tính năng phân loại chat sẵn có từ Desktop đưa lên
+              Mobile, giải phóng hòm thư nhanh nhất với chi phí dev thấp.
             </p>
           </div>
           <div className="card red">
@@ -197,34 +199,339 @@ export default function ShowcasePart2() {
             <span className="card-title">3. Focus Mode</span>
             <span className="card-tag">BETA LATER</span>
             <p>
-              Chủ động lùi lại và chỉ thử nghiệm nội bộ, gom tin nhắn ồn ào vào
+              Chủ động lùi lại, chỉ thử nghiệm nội bộ, gom tin nhắn ồn ào vào
               bản tóm tắt định kỳ để tránh làm phức tạp hóa MVP ban đầu.
             </p>
           </div>
         </div>
 
-        <div className="callout">
-          <b>Guardrail Metric:</b> "Nếu người dùng thấy bị làm phiền hoặc tăng
-          tỷ lệ tắt thông báo, sẵn sàng dừng rollout — dù tỷ lệ phản hồi tin
-          nhắn có tăng."
-        </div>
-
         <p className="wf-flow-lead" style={{ margin: "26px 0 14px" }}>
           Kế hoạch thực thi 3 tháng: Từ Validate ý tưởng đến Launch &amp; Đo
-          lường
+          lường.
         </p>
 
         <div className="roadmap-wrapper-box">
           <ZaloRoadmap />
         </div>
+
+        <p className="callout-line" style={{ marginTop: "24px" }}>
+          Ba tháng không đủ để làm mọi thứ — nhưng đủ để chứng minh một điều:
+          liệu cắt đúng chỗ có tạo ra khác biệt hay không.
+        </p>
       </CommitLayout>
 
-      {/* ================= COMMIT 06: MERGE ================= */}
+      {/* ================= COMMIT 07: MEASURE IMPACT ================= */}
+      <CommitLayout
+        hash="#a02f4c"
+        cmd="measure(impact)"
+        tag={
+          <span className="tag-wrap">
+            <span>assignment 02</span>
+            <span className="skill-pill">
+              <TrendingUp size={12} /> Goal Setting
+            </span>
+          </span>
+        }
+      >
+        <h2>Cắt gọn phạm vi không có nghĩa là hạ thấp mục tiêu</h2>
+
+        <p>
+          Chọn làm ít hơn dễ khiến người ta tự thỏa hiệp luôn với một mục tiêu
+          khiêm tốn hơn. Nhưng nếu không có một con số duy nhất để đối chiếu, sẽ
+          không bao giờ biết được liệu cách "cắt" ở commit trước có đúng hay
+          không.
+        </p>
+
+        <div className="brief" style={{ marginTop: "16px" }}>
+          <div className="row">
+            <span className="label">NORTH STAR</span>
+            <span className="val">
+              <b>+15% – 20% Reply Rate within 24h</b> trên các Hội thoại quan
+              trọng (nhóm công việc, đối tác có trao đổi file/link hoặc cuộc gọi
+              trước đó).
+            </span>
+          </div>
+          <div className="row">
+            <span className="label">ĐỊNH NGHĨA "HỘI THOẠI QUAN TRỌNG"</span>
+            <span className="val">
+              Thỏa ít nhất 1 trong 2 điều kiện: (1) thuộc thư mục người dùng tự
+              gán nhãn Công việc/Gia đình/Khách hàng, hoặc (2) nằm trong top 15%
+              hội thoại có tần suất tương tác cao nhất 30 ngày gần nhất.
+            </span>
+          </div>
+        </div>
+
+        <p style={{ marginTop: "20px" }}>
+          Vì Zalo chưa có baseline nội bộ cho hành vi này, mình neo target vào
+          benchmark ngành thay vì đoán số trên trời:
+        </p>
+
+        <div className="card-row" style={{ marginTop: "16px" }}>
+          <div className="card blue" style={{ flex: 1 }}>
+            <span
+              className="card-title"
+              style={{ fontSize: "18px", marginTop: "4px" }}
+            >
+              18–22%
+            </span>
+            <p
+              style={{ fontWeight: 600, color: "var(--ink)", margin: "4px 0" }}
+            >
+              Reply rate sau Gentle Reminder
+            </p>
+            <p style={{ fontSize: "12px", color: "var(--ink-soft)" }}>
+              Benchmark in-app reminder chỉ ~10% (Leanplum). Đặt cao gấp ~2x vì
+              Zalo có captive audience và context cụ thể hơn một prompt chung
+              chung.
+            </p>
+          </div>
+          <div className="card blue" style={{ flex: 1 }}>
+            <span
+              className="card-title"
+              style={{ fontSize: "18px", marginTop: "4px" }}
+            >
+              25–30%
+            </span>
+            <p
+              style={{ fontWeight: 600, color: "var(--ink)", margin: "4px 0" }}
+            >
+              Retention Reply Later (D28)
+            </p>
+            <p style={{ fontSize: "12px", color: "var(--ink-soft)" }}>
+              Benchmark utility feature ~20% (Mixpanel). Nhỉnh hơn vì giải quyết
+              đúng pain point có tần suất xảy ra hàng ngày.
+            </p>
+          </div>
+          <div className="card blue" style={{ flex: 1 }}>
+            <span
+              className="card-title"
+              style={{ fontSize: "18px", marginTop: "4px" }}
+            >
+              4–6% DAU
+            </span>
+            <p
+              style={{ fontWeight: 600, color: "var(--ink)", margin: "4px 0" }}
+            >
+              Adoption Focus Mode (D7)
+            </p>
+            <p style={{ fontSize: "12px", color: "var(--ink-soft)" }}>
+              Ngang benchmark ~5% DAU (Mixpanel) — đây là hành vi hoàn toàn mới,
+              không kỳ vọng vượt chuẩn ngay ở tháng đầu.
+            </p>
+          </div>
+        </div>
+
+        <p className="callout-line" style={{ marginTop: "24px" }}>
+          Một target không dựa trên số liệu nào cả thì cũng chỉ là một lời hứa
+          suông — số liệu ngành, dù không hoàn hảo, vẫn là điểm neo tốt hơn cảm
+          tính.
+        </p>
+      </CommitLayout>
+
+      {/* ================= COMMIT 08: MITIGATE RISKS ================= */}
+      <CommitLayout
+        hash="#e62d19"
+        cmd="mitigate(risks)"
+        tag={
+          <span className="tag-wrap">
+            <span>assignment 02</span>
+            <span className="skill-pill">
+              <ShieldCheck size={12} /> Risk Management
+            </span>
+          </span>
+        }
+      >
+        <h2>Rủi ro cần kiểm soát trước khi Rollout</h2>
+
+        <p>
+          Làm sản phẩm không chỉ là tối đa hóa chỉ số tăng trưởng, mà còn là bảo
+          vệ trải nghiệm cốt lõi của người dùng không bị tổn hại:
+        </p>
+
+        <div
+          className="risk-matrix"
+          style={{
+            marginTop: "20px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "16px",
+          }}
+        >
+          <div
+            className="risk-card"
+            style={{
+              background: "#fff",
+              border: "1px solid var(--border-subtle)",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <div
+              className="risk-top"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                marginBottom: "8px",
+              }}
+            >
+              <BellOff size={16} color="#ef4444" />
+              <span className="risk-name" style={{ fontWeight: 700 }}>
+                1. Gây phiền (Spam Fatigue)
+              </span>
+            </div>
+            <p
+              className="risk-desc"
+              style={{
+                fontSize: "13px",
+                color: "var(--ink-soft)",
+                margin: "0 0 10px 0",
+              }}
+            >
+              <b>Dấu hiệu:</b> Tần suất notification quá dày làm user bực mình.
+            </p>
+            <div
+              className="risk-control"
+              style={{
+                fontSize: "12px",
+                background: "var(--bg-muted)",
+                padding: "8px",
+                borderRadius: "6px",
+              }}
+            >
+              <strong>Kiểm soát:</strong> Giới hạn tối đa 1 nhắc nhở/ngày/hội
+              thoại; tuyệt đối không gửi sau 22:00.
+            </div>
+          </div>
+
+          <div
+            className="risk-card"
+            style={{
+              background: "#fff",
+              border: "1px solid var(--border-subtle)",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <div
+              className="risk-top"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                marginBottom: "8px",
+              }}
+            >
+              <Activity size={16} color="#ef4444" />
+              <span className="risk-name" style={{ fontWeight: 700 }}>
+                2. Tăng áp lực (Anxiety)
+              </span>
+            </div>
+            <p
+              className="risk-desc"
+              style={{
+                fontSize: "13px",
+                color: "var(--ink-soft)",
+                margin: "0 0 10px 0",
+              }}
+            >
+              <b>Dấu hiệu:</b> Cảm giác bị theo dõi và ép trả lời.
+            </p>
+            <div
+              className="risk-control"
+              style={{
+                fontSize: "12px",
+                background: "var(--bg-muted)",
+                padding: "8px",
+                borderRadius: "6px",
+              }}
+            >
+              <strong>Kiểm soát:</strong> Copywriting mềm mỏng ("Bạn có muốn xem
+              lại...?"), cung cấp 1-chạm tắt vĩnh viễn tính năng.
+            </div>
+          </div>
+
+          <div
+            className="risk-card"
+            style={{
+              background: "#fff",
+              border: "1px solid var(--border-subtle)",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <div
+              className="risk-top"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                marginBottom: "8px",
+              }}
+            >
+              <FileWarning size={16} color="#ef4444" />
+              <span className="risk-name" style={{ fontWeight: 700 }}>
+                3. Tóm tắt sai ngữ cảnh
+              </span>
+            </div>
+            <p
+              className="risk-desc"
+              style={{
+                fontSize: "13px",
+                color: "var(--ink-soft)",
+                margin: "0 0 10px 0",
+              }}
+            >
+              <b>Dấu hiệu:</b> AI trích xuất nhầm từ các cuộc gọi tán gẫu.
+            </p>
+            <div
+              className="risk-control"
+              style={{
+                fontSize: "12px",
+                background: "var(--bg-muted)",
+                padding: "8px",
+                borderRadius: "6px",
+              }}
+            >
+              <strong>Kiểm soát:</strong> Chỉ kích hoạt khi phát hiện từ khóa
+              hành động (Action Verbs); luôn yêu cầu user duyệt trước khi lưu.
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="callout"
+          style={{
+            marginTop: "20px",
+            borderColor: "rgba(239, 68, 68, 0.3)",
+            background: "rgba(239, 68, 68, 0.04)",
+          }}
+        >
+          <b style={{ color: "#b91c1c" }}>Guardrail Trigger:</b> Nếu tỷ lệ tắt
+          thông báo (Opt-out Rate) &gt; 25% hoặc điểm CSAT giảm quá 0.3 ở nhóm
+          thử nghiệm, sẵn sàng dừng rollout để tối ưu hóa mô hình AI — dù tỷ lệ
+          phản hồi tin nhắn có tăng.
+        </div>
+
+        <p className="callout-line" style={{ marginTop: "24px" }}>
+          Vì đôi khi, thứ khó đo nhất trong một sản phẩm lại chính là niềm tin —
+          và nó chỉ mất, không dễ lấy lại.
+        </p>
+      </CommitLayout>
+
+      {/* ================= COMMIT 09: MERGE ================= */}
       <CommitLayout
         type="final"
         hash="#f1nal"
         cmd="merge(identity)"
-        tag="điều đọng lại"
+        tag={
+          <span className="tag-wrap">
+            <span>điều đọng lại</span>
+            <span className="skill-pill">
+              <Lightbulb size={12} /> Product Philosophy
+            </span>
+          </span>
+        }
       >
         <h2>Định hình bản sắc Technical PM</h2>
 
@@ -232,7 +539,7 @@ export default function ShowcasePart2() {
           Sau tất cả, điều đọng lại sâu nhất trong mình không nằm ở quy mô của
           giải pháp, mà ở những khoảng lặng rất nhỏ trong trải nghiệm — không
           chuông reo dồn dập, không rung bần bật, chỉ một dòng copy nhẹ nhàng
-          'Sẵn sàng phản hồi chưa?' thay vì hối thúc.
+          "Sẵn sàng phản hồi chưa?" thay vì hối thúc.
         </p>
 
         <div className="diff">

@@ -83,7 +83,7 @@ interface CommitLayoutProps {
   type?: "default" | "warm" | "mint" | "final";
   hash: string;
   cmd: string;
-  tag: string;
+  tag: React.ReactNode;
   children: React.ReactNode;
 }
 

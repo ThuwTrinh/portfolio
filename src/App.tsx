@@ -5,6 +5,7 @@ import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 import ZaloCaseStudy from "./components/Project/Zalo/ZaloCaseStudy";
 import ReuseUniShowcase from "./components/Project/ReuseUni/ReuseShowcase";
+import TechnicalToolbox from "./components/TechnicalToolbox/TechnicalToolbox";
 
 function App() {
   return (
@@ -26,9 +27,11 @@ function App() {
       <main id="top">
         <Hero />
         <Snapshot />
-        <ReuseUniShowcase />
-        <ZaloCaseStudy />
         <Experience />
+        <ZaloCaseStudy />
+        <ReuseUniShowcase />
+        <TechnicalToolbox />
+
         <Contact />
       </main>
       <footer>
