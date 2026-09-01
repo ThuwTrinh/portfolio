@@ -175,8 +175,8 @@ export default function ReuseUniShowcase() {
                 Chào mừng bạn đến với triển lãm{" "}
                 <strong>6 bức tranh thực thi</strong> — nơi ghi lại từng nét vẽ
                 định hình sản phẩm của mình trong vai trò{" "}
-                <strong>Technical Product Owner</strong>, từ phác thảo ý tưởng
-                đầu tiên cho đến độ hoàn thiện cuối cùng.
+                <strong>Product Manager</strong>, từ phác thảo ý tưởng đầu tiên
+                cho đến độ hoàn thiện cuối cùng.
               </p>
             </div>
           </div>

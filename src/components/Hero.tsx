@@ -56,12 +56,13 @@ function Hero() {
         transition={{ duration: 0.7, delay: 0.12 }}
       >
         <p className="eyebrow">
-          <span className="status-dot" /> SẴN SÀNG CHO CƠ HỘI PRODUCT · Thành Phố Hồ Chí Minh
+          <span className="status-dot" /> SẴN SÀNG CHO CƠ HỘI PRODUCT · Thành
+          Phố Hồ Chí Minh
         </p>
         <h1 id="hero-title">
           Chào bạn, mình là <span className="hero-name">Anh Thư</span>
           <br />
-          <span className="hero-role">Technical Product Owner</span>
+          <span className="hero-role">Product Management</span>
         </h1>
         <p className="typewriter" aria-live="polite">
           “{typedLine}

@@ -6,6 +6,7 @@ import {
   Code2,
   Database,
   Network,
+  LineChart,
 } from "lucide-react";
 import "./TechnicalToolbox.css";
 import Sparkles from "../Sparkles";
@@ -13,6 +14,7 @@ import Sparkles from "../Sparkles";
 import sspsUseCaseImg from "../../assets/ssps_usecase_diagram.png";
 import sqlResultImg from "../../assets/restaurant_sql_revenue_result.png";
 import erdDiagramImg from "../../assets/restaurant_erd_diagram.png";
+import ga4AnalyticsImg from "../../assets/ga4_funnel_analytics.png";
 
 interface SkillProof {
   id: string;
@@ -29,45 +31,60 @@ interface SkillProof {
 
 const skillsList: SkillProof[] = [
   {
+    id: "skill-ga4",
+    category: "Product & Data Analytics",
+    title: "Phân tích Phễu Chuyển Đổi & Phát Hiện Bất Thường Dữ Liệu",
+    project: "E-commerce Funnel (GA4)",
+    projectUrl:
+      "https://docs.google.com/document/d/18VIstypqma6MsIB18-lnOJ-fVFW1H-Px4uAQARu93qs/edit?usp=sharing",
+    artifactLabel: "GA4 Funnel & User Journey",
+    description:
+      "Phân tích hành trình đặt hàng đa kênh, bóc tách điểm nghẽn Checkout trên Mobile (ma sát phí ship & thẻ tín dụng); đồng thời nhận diện và bóc tách ~40k phiên bot traffic bất thường để bảo vệ độ chuẩn xác của dữ liệu.",
+    takeaway:
+      "Định lượng ma sát trải nghiệm và đề xuất giải pháp tối ưu chuyển đổi dựa trên dữ liệu hành vi thực tế.",
+    image: ga4AnalyticsImg,
+    icon: <LineChart size={15} />,
+  },
+  {
     id: "skill-prd",
-    category: "Product Requirement",
+    category: "Product Requirement & Delivery",
     title: "Đặc tả PRD, User Stories & Kịch bản Use Case",
     project: "HCMUT_SSPS",
     projectUrl:
       "https://drive.google.com/file/d/1U-PeyDG1E-8cjje1H9uiDZ3M1eyCZt8Q/view?usp=sharing",
-    artifactLabel: "Use Case Diagram",
+    artifactLabel: "Use Case & Flow Specs",
     description:
-      "Đặc tả trọn bộ tài liệu PRD, phân rã backlog thành các User Stories có tiêu chuẩn nghiệm thu (AC), và thiết kế kịch bản Use Case chi tiết giúp team dev nắm bắt chuẩn luồng nghiệp vụ.",
+      "Chuyển hóa bài toán người dùng thành tài liệu PRD, phân rã backlog thành User Stories với tiêu chuẩn nghiệm thu (Acceptance Criteria) rõ ràng, làm cầu nối truyền đạt logic nghiệp vụ cho đội ngũ kỹ thuật.",
     takeaway:
-      "Bảo đảm tính chặt chẽ về nghiệp vụ và đúng phạm vi trước khi bước vào giai đoạn code.",
+      "Đảm bảo sự thấu hiểu đồng nhất giữa Business và Engineering trước khi bước vào giai đoạn phát triển.",
     image: sspsUseCaseImg,
     icon: <Code2 size={15} />,
   },
   {
     id: "skill-sql",
-    category: "Data Querying",
-    title: "Truy vấn SQL & Bóc tách doanh thu",
-    project: "Restaurant DB",
+    category: "Business Intelligence & SQL",
+    title: "Truy vấn Dữ liệu & Bóc tách Hiệu quả Kinh doanh",
+    project: "Restaurant Management DB",
     projectUrl: "https://github.com/PTToNhu/Database-System-Assignment-2",
-    artifactLabel: "SQL Query Results",
+    artifactLabel: "SQL Query Metrics",
     description:
-      "Tự viết các câu lệnh và thủ tục SQL để tính toán doanh thu theo chi nhánh, lọc các điểm bán đạt KPI phục vụ việc đánh giá hiệu quả kinh doanh.",
+      "Chủ động xây dựng câu lệnh SQL đa bảng, trích xuất và đo lường doanh thu theo từng chi nhánh cùng các chỉ số KPI vận hành, phục vụ việc đánh giá hiệu suất kinh doanh độc lập.",
     takeaway:
-      "Chủ động truy vấn và phân tích số liệu không phụ thuộc vào data team.",
+      "Chủ động khai thác dữ liệu có cấu trúc để đưa ra các phân tích định lượng mà không phụ thuộc data team.",
     image: sqlResultImg,
     icon: <Database size={15} />,
   },
   {
     id: "skill-erd",
-    category: "System Design",
-    title: "Thiết kế mô hình dữ liệu & Logic nghiệp vụ",
-    project: "Restaurant DB",
+    category: "System & Logic Design",
+    title: "Mô hình hóa Luồng Nghiệp vụ & Cơ sở Dữ liệu",
+    project: "Restaurant Management DB",
     projectUrl: "https://github.com/PTToNhu/Database-System-Assignment-2",
-    artifactLabel: "E-ERD System Model",
+    artifactLabel: "E-ERD Database Model",
     description:
-      "Thiết kế sơ đồ quan hệ E-ERD, chuẩn hóa dữ liệu và xây dựng Trigger/Stored Procedure để tự động hóa toàn bộ logic: phân hạng thành viên, áp dụng ưu đãi và trừ kho nguyên liệu theo món ăn.",
+      "Thiết kế sơ đồ quan hệ E-ERD chuẩn hóa và xây dựng quy tắc tự động hóa luồng nghiệp vụ (tính điểm thành viên, áp dụng khuyến mãi, cập nhật tồn kho) nhằm đảm bảo tính toàn vẹn hệ thống.",
     takeaway:
-      "Tối ưu hóa tính toàn vẹn dữ liệu và thông suốt luồng xử lý backend.",
+      "Thấu hiểu kiến trúc dữ liệu nền tảng để phối hợp trơn tru cùng đội ngũ Backend và Solution Architect.",
     image: erdDiagramImg,
     icon: <Network size={15} />,
   },
@@ -114,7 +131,7 @@ export default function TechnicalToolbox() {
           </p>
         </motion.div>
 
-        {/* Danh sách Skills: Mỗi Card tự canh Scroll riêng */}
+        {/* Danh sách Skills */}
         <div className="toolbox-list">
           {skillsList.map((skill) => (
             <motion.div
