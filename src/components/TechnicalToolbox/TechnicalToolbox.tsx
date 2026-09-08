@@ -7,6 +7,7 @@ import {
   Database,
   Network,
   LineChart,
+  BarChart,
 } from "lucide-react";
 import "./TechnicalToolbox.css";
 import Sparkles from "../Sparkles";
@@ -15,6 +16,7 @@ import sspsUseCaseImg from "../../assets/ssps_usecase_diagram.png";
 import sqlResultImg from "../../assets/restaurant_sql_revenue_result.png";
 import erdDiagramImg from "../../assets/restaurant_erd_diagram.png";
 import ga4AnalyticsImg from "../../assets/ga4_funnel_analytics.png";
+import dashboardImg from "../../assets/dashboard.png";
 
 interface SkillProof {
   id: string;
@@ -44,6 +46,20 @@ const skillsList: SkillProof[] = [
       "Định lượng ma sát trải nghiệm và đề xuất giải pháp tối ưu chuyển đổi dựa trên dữ liệu hành vi thực tế.",
     image: ga4AnalyticsImg,
     icon: <LineChart size={15} />,
+  },
+  {
+    id: "skill-powerbi",
+    category: "Data Visualization & BI",
+    title: "Trực quan hóa Dữ liệu & Phân tích Product Mix",
+    project: "CompanyX BI System",
+    projectUrl: "https://github.com/MartinDawn/CompanyX.git",
+    artifactLabel: "Power BI Dashboard",
+    description:
+      "Dùng SQL khám phá dữ liệu và lên yêu cầu trích xuất (Data Requirements) cho team Data. Xây dựng Power BI Dashboard để trực quan hóa doanh thu, lợi nhuận và hiệu quả của từng dòng sản phẩm.",
+    takeaway:
+      "Đưa ra quyết định dựa trên dữ liệu (Data-driven): Đề xuất đẩy mạnh sản xuất dòng Standard đang bán chạy và hạn chế dòng Tourist kém hiệu quả.",
+    image: dashboardImg,
+    icon: <BarChart size={15} />,
   },
   {
     id: "skill-prd",
