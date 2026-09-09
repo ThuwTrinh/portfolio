@@ -14,10 +14,10 @@ import {
 
 import LeanCanvasReuseUni from "./LeanCanvas/LeanCanvasReuseUni";
 import MVPReuseUni from "./MVPReuseUni/MVPReuseUni";
-import flowImg from "../../../assets/userflow.png";
-import screensOverviewImg from "../../../assets/figma-screens-overview.png";
-import scrumImg from "../../../assets/scrum-board.png";
-import testImg from "../../../assets/coverage.png";
+import flowImg from "../../../assets/userflow.webp";
+import screensOverviewImg from "../../../assets/figma-screens-overview.webp";
+import scrumImg from "../../../assets/scrum-board.webp";
+import testImg from "../../../assets/coverage.webp";
 import "./ReuseShowcase.css";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -216,6 +216,7 @@ export default function ReuseUniShowcase() {
                     alt={t(
                       `projects.reuse.exhibits.${item.translationKey}.alt`,
                     )}
+                    loading="lazy"
                   />
                 )}
               </div>

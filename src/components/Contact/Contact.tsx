@@ -2,7 +2,7 @@ import { motion, type Variants } from "framer-motion";
 import { Mail, ArrowUpRight, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import "./Contact.css";
-import avatarImg from "../../assets/img2.jpg";
+import avatarImg from "../../assets/img2.webp";
 import { useTranslation } from "react-i18next";
 
 // Hiệu ứng container điều phối xuất hiện tuần tự
@@ -48,6 +48,7 @@ export default function Contact() {
         className="contact-avatar-bg"
         src={avatarImg}
         alt={t("contact.avatarAlt")}
+        loading="lazy"
         initial={{ opacity: 0, scale: 0.96 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.2 }}

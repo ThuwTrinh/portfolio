@@ -332,8 +332,7 @@ const projectsEn = {
           'Instead of looking for a "cool" feature to build, I looked back at my own experiences and those of the friends around me — young people who are studying, working, and taking on the responsibilities of project teams all at once. The biggest pain point wasn’t the lack of ways to have fun, but the',
         insightQuestion:
           "<0>pressure of being pulled in too many directions, with too many roles packed into the same inbox.</0>",
-        insightAfter:
-          "",
+        insightAfter: "",
         personaBadge: "THE CONTEXT SWITCHERS",
         personaChats: ["🏠 Family", "📚 Study", "💼 Work", "🎓 Internship"],
         personaSub:
@@ -425,8 +424,7 @@ const projectsEn = {
           {
             name: "2. Anxiety",
             signal: "Signal: users feel watched and pressured to reply.",
-            control:
-              "use gentle copy and provide a one-tap permanent opt-out.",
+            control: "use gentle copy and provide a one-tap permanent opt-out.",
           },
           {
             name: "3. Wrong-context summary",

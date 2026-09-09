@@ -1,16 +1,11 @@
-﻿import {
-  Target,
-  Search,
-  Scale,
-  LineChart,
-} from "lucide-react";
+﻿import { Target, Search, Scale, LineChart } from "lucide-react";
 import { CommitLayout } from "./ZaloCaseStudy";
 import { Trans, useTranslation } from "react-i18next";
 
-import flow1 from "../../../assets/flow_page1.jpg";
-import flow2 from "../../../assets/flow_page2.jpg";
-import flow3 from "../../../assets/flow_page3.jpg";
-import flow4 from "../../../assets/flow_page4.jpg";
+import flow1 from "../../../assets/flow_page1.webp";
+import flow2 from "../../../assets/flow_page2.webp";
+import flow3 from "../../../assets/flow_page3.webp";
+import flow4 from "../../../assets/flow_page4.webp";
 
 export default function ShowcasePart1() {
   const { t } = useTranslation();
@@ -260,6 +255,7 @@ export default function ShowcasePart1() {
               <img
                 src={flow1}
                 alt={t("projects.zalo.part1.commit3.step1Title")}
+                loading="lazy"
               />
             </div>
             <div className="wf-card-note">
@@ -282,6 +278,7 @@ export default function ShowcasePart1() {
               <img
                 src={flow2}
                 alt={t("projects.zalo.part1.commit3.step2Title")}
+                loading="lazy"
               />
             </div>
             <div className="wf-card-note">
@@ -303,6 +300,7 @@ export default function ShowcasePart1() {
               <img
                 src={flow3}
                 alt={t("projects.zalo.part1.commit3.step3Title")}
+                loading="lazy"
               />
             </div>
             <div className="wf-card-note single-text">
@@ -322,6 +320,7 @@ export default function ShowcasePart1() {
               <img
                 src={flow4}
                 alt={t("projects.zalo.part1.commit3.step4Title")}
+                loading="lazy"
               />
             </div>
             <div className="wf-card-note single-text">

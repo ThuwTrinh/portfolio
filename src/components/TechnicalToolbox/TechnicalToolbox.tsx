@@ -12,11 +12,11 @@ import {
 import "./TechnicalToolbox.css";
 import Sparkles from "../Sparkles";
 
-import sspsUseCaseImg from "../../assets/ssps_usecase_diagram.png";
-import sqlResultImg from "../../assets/restaurant_sql_revenue_result.png";
-import erdDiagramImg from "../../assets/restaurant_erd_diagram.png";
-import ga4AnalyticsImg from "../../assets/ga4_funnel_analytics.png";
-import dashboardImg from "../../assets/dashboard.png";
+import sspsUseCaseImg from "../../assets/ssps_usecase_diagram.webp";
+import sqlResultImg from "../../assets/restaurant_sql_revenue_result.webp";
+import erdDiagramImg from "../../assets/restaurant_erd_diagram.webp";
+import ga4AnalyticsImg from "../../assets/ga4_funnel_analytics.webp";
+import dashboardImg from "../../assets/dashboard.webp";
 import { useTranslation } from "react-i18next";
 
 interface SkillProof {
@@ -169,6 +169,7 @@ export default function TechnicalToolbox() {
                     <img
                       src={skill.image}
                       alt={t(`toolbox.items.${skill.translationKey}.title`)}
+                      loading="lazy"
                     />
                   </div>
                 </div>

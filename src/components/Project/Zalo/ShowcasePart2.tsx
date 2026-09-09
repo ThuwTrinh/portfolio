@@ -7,7 +7,7 @@
 } from "lucide-react";
 import { CommitLayout } from "./ZaloCaseStudy";
 import ZaloRoadmap from "./ZaloRoadmap/ZaloRoadmap";
-import loopDiagram from "../../../assets/loop_diagram.png";
+import loopDiagram from "../../../assets/loop_diagram.webp";
 import { Trans, useTranslation } from "react-i18next";
 
 export default function ShowcasePart2() {
@@ -132,7 +132,11 @@ export default function ShowcasePart2() {
 
         {i18n.language !== "en" && (
           <div className="loop-image-wrap">
-            <img src={loopDiagram} alt="Vòng lặp tâm lý Reply Anxiety" />
+            <img
+              src={loopDiagram}
+              alt="Vòng lặp tâm lý Reply Anxiety"
+              loading="lazy"
+            />
           </div>
         )}
       </CommitLayout>

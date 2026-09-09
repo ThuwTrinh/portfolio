@@ -1,6 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { Languages, Target, FileText, ArrowUpRight } from "lucide-react";
-import bkuLogo from "../../assets/bku.png";
+import bkuLogo from "../../assets/bku.webp";
 import "./Snapshot.css";
 import Sparkles from "../Sparkles";
 import { useTranslation } from "react-i18next";
@@ -9,7 +9,9 @@ const snapshotData = [
   {
     id: 1,
     size: "large",
-    icon: <img src={bkuLogo} alt="" className="snapshot-logo-img" />,
+    icon: (
+      <img src={bkuLogo} alt="" className="snapshot-logo-img" loading="lazy" />
+    ),
     titleKey: "snapshot.degree",
     subKey: "snapshot.degreeSub",
     detailsKey: "snapshot.degreeDetails",

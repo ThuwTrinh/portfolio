@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState, type MouseEvent } from "react";
 import { motion } from "framer-motion";
-import heroImg from "../assets/img1.jpg";
-import cvFile from "../assets/cv.pdf";
+import heroImg from "../assets/img1.webp";
 import Sparkles from "./Sparkles";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -77,7 +76,7 @@ function Hero() {
           </a>
           <a
             className="text-link"
-            href={cvFile}
+            href="/cv.pdf"
             target="_blank"
             rel="noreferrer"
           >
@@ -108,7 +107,12 @@ function Hero() {
           animate={{ rotateX: tilt.y, rotateY: tilt.x }}
           transition={{ type: "spring", stiffness: 180, damping: 18 }}
         >
-          <img src={heroImg} alt={t("hero.portraitAlt")} />
+          <img
+            src={heroImg}
+            alt={t("hero.portraitAlt")}
+            width={1000}
+            height={1000}
+          />
         </motion.div>
         <motion.div
           className="floating-card card-build"

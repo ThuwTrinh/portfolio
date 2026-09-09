@@ -167,7 +167,8 @@ export default function LeanCanvasReuseUni({
           <div className="bottom-row-items">
             {cost.map((item, index) => (
               <span key={item}>
-                • <Trans
+                •{" "}
+                <Trans
                   i18nKey={`projects.lean.cost.${index}`}
                   components={[<strong />]}
                 />
@@ -184,7 +185,8 @@ export default function LeanCanvasReuseUni({
           <div className="bottom-row-items">
             {revenue.map((item, index) => (
               <span key={item}>
-                • <Trans
+                •{" "}
+                <Trans
                   i18nKey={`projects.lean.revenue.${index}`}
                   components={[<strong />]}
                 />
