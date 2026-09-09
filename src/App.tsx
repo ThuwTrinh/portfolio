@@ -6,21 +6,40 @@ import Contact from "./components/Contact/Contact";
 import ZaloCaseStudy from "./components/Project/Zalo/ZaloCaseStudy";
 import ReuseUniShowcase from "./components/Project/ReuseUni/ReuseShowcase";
 import TechnicalToolbox from "./components/TechnicalToolbox/TechnicalToolbox";
+import { useTranslation } from "react-i18next";
+import i18n from "./i18n";
+import { Globe } from "lucide-react";
 
 function App() {
+  const { t } = useTranslation();
+  const isVietnamese = i18n.language === "vi";
+
+  const toggleLanguage = () => {
+    void i18n.changeLanguage(isVietnamese ? "en" : "vi");
+  };
+
   return (
     <div className="site-shell">
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Back to top">
+        <a className="wordmark" href="#top" aria-label={t("nav.backToTop")}>
           <span className="wordmark-mark">C</span>
-          <span>Anh Thu / Product</span>
+          <span>{t("hero.name")} / Product</span>
         </a>
-        <nav aria-label="Main navigation">
-          <a href="#about">Giới thiệu</a>
-          <a href="#work">Dự án</a>
-          <a href="#experience">Hành trình</a>
+        <button
+          className="language-toggle"
+          type="button"
+          onClick={toggleLanguage}
+          aria-label={t("language.switchTo")}
+        >
+          <Globe size={14} strokeWidth={1.8} aria-hidden="true" />
+          <span>{isVietnamese ? "EN" : "VI"}</span>
+        </button>
+        <nav aria-label={t("nav.main")}>
+          <a href="#about">{t("nav.about")}</a>
+          <a href="#work">{t("nav.work")}</a>
+          <a href="#experience">{t("nav.experience")}</a>
           <a className="nav-contact" href="#contact">
-            Liên hệ <span aria-hidden="true">↗</span>
+            {t("nav.contact")} <span aria-hidden="true">↗</span>
           </a>
         </nav>
       </header>
@@ -35,8 +54,8 @@ function App() {
         <Contact />
       </main>
       <footer>
-        <span>© 2024 Anh Thu</span>
-        <span>Built with curiosity &amp; care</span>
+        <span>© 2024 {t("hero.name")}</span>
+        <span>{t("footer.builtWith")}</span>
       </footer>
     </div>
   );

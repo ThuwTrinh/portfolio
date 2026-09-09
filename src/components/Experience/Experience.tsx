@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles, Footprints, MapPin } from "lucide-react";
 import "./Experience.css";
+import { useTranslation } from "react-i18next";
 
 // Mảng tọa độ chuẩn của bạn
 const STAGE_OFFSETS = ["5%", "32%", "59%", "87%"];
@@ -10,58 +11,35 @@ const roadStages = [
   {
     index: 0,
     step: "01",
-    km: "KM 0.0",
-    tag: "GỐC RỄ TƯ DUY",
-    title: "Những bài toán không có đáp án mẫu",
-    lens: "Chuyên Toán • THPT Chuyên Quang Trung",
-    shortDesc:
-      "Những năm tháng học chuyên Toán rèn cho em thói quen không ngại bài toán khó. Khi đối mặt với sự mơ hồ, phản xạ đầu tiên là đào sâu tìm bản chất chứ không học vẹt công thức.",
-    takeaway:
-      "Tư duy gốc rễ: Luôn bóc tách vấn đề về những điều cơ bản nhất trước khi tìm lời giải.",
+    km: "0.0",
+    translationKey: "stage1",
     side: "left",
   },
   {
     index: 1,
     step: "02",
-    km: "KM 2.5",
-    tag: "NỀN TẢNG KỸ THUẬT",
-    title: "Làm chủ dòng code & Hệ thống",
-    lens: "Computer Science • Bách Khoa HCMUT",
-    shortDesc:
-      "Những đêm debug đồ án lớn ở Bách Khoa cho em cái nhìn thực tế về cách phần mềm vận hành: code chạy được là một chuyện, hệ thống chịu tải tốt và dễ bảo trì hay không lại là chuyện khác.",
-    takeaway:
-      "Hiểu sâu về kỹ thuật để biết rõ giới hạn công nghệ và nói cùng ngôn ngữ với Dev.",
+    km: "2.5",
+    translationKey: "stage2",
     side: "right",
   },
   {
     index: 2,
     step: "03",
-    km: "KM 5.0",
-    tag: "BƯỚC NGOẶT THỰC TẾ",
-    title: "Khi tính năng tâm huyết bị ngó lơ",
-    lens: "Mobile App • Interlink Labs",
-    shortDesc:
-      "Làm app thực tế, nhìn người dùng drop-off ở những tính năng mình mất cả tháng để viết code, em mới vỡ lẽ: Code xịn đến đâu mà giải sai nhu cầu thì sản phẩm vẫn bị bỏ xó.",
-    takeaway:
-      "Chuyển dịch tư duy: Đừng chỉ hỏi 'làm như thế nào', hãy luôn tự hỏi 'tại sao người ta phải dùng?'.",
+    km: "5.0",
+    translationKey: "stage3",
     side: "left",
   },
   {
     index: 3,
     step: "04",
-    km: "KM 10.0",
-    tag: "ĐÍCH ĐẾN HIỆN TẠI",
-    title: "Làm chủ sản phẩm từ đầu đến cuối",
-    lens: "Product Management & AI",
-    shortDesc:
-      "Em kết hợp logic toán học, nền tảng kỹ thuật và làn sóng AI để nhận trọn trách nhiệm cho sản phẩm—từ lúc bóc tách ý tưởng sơ khai cho đến trải nghiệm cuối cùng trên tay người dùng.",
-    takeaway:
-      "Biến những công nghệ phức tạp thành trải nghiệm số đơn giản và tạo ra giá trị thật.",
+    km: "10.0",
+    translationKey: "stage4",
     side: "right",
   },
 ];
 
 export default function Experience() {
+  const { t } = useTranslation();
   const [visibleStages, setVisibleStages] = useState<number[]>([0]);
 
   const handleStageEnter = (index: number) => {
@@ -86,15 +64,13 @@ export default function Experience() {
       <header className="road-header">
         <div className="road-badge">
           <Sparkles size={14} className="text-sky-500" />
-          <span>THE PRODUCT ODYSSEY</span>
+          <span>{t("experience.badge")}</span>
         </div>
         <h2>
-          Con Đường Chuyển Dịch <br />
-          <em>Từ Code sang Product</em>
+          {t("experience.title")} <br />
+          <em>{t("experience.titleAccent")}</em>
         </h2>
-        <p>
-          Hành trình từng bước định hình bản năng sản phẩm qua 4 cột mốc đáng nhớ.
-        </p>
+        <p>{t("experience.intro")}</p>
       </header>
 
       {/* Sân khấu Roadmap */}
@@ -146,7 +122,9 @@ export default function Experience() {
             <div className="traveler-core">
               <Footprints size={15} className="text-sky-500" />
             </div>
-            <span className="traveler-tag">STATION 0{activeStage + 1}</span>
+            <span className="traveler-tag">
+              {t("experience.station", { number: `0${activeStage + 1}` })}
+            </span>
           </motion.div>
         </div>
 
@@ -175,16 +153,26 @@ export default function Experience() {
                     >
                       <div className="card-top-bar">
                         <div className="card-badge-group">
-                          <span className="stage-pill-tag">{stage.tag}</span>
-                          <span className="stage-lens-tag">{stage.lens}</span>
+                          <span className="stage-pill-tag">
+                            {t(`experience.${stage.translationKey}.tag`)}
+                          </span>
+                          <span className="stage-lens-tag">
+                            {t(`experience.${stage.translationKey}.lens`)}
+                          </span>
                         </div>
                       </div>
 
-                      <h3 className="stage-title">{stage.title}</h3>
-                      <p className="stage-desc">{stage.shortDesc}</p>
+                      <h3 className="stage-title">
+                        {t(`experience.${stage.translationKey}.title`)}
+                      </h3>
+                      <p className="stage-desc">
+                        {t(`experience.${stage.translationKey}.desc`)}
+                      </p>
 
                       <div className="stage-takeaway-simple">
-                        <p className="takeaway-text">{stage.takeaway}</p>
+                        <p className="takeaway-text">
+                          {t(`experience.${stage.translationKey}.takeaway`)}
+                        </p>
                       </div>
                     </motion.div>
                   ) : (
@@ -198,10 +186,14 @@ export default function Experience() {
                     >
                       <div className="signpost-head">
                         <MapPin size={12} className="text-sky-500" />
-                        <span>{stage.km}</span>
+                        <span>
+                          {t("experience.km", { distance: stage.km })}
+                        </span>
                       </div>
                       <div className="signpost-body">
-                        <strong>STATION {stage.step}</strong>
+                        <strong>
+                          {t("experience.station", { number: stage.step })}
+                        </strong>
                       </div>
                     </motion.div>
                   )}
@@ -224,16 +216,26 @@ export default function Experience() {
                     >
                       <div className="card-top-bar">
                         <div className="card-badge-group">
-                          <span className="stage-pill-tag">{stage.tag}</span>
-                          <span className="stage-lens-tag">{stage.lens}</span>
+                          <span className="stage-pill-tag">
+                            {t(`experience.${stage.translationKey}.tag`)}
+                          </span>
+                          <span className="stage-lens-tag">
+                            {t(`experience.${stage.translationKey}.lens`)}
+                          </span>
                         </div>
                       </div>
 
-                      <h3 className="stage-title">{stage.title}</h3>
-                      <p className="stage-desc">{stage.shortDesc}</p>
+                      <h3 className="stage-title">
+                        {t(`experience.${stage.translationKey}.title`)}
+                      </h3>
+                      <p className="stage-desc">
+                        {t(`experience.${stage.translationKey}.desc`)}
+                      </p>
 
                       <div className="stage-takeaway-simple">
-                        <p className="takeaway-text">{stage.takeaway}</p>
+                        <p className="takeaway-text">
+                          {t(`experience.${stage.translationKey}.takeaway`)}
+                        </p>
                       </div>
                     </motion.div>
                   ) : (
@@ -247,10 +249,14 @@ export default function Experience() {
                     >
                       <div className="signpost-head">
                         <MapPin size={12} className="text-sky-500" />
-                        <span>{stage.km}</span>
+                        <span>
+                          {t("experience.km", { distance: stage.km })}
+                        </span>
                       </div>
                       <div className="signpost-body">
-                        <strong>STATION {stage.step}</strong>
+                        <strong>
+                          {t("experience.station", { number: stage.step })}
+                        </strong>
                       </div>
                     </motion.div>
                   )}

@@ -1,0 +1,141 @@
+{
+  "language": { "switchTo": "Vietnamese", "current": "EN" },
+  "nav": {
+    "backToTop": "Back to top",
+    "main": "Main navigation",
+    "about": "About",
+    "work": "Projects",
+    "experience": "Journey",
+    "contact": "Contact"
+  },
+  "footer": { "builtWith": "Built with curiosity & care" },
+  "hero": {
+    "eyebrow": "OPEN TO PRODUCT OPPORTUNITIES · HO CHI MINH CITY",
+    "greeting": "Hi, I'm",
+    "name": "Anh Thu",
+    "role": "Product Management",
+    "typewriter": [
+      "Untangling problems hidden in ambiguity",
+      "Turning user insights into product priorities",
+      "Building with purpose & creating real value"
+    ],
+    "intro": "From a technical foundation to a product mindset — I enjoy untangling ambiguous problems and turning them into simple, useful digital experiences.",
+    "explore": "Explore my journey",
+    "featuredProjects": "Featured projects",
+    "cv": "View CV",
+    "visualLabel": "Product management visual",
+    "portraitAlt": "Portrait of Trinh Thi Anh Thu",
+    "builder": "<0>Builder</0> <1>Mindset</1>",
+    "learner": "<0>Continuous</0> <1>Learner</1>",
+    "userCentric": "<0>User-</0><1>Centric</1>"
+  },
+  "snapshot": {
+    "ariaLabel": "Quick snapshot",
+    "eyebrow": "QUICK SNAPSHOT",
+    "title": "A Snapshot of Me",
+    "degree": "Outstanding Graduate",
+    "degreeSub": "HCMUT • Computer Science",
+    "degreeDetails": "GPA: 3.6 / 4.0 (8.32/10)\nGraduating Nov 2026",
+    "transcript": "View transcript",
+    "language": "English Proficiency",
+    "languageSub": "TOEIC 760 (Listening & Reading)",
+    "languageDetails": "Confident communication & effective collaboration in international environments",
+    "mindset": "Product Mindset",
+    "mindsetSub": "Technical Feasibility",
+    "mindsetDetails": "Bridging technical constraints with business needs, with AI-powered execution",
+    "logoAlt": "HCMUT logo"
+  },
+  "experience": {
+    "badge": "THE PRODUCT ODYSSEY",
+    "title": "The Shift",
+    "titleAccent": "From Code to Product",
+    "intro": "Four milestones that shaped the way I think about products.",
+    "station": "STATION {{number}}",
+    "km": "KM {{distance}}",
+    "stage1": {
+      "tag": "ROOTS OF THINKING",
+      "title": "Problems without a template",
+      "lens": "Math • Quang Trung High School for the Gifted",
+      "desc": "Years of studying advanced Mathematics taught me not to shy away from hard problems. When faced with ambiguity, my first instinct is to dig deeper and find the underlying logic—not memorize a formula.",
+      "takeaway": "Think from first principles: Break problems down to their fundamentals before looking for answers."
+    },
+    "stage2": {
+      "tag": "TECHNICAL FOUNDATION",
+      "title": "Learning how code & systems work",
+      "lens": "Computer Science • HCMUT",
+      "desc": "Long nights debugging major projects at HCMUT gave me a practical view of how software works: getting code to run is one thing; building systems that scale and stay maintainable is another.",
+      "takeaway": "Understand technology deeply to know its limits and speak the same language as engineers."
+    },
+    "stage3": {
+      "tag": "THE REALITY CHECK",
+      "title": "When a feature gets ignored",
+      "lens": "Mobile App • Interlink Labs",
+      "desc": "Building a real-world app and watching users drop off from features I spent weeks coding taught me a hard lesson: great code means little if it solves the wrong problem.",
+      "takeaway": "Shift the question: Don't just ask 'how do we build it?' Ask 'why would people use it?'"
+    },
+    "stage4": {
+      "tag": "WHERE I AM TODAY",
+      "title": "Owning the product end to end",
+      "lens": "Product Management & AI",
+      "desc": "I bring together mathematical thinking, technical foundations, and AI to take ownership of the product journey—from shaping a rough idea to crafting the final experience.",
+      "takeaway": "Turn complex technology into simple digital experiences that create real value."
+    }
+  },
+  "contact": {
+    "status": "OPEN TO NEW OPPORTUNITIES",
+    "title": "Let’s build",
+    "titleAccent": "something real.",
+    "email": "Send me an email",
+    "copyEmail": "Copy email",
+    "copied": "Email copied",
+    "avatarAlt": "Trinh Thi Anh Thu"
+  },
+  "toolbox": {
+    "ariaLabel": "Skills showcase",
+    "eyebrow": "SKILL SHOWCASE",
+    "title": "Supporting Skills",
+    "intro": "Practical skills demonstrated through real products and hands-on projects.",
+    "items": {
+      "ga4": {
+        "category": "Product & Data Analytics",
+        "title": "Conversion Funnel Analysis & Anomaly Detection",
+        "project": "E-commerce Funnel (GA4)",
+        "artifact": "GA4 Funnel & User Journey",
+        "description": "Analyzed the multi-channel purchase journey, identified Mobile Checkout friction around shipping fees and credit cards, and uncovered ~40K anomalous bot sessions to protect data accuracy.",
+        "takeaway": "Quantified experience friction and proposed data-driven improvements to conversion."
+      },
+      "powerbi": {
+        "category": "Data Visualization & BI",
+        "title": "Data Visualization & Product Mix Analysis",
+        "project": "CompanyX BI System",
+        "artifact": "Power BI Dashboard",
+        "description": "Used SQL to explore data and define extraction requirements for the Data team. Built a Power BI dashboard to visualize revenue, profit, and performance across product lines.",
+        "takeaway": "Enabled data-driven decisions: scale the strong-performing Standard line while reducing focus on the less effective Tourist line."
+      },
+      "prd": {
+        "category": "Product Requirement & Delivery",
+        "title": "PRDs, User Stories & Use Case Specifications",
+        "project": "HCMUT_SSPS",
+        "artifact": "Use Case & Flow Specs",
+        "description": "Translated user problems into PRDs, broke down the backlog into User Stories with clear Acceptance Criteria, and bridged business logic with engineering.",
+        "takeaway": "Create shared understanding between Business and Engineering before development begins."
+      },
+      "sql": {
+        "category": "Business Intelligence & SQL",
+        "title": "Data Queries & Business Performance Analysis",
+        "project": "Restaurant Management DB",
+        "artifact": "SQL Query Metrics",
+        "description": "Built multi-table SQL queries to extract revenue by branch and key operational KPIs, enabling independent performance analysis.",
+        "takeaway": "Leverage structured data to generate quantitative insights without relying entirely on the data team."
+      },
+      "erd": {
+        "category": "System & Logic Design",
+        "title": "Business Flow & Database Modeling",
+        "project": "Restaurant Management DB",
+        "artifact": "E-ERD Database Model",
+        "description": "Designed a normalized E-ERD and modeled automated business rules for membership points, promotions, and inventory updates to maintain system integrity.",
+        "takeaway": "Understand the data foundation to collaborate effectively with Backend and Solution Architecture teams."
+      }
+    }
+  }
+}

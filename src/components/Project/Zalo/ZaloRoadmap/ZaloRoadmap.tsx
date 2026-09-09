@@ -1,69 +1,69 @@
 import { motion } from "framer-motion";
 import "./ZaloRoadmap.css";
+import { useTranslation } from "react-i18next";
 
 const roadmapData = [
   {
     id: "smart-reply",
-    title: "Smart Reply Reminder",
+    translationKey: "smartReply",
     colorClass: "theme-blue",
     tracks: [
       {
-        name: "A. Re-notify",
-        m1: [
-          "Xác định logic kích hoạt (Trigger Logic)",
-          "Thử nghiệm nội bộ (Internal Test)",
-        ],
-        m2: ["Chạy thử nghiệm A/B test 10–20% user"],
-        m3: [
-          "Mở rộng Rollout 50%+ (nếu đạt chuẩn)",
-          "Tinh chỉnh ngưỡng kích hoạt (Threshold)",
-        ],
+        translationKey: "reNotify",
       },
       {
-        name: "B. Reply Later",
-        m1: ["Xây dựng luồng trải nghiệm & Logic nghiệp vụ"],
-        m2: ["Phát triển tính năng & Test nội bộ"],
-        m3: ["Mở thử nghiệm Beta cho người dùng"],
+        translationKey: "replyLater",
       },
     ],
   },
   {
     id: "focus-mode",
-    title: "Focus Mode",
+    translationKey: "focusMode",
     colorClass: "theme-coral",
     tracks: [
       {
-        name: "",
-        m1: ["Thiết kế Wireframe & Định hình UX"],
-        m2: ["Phát triển bản thử nghiệm (Build MVP)"],
-        m3: ["Bắt đầu chạy thử nghiệm A/B trên mobile"],
+        translationKey: "main",
       },
     ],
   },
   {
     id: "smart-org",
-    title: "Smart Conv. Org",
+    translationKey: "smartOrg",
     colorClass: "theme-teal",
     tracks: [
       {
-        name: "",
-        m1: [
-          "Thiết kế banner hướng dẫn (Onboarding)",
-          "Triển khai nhanh tính năng sẵn có (Quick Win)",
-        ],
-        m2: ["Đo lường hiệu quả tương tác banner"],
-        m3: ["Tinh chỉnh lại câu chữ (Copywriting)"],
+        translationKey: "main",
       },
     ],
   },
 ];
 
 export default function ZaloRoadmap() {
+  const { t } = useTranslation();
+  const months = t("projects.roadmap.months", {
+    returnObjects: true,
+  }) as string[];
+  const monthSubtitles = t("projects.roadmap.monthSubtitles", {
+    returnObjects: true,
+  }) as string[];
+  const categories = t("projects.roadmap.categories", {
+    returnObjects: true,
+  }) as Record<
+    string,
+    {
+      title: string;
+      tracks: Record<
+        string,
+        { name: string; m1: string[]; m2: string[]; m3: string[] }
+      >;
+    }
+  >;
+
   return (
     <div className="roadmap-section" id="roadmap">
       <div className="roadmap-header">
-        <h3>Lộ Trình Thực Thi 3 Tháng</h3>
-        <p>Từ Kiểm chứng Ý tưởng đến Phát hành &amp; Tối ưu</p>
+        <h3>{t("projects.roadmap.title")}</h3>
+        <p>{t("projects.roadmap.subtitle")}</p>
       </div>
 
       <div className="gantt-container">
@@ -71,16 +71,16 @@ export default function ZaloRoadmap() {
         <div className="gantt-timeline-header">
           <div className="gantt-corner"></div>
           <div className="gantt-month">
-            <strong>Tháng 1</strong>
-            <span>Kiểm chứng &amp; Xây dựng</span>
+            <strong>{months[0]}</strong>
+            <span>{monthSubtitles[0]}</span>
           </div>
           <div className="gantt-month">
-            <strong>Tháng 2</strong>
-            <span>Phát hành &amp; Đo lường</span>
+            <strong>{months[1]}</strong>
+            <span>{monthSubtitles[1]}</span>
           </div>
           <div className="gantt-month">
-            <strong>Tháng 3</strong>
-            <span>Tối ưu &amp; Mở rộng</span>
+            <strong>{months[2]}</strong>
+            <span>{monthSubtitles[2]}</span>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ export default function ZaloRoadmap() {
             >
               {/* Cột trái: Tên nhóm tính năng */}
               <div className="gantt-category-label">
-                <span>{category.title}</span>
+                <span>{categories[category.translationKey].title}</span>
               </div>
 
               {/* Các Sub-tracks bên trong */}
@@ -106,14 +106,26 @@ export default function ZaloRoadmap() {
                   <div className="gantt-track-row" key={tIndex}>
                     {/* Sub-label (A. Re-notify / B. Reply Later) */}
                     <div className="track-sub-label">
-                      {track.name && <span>{track.name}</span>}
+                      {categories[category.translationKey].tracks[
+                        track.translationKey
+                      ].name && (
+                        <span>
+                          {
+                            categories[category.translationKey].tracks[
+                              track.translationKey
+                            ].name
+                          }
+                        </span>
+                      )}
                     </div>
 
                     {/* Khối nhiệm vụ Tháng 1, 2, 3 */}
                     <div className="track-cell">
                       <div className="task-bar m1-bar">
                         <ul>
-                          {track.m1.map((item, i) => (
+                          {categories[category.translationKey].tracks[
+                            track.translationKey
+                          ].m1.map((item, i) => (
                             <li key={i}>{item}</li>
                           ))}
                         </ul>
@@ -122,7 +134,9 @@ export default function ZaloRoadmap() {
                     <div className="track-cell">
                       <div className="task-bar m2-bar">
                         <ul>
-                          {track.m2.map((item, i) => (
+                          {categories[category.translationKey].tracks[
+                            track.translationKey
+                          ].m2.map((item, i) => (
                             <li key={i}>{item}</li>
                           ))}
                         </ul>
@@ -131,7 +145,9 @@ export default function ZaloRoadmap() {
                     <div className="track-cell">
                       <div className="task-bar m3-bar">
                         <ul>
-                          {track.m3.map((item, i) => (
+                          {categories[category.translationKey].tracks[
+                            track.translationKey
+                          ].m3.map((item, i) => (
                             <li key={i}>{item}</li>
                           ))}
                         </ul>

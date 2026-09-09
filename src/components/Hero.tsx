@@ -1,17 +1,16 @@
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useMemo, useState, type MouseEvent } from "react";
 import { motion } from "framer-motion";
 import heroImg from "../assets/img1.jpg";
 import cvFile from "../assets/cv.pdf";
 import Sparkles from "./Sparkles";
-
-
-const typewriterLines = [
-  "Gỡ rối bài toán giữa những điều mơ hồ",
-  "Biến insight người dùng thành ưu tiên phát triển",
-  "Xây dựng sản phẩm có chủ đích & tạo giá trị thật",
-];
+import { Trans, useTranslation } from "react-i18next";
 
 function Hero() {
+  const { t } = useTranslation();
+  const typewriterLines = useMemo(
+    () => t("hero.typewriter", { returnObjects: true }) as string[],
+    [t],
+  );
   const [lineIndex, setLineIndex] = useState(0);
   const [typedLine, setTypedLine] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -37,7 +36,7 @@ function Hero() {
     }, delay);
 
     return () => window.clearTimeout(timer);
-  }, [isDeleting, lineIndex, typedLine]);
+  }, [isDeleting, lineIndex, typedLine, typewriterLines]);
 
   const handleVisualMove = (event: MouseEvent<HTMLDivElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -56,29 +55,25 @@ function Hero() {
         transition={{ duration: 0.7, delay: 0.12 }}
       >
         <p className="eyebrow">
-          <span className="status-dot" /> SẴN SÀNG CHO CƠ HỘI PRODUCT · Thành
-          Phố Hồ Chí Minh
+          <span className="status-dot" /> {t("hero.eyebrow")}
         </p>
         <h1 id="hero-title">
-          Chào bạn, mình là <span className="hero-name">Anh Thư</span>
+          {t("hero.greeting")}{" "}
+          <span className="hero-name">{t("hero.name")}</span>
           <br />
-          <span className="hero-role">Product Management</span>
+          <span className="hero-role">{t("hero.role")}</span>
         </h1>
         <p className="typewriter" aria-live="polite">
           “{typedLine}
           <span className="caret" />”
         </p>
-        <p className="hero-intro">
-          Đi lên từ nền tảng kỹ thuật tới tư duy sản phẩm — mình thích gỡ rối
-          những bài toán mơ hồ và biến chúng thành trải nghiệm số đơn giản, hữu
-          ích.
-        </p>
+        <p className="hero-intro">{t("hero.intro")}</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#experience">
-            Khám phá hành trình <span aria-hidden="true">↓</span>
+            {t("hero.explore")} <span aria-hidden="true">↓</span>
           </a>
           <a className="text-link" href="#work">
-            Dự án tiêu biểu
+            {t("hero.featuredProjects")}
           </a>
           <a
             className="text-link"
@@ -86,13 +81,13 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
           >
-            Xem CV <span aria-hidden="true">↗</span>
+            {t("hero.cv")} <span aria-hidden="true">↗</span>
           </a>
         </div>
       </motion.div>
       <div
         className="hero-visual"
-        aria-label="Product management visual"
+        aria-label={t("hero.visualLabel")}
         onMouseMove={handleVisualMove}
         onMouseLeave={() => setTilt({ x: 0, y: 0 })}
       >
@@ -113,7 +108,7 @@ function Hero() {
           animate={{ rotateX: tilt.y, rotateY: tilt.x }}
           transition={{ type: "spring", stiffness: 180, damping: 18 }}
         >
-          <img src={heroImg} alt="Portrait of Trịnh Thị Anh Thư" />
+          <img src={heroImg} alt={t("hero.portraitAlt")} />
         </motion.div>
         <motion.div
           className="floating-card card-build"
@@ -126,7 +121,10 @@ function Hero() {
           }}
         >
           <span>
-            Builder <strong>Mindset</strong>
+            <Trans
+              i18nKey="hero.builder"
+              components={[<span className="keyword-muted" />, <strong />]}
+            />
           </span>
         </motion.div>
         <motion.div
@@ -140,7 +138,10 @@ function Hero() {
           }}
         >
           <span>
-            Continuous <strong>Learner</strong>
+            <Trans
+              i18nKey="hero.learner"
+              components={[<span className="keyword-muted" />, <strong />]}
+            />
           </span>
         </motion.div>
         <motion.div
@@ -153,7 +154,12 @@ function Hero() {
             delay: 2,
           }}
         >
-          <span>User-Centric</span>
+          <span>
+            <Trans
+              i18nKey="hero.userCentric"
+              components={[<span className="keyword-muted" />, <strong />]}
+            />
+          </span>
         </motion.div>
       </div>
       {/* <div className="scroll-note">

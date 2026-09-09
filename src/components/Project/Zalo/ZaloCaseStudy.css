@@ -32,7 +32,11 @@
     transparent 100%
   );
   color: var(--ink);
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-size: 16.5px;
   line-height: 1.6;
   padding: 40px 0 0;
@@ -242,6 +246,7 @@
   margin: 0 0 18px;
   font-size: 13.5px;
   box-shadow: 0 2px 8px rgba(16, 19, 28, 0.02);
+  text-align: justify;
 }
 .brief .row {
   display: flex;
@@ -256,7 +261,7 @@
   font-size: 10.5px;
   color: var(--ink-faint);
   flex-shrink: 0;
-  width: 120px;
+  width: 150px;
   padding-top: 1px;
   letter-spacing: 0.03em;
 }
@@ -407,6 +412,113 @@
   color: var(--blue);
 }
 
+/* RISK MATRIX */
+.risk-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+.risk-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 18px 18px 16px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(199, 206, 221, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(16, 19, 28, 0.05);
+}
+.risk-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: var(--risk-color);
+}
+.risk-card--0 {
+  --risk-color: var(--coral);
+  background: linear-gradient(150deg, #fffaf7 0%, #ffffff 60%);
+}
+.risk-card--1 {
+  --risk-color: var(--amber);
+  background: linear-gradient(150deg, #fffdf5 0%, #ffffff 60%);
+}
+.risk-card--2 {
+  --risk-color: var(--blue);
+  background: linear-gradient(150deg, #f7faff 0%, #ffffff 60%);
+}
+.risk-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 42px;
+}
+.risk-index {
+  display: grid;
+  flex: 0 0 30px;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: var(--risk-color);
+  border: 1px solid color-mix(in srgb, var(--risk-color) 35%, white);
+  border-radius: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+}
+.risk-name {
+  padding-top: 3px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.risk-section {
+  flex: 1;
+}
+.risk-label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  align-items: center;
+  text-align: center;
+}
+.risk-section .risk-label {
+  color: var(--ink-soft);
+}
+.risk-desc,
+.risk-control p {
+  margin: 0;
+  line-height: 1.55;
+}
+.risk-desc {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+.risk-control {
+  padding: 11px 12px;
+  background: rgba(240, 249, 255, 0.76);
+  border: 1px solid rgba(199, 206, 221, 0.55);
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .risk-matrix {
+    grid-template-columns: 1fr;
+  }
+  .risk-card {
+    min-height: 0;
+  }
+}
+
 /* --- WIREFRAME GRID 4 CỘT --- */
 .wf-grid-container {
   display: grid;
@@ -462,7 +574,7 @@
 /* CỐ ĐỊNH ẢNH KHÔNG BỊ MÉO/KÉO DÃN */
 .wf-img-box {
   width: 100%;
-  height: 240px; 
+  height: 240px;
   border-radius: 8px;
   overflow: hidden;
   background: #ffffff;
@@ -475,7 +587,7 @@
 .wf-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain;
   display: block;
 }
 
@@ -625,7 +737,7 @@
   height: auto;
   object-fit: contain;
   /* Phép thuật ở đây: Làm nền trắng của ảnh chìm hoàn toàn vào nền xanh pastel của web */
-  mix-blend-mode: darken; 
+  mix-blend-mode: darken;
 }
 
 /* CALLOUT */

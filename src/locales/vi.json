@@ -1,0 +1,141 @@
+{
+  "language": { "switchTo": "English", "current": "VI" },
+  "nav": {
+    "backToTop": "Về đầu trang",
+    "main": "Điều hướng chính",
+    "about": "Giới thiệu",
+    "work": "Dự án",
+    "experience": "Hành trình",
+    "contact": "Liên hệ"
+  },
+  "footer": { "builtWith": "Built with curiosity & care" },
+  "hero": {
+    "eyebrow": "SẴN SÀNG CHO CƠ HỘI PRODUCT · Thành Phố Hồ Chí Minh",
+    "greeting": "Chào bạn, mình là",
+    "name": "Anh Thư",
+    "role": "Product Management",
+    "typewriter": [
+      "Gỡ rối bài toán giữa những điều mơ hồ",
+      "Biến insight người dùng thành ưu tiên phát triển",
+      "Xây dựng sản phẩm có chủ đích & tạo giá trị thật"
+    ],
+    "intro": "Đi lên từ nền tảng kỹ thuật tới tư duy sản phẩm — mình thích gỡ rối những bài toán mơ hồ và biến chúng thành trải nghiệm số đơn giản, hữu ích.",
+    "explore": "Khám phá hành trình",
+    "featuredProjects": "Dự án tiêu biểu",
+    "cv": "Xem CV",
+    "visualLabel": "Hình ảnh về quản lý sản phẩm",
+    "portraitAlt": "Chân dung Trịnh Thị Anh Thư",
+    "builder": "<0>Builder</0> <1>Mindset</1>",
+    "learner": "<0>Continuous</0> <1>Learner</1>",
+    "userCentric": "<0>User-</0><1>Centric</1>"
+  },
+  "snapshot": {
+    "ariaLabel": "Tổng quan nhanh",
+    "eyebrow": "TỔNG QUAN NHANH",
+    "title": "Đôi Nét Nổi Bật Về Mình",
+    "degree": "Tốt nghiệp Xuất Sắc",
+    "degreeSub": "HCMUT • Khoa Học Máy Tính",
+    "degreeDetails": "GPA: 3.6 / 4.0 (8.32/10)\nTốt nghiệp T11/2026",
+    "transcript": "Xem Bảng Điểm",
+    "language": "Năng lực Ngoại ngữ",
+    "languageSub": "TOEIC 760 (Listening & Reading)",
+    "languageDetails": "Giao tiếp tự tin & làm việc hiệu quả trong môi trường quốc tế",
+    "mindset": "Product Mindset",
+    "mindsetSub": "Technical Feasibility",
+    "mindsetDetails": "Cầu nối giữa kỹ thuật & bài toán kinh doanh, tối ưu hóa thực thi với AI",
+    "logoAlt": "Logo HCMUT"
+  },
+  "experience": {
+    "badge": "THE PRODUCT ODYSSEY",
+    "title": "Con Đường Chuyển Dịch",
+    "titleAccent": "Từ Code sang Product",
+    "intro": "Hành trình từng bước định hình bản năng sản phẩm qua 4 cột mốc đáng nhớ.",
+    "station": "TRẠM {{number}}",
+    "km": "KM {{distance}}",
+    "stage1": {
+      "tag": "GỐC RỄ TƯ DUY",
+      "title": "Những bài toán không có đáp án mẫu",
+      "lens": "Chuyên Toán • THPT Chuyên Quang Trung",
+      "desc": "Những năm tháng học chuyên Toán rèn cho em thói quen không ngại bài toán khó. Khi đối mặt với sự mơ hồ, phản xạ đầu tiên là đào sâu tìm bản chất chứ không học vẹt công thức.",
+      "takeaway": "Tư duy gốc rễ: Luôn bóc tách vấn đề về những điều cơ bản nhất trước khi tìm lời giải."
+    },
+    "stage2": {
+      "tag": "NỀN TẢNG KỸ THUẬT",
+      "title": "Làm chủ dòng code & Hệ thống",
+      "lens": "Computer Science • Bách Khoa HCMUT",
+      "desc": "Những đêm debug đồ án lớn ở Bách Khoa cho em cái nhìn thực tế về cách phần mềm vận hành: code chạy được là một chuyện, hệ thống chịu tải tốt và dễ bảo trì hay không lại là chuyện khác.",
+      "takeaway": "Hiểu sâu về kỹ thuật để biết rõ giới hạn công nghệ và nói cùng ngôn ngữ với Dev."
+    },
+    "stage3": {
+      "tag": "BƯỚC NGOẶT THỰC TẾ",
+      "title": "Khi tính năng tâm huyết bị ngó lơ",
+      "lens": "Mobile App • Interlink Labs",
+      "desc": "Làm app thực tế, nhìn người dùng drop-off ở những tính năng mình mất cả tháng để viết code, em mới vỡ lẽ: Code xịn đến đâu mà giải sai nhu cầu thì sản phẩm vẫn bị bỏ xó.",
+      "takeaway": "Chuyển dịch tư duy: Đừng chỉ hỏi 'làm như thế nào', hãy luôn tự hỏi 'tại sao người ta phải dùng?'."
+    },
+    "stage4": {
+      "tag": "ĐÍCH ĐẾN HIỆN TẠI",
+      "title": "Làm chủ sản phẩm từ đầu đến cuối",
+      "lens": "Product Management & AI",
+      "desc": "Em kết hợp logic toán học, nền tảng kỹ thuật và làn sóng AI để nhận trọn trách nhiệm cho sản phẩm—từ lúc bóc tách ý tưởng sơ khai cho đến trải nghiệm cuối cùng trên tay người dùng.",
+      "takeaway": "Biến những công nghệ phức tạp thành trải nghiệm số đơn giản và tạo ra giá trị thật."
+    }
+  },
+  "contact": {
+    "status": "SẴN SÀNG CHO CƠ HỘI MỚI",
+    "title": "Let’s build",
+    "titleAccent": "something real.",
+    "email": "Gửi email",
+    "copyEmail": "Sao chép email",
+    "copied": "Đã sao chép email",
+    "avatarAlt": "Trịnh Thị Anh Thư"
+  },
+  "toolbox": {
+    "ariaLabel": "Trưng bày năng lực",
+    "eyebrow": "SKILL SHOWCASE",
+    "title": "Năng Lực Bổ Trợ",
+    "intro": "Những kỹ năng thực chiến khác được kiểm chứng qua sản phẩm và công việc thực tế.",
+    "items": {
+      "ga4": {
+        "category": "Product & Data Analytics",
+        "title": "Phân tích Phễu Chuyển Đổi & Phát Hiện Bất Thường Dữ Liệu",
+        "project": "E-commerce Funnel (GA4)",
+        "artifact": "GA4 Funnel & User Journey",
+        "description": "Phân tích hành trình đặt hàng đa kênh, bóc tách điểm nghẽn Checkout trên Mobile (ma sát phí ship & thẻ tín dụng); đồng thời nhận diện và bóc tách ~40k phiên bot traffic bất thường để bảo vệ độ chuẩn xác của dữ liệu.",
+        "takeaway": "Định lượng ma sát trải nghiệm và đề xuất giải pháp tối ưu chuyển đổi dựa trên dữ liệu hành vi thực tế."
+      },
+      "powerbi": {
+        "category": "Data Visualization & BI",
+        "title": "Trực quan hóa Dữ liệu & Phân tích Product Mix",
+        "project": "CompanyX BI System",
+        "artifact": "Power BI Dashboard",
+        "description": "Dùng SQL khám phá dữ liệu và lên yêu cầu trích xuất (Data Requirements) cho team Data. Xây dựng Power BI Dashboard để trực quan hóa doanh thu, lợi nhuận và hiệu quả của từng dòng sản phẩm.",
+        "takeaway": "Đưa ra quyết định dựa trên dữ liệu (Data-driven): Đề xuất đẩy mạnh sản xuất dòng Standard đang bán chạy và hạn chế dòng Tourist kém hiệu quả."
+      },
+      "prd": {
+        "category": "Product Requirement & Delivery",
+        "title": "Đặc tả PRD, User Stories & Kịch bản Use Case",
+        "project": "HCMUT_SSPS",
+        "artifact": "Use Case & Flow Specs",
+        "description": "Chuyển hóa bài toán người dùng thành tài liệu PRD, phân rã backlog thành User Stories với tiêu chuẩn nghiệm thu (Acceptance Criteria) rõ ràng, làm cầu nối truyền đạt logic nghiệp vụ cho đội ngũ kỹ thuật.",
+        "takeaway": "Đảm bảo sự thấu hiểu đồng nhất giữa Business và Engineering trước khi bước vào giai đoạn phát triển."
+      },
+      "sql": {
+        "category": "Business Intelligence & SQL",
+        "title": "Truy vấn Dữ liệu & Bóc tách Hiệu quả Kinh doanh",
+        "project": "Restaurant Management DB",
+        "artifact": "SQL Query Metrics",
+        "description": "Chủ động xây dựng câu lệnh SQL đa bảng, trích xuất và đo lường doanh thu theo từng chi nhánh cùng các chỉ số KPI vận hành, phục vụ việc đánh giá hiệu suất kinh doanh độc lập.",
+        "takeaway": "Chủ động khai thác dữ liệu có cấu trúc để đưa ra các phân tích định lượng mà không phụ thuộc data team."
+      },
+      "erd": {
+        "category": "System & Logic Design",
+        "title": "Mô hình hóa Luồng Nghiệp vụ & Cơ sở Dữ liệu",
+        "project": "Restaurant Management DB",
+        "artifact": "E-ERD Database Model",
+        "description": "Thiết kế sơ đồ quan hệ E-ERD chuẩn hóa và xây dựng quy tắc tự động hóa luồng nghiệp vụ (tính điểm thành viên, áp dụng khuyến mãi, cập nhật tồn kho) nhằm đảm bảo tính toàn vẹn hệ thống.",
+        "takeaway": "Thấu hiểu kiến trúc dữ liệu nền tảng để phối hợp trơn tru cùng đội ngũ Backend và Solution Architect."
+      }
+    }
+  }
+}

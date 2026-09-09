@@ -19,6 +19,7 @@ import screensOverviewImg from "../../../assets/figma-screens-overview.png";
 import scrumImg from "../../../assets/scrum-board.png";
 import testImg from "../../../assets/coverage.png";
 import "./ReuseShowcase.css";
+import { Trans, useTranslation } from "react-i18next";
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -32,82 +33,64 @@ const itemVariants: Variants = {
 const exhibits = [
   {
     id: "strategy",
-    tag: "Exhibit 01 • Business Strategy & Moat",
+    translationKey: "strategy",
     icon: <Layers size={14} />,
-    title: "Bức Tranh 01 — Lean Canvas & Xác Lập Rào Cản Phòng Thủ (Moat)",
-    desc: "Bóc tách không gian bài toán và khoảng trống thị trường; thiết lập lợi thế phòng thủ (Trust Moat) bằng cơ chế xác thực email .edu.vn và mô hình giao dịch siêu cục bộ tại KTX Làng Đại học với chi phí vận chuyển bằng 0.",
     align: "align-left",
     isCanvas: true,
   },
   {
     id: "mvp-scoping",
-    tag: "Exhibit 02 • Scope & Trade-offs",
+    translationKey: "mvp",
     icon: <Sparkles size={14} />,
-    title: "Bức Tranh 02 — Định Nghĩa MVP & Quyết Định Trade-off",
-    desc: "Cắt giảm 60% tính năng phụ qua ma trận Impact/Effort; cô đọng 5 tính năng cốt lõi (Core Loop) để xác thực giải pháp (Problem-Solution Fit) sau 2 tháng phát triển.",
     align: "align-right",
     isMVP: true,
   },
   {
     id: "ux",
-    tag: "Exhibit 03 • Product Flow & Edge Cases",
+    translationKey: "ux",
     icon: <Layout size={14} />,
-    title: "Bức Tranh 03 — Kiến Trúc Luồng Người Dùng (User Flows)",
-    desc: "Trực tiếp thiết kế trọn bộ 5 luồng logic (Auth, Marketplace, Lọc KTX, Chat, Profile) và bao phủ triệt để các edge cases, đảm bảo hơn 90% sinh viên hoàn thành thao tác trơn tru ngay lần đầu.",
     align: "align-left",
     image: flowImg,
-    alt: "User Flow Diagram",
     isCompactMedia: true,
     drawIOLink:
       "https://drive.google.com/file/d/1mcz3m8hW4O1EUFuDN8a3E2GBfzYDX5Nn/view?usp=sharing",
   },
   {
     id: "prototype",
-    tag: "Exhibit 04 • Hi-Fi Prototype & System",
+    translationKey: "prototype",
     icon: <Smartphone size={14} />,
-    title: "Bức Tranh 04 — Hệ Thống Design System & Prototype Tương Tác",
-    desc: "Tự tay xây dựng hệ sinh thái UI/UX theo chuẩn Mobile-First, tối ưu hóa hành trình đăng bài thanh lý chỉ trong 3 bước với điểm đánh giá độ trực quan > 4.0/5.0 từ đợt usability test thực tế.",
     align: "align-right",
     image: screensOverviewImg,
-    alt: "Overview toàn bộ màn hình thiết kế Figma của ReuseUni",
     figmaLink:
       "https://www.figma.com/design/k5GiTmZeSafBUGYg4avD0Z/Mobile-App?node-id=0-1&t=k5S1mUk0NzNdVujD-1",
   },
   {
     id: "scrum",
-    tag: "Exhibit 05 • Agile & Sprint Management",
+    translationKey: "scrum",
     icon: <GitPullRequest size={14} />,
-    title: "Bức Tranh 05 — Vận Hành Scrum & Điều Phối Thực Thi",
-    desc: "Trực tiếp điều phối tiến độ phát triển qua GitHub Projects với 4 Sprints (2 tuần/sprint), phân loại thẻ công việc P0→P3 để kiểm soát technical debts và bàn giao 100% deliverables đúng cam kết.",
     align: "align-left",
     image: scrumImg,
-    alt: "GitHub Projects Scrum Board",
   },
   {
     id: "qa",
-    tag: "Exhibit 06 • Quality Assurance & Automation",
+    translationKey: "qa",
     icon: <Terminal size={14} />,
-    title: "Bức Tranh 06 — Kiểm Thử Giao Diện & Test Automation",
-    desc: "Thiết lập hàng rào kiểm thử tự động trên Jest; đạt 82.5% Line Coverage (306/308 tests pass) nhằm triệt tiêu rủi ro lỗi giao diện và đảm bảo sản phẩm vận hành ổn định khi đến tay người dùng.",
     align: "align-right", // <-- Đã bổ sung thuộc tính này để Bức tranh 06 lệch sang phải
     image: testImg,
-    alt: "Test Coverage Terminal",
     isTerminal: true,
   },
 ];
 
 export default function ReuseUniShowcase() {
+  const { t } = useTranslation();
+
   return (
     <section className="gallery-showcase-section" id="reuseuni">
       <div className="section-head">
-        <span className="pill-tag">PROJECT CASE STUDY</span>
-        <h2>ReuseUni — Sàn Trao Đổi Đồ KTX</h2>
+        <span className="pill-tag">{t("projects.reuse.tag")}</span>
+        <h2>{t("projects.reuse.title")}</h2>
 
-        <p className="one-liner">
-          Nền tảng thương mại điện tử siêu cục bộ (Hyperlocal C2C) dành riêng
-          cho sinh viên Làng Đại học — Giải quyết bài toán lãng phí đồ đạc mỗi
-          mùa tốt nghiệp và nỗi lo lừa đảo trên các hội nhóm mạng xã hội.
-        </p>
+        <p className="one-liner">{t("projects.reuse.intro")}</p>
 
         {/* NÚT TÀI LIỆU DỰ ÁN */}
         <div className="project-links-bar">
@@ -118,7 +101,7 @@ export default function ReuseUniShowcase() {
             className="link-pill pdf-link"
           >
             <FileText size={15} />
-            <span>Tài liệu chi tiết (PDF)</span>
+            <span>{t("projects.reuse.pdf")}</span>
             <ExternalLink size={13} className="ext-icon" />
           </a>
 
@@ -129,7 +112,7 @@ export default function ReuseUniShowcase() {
             className="link-pill gh-link"
           >
             <FolderGit2 size={15} />
-            <span>GitHub Organization / Board</span>
+            <span>{t("projects.reuse.github")}</span>
             <ExternalLink size={13} className="ext-icon" />
           </a>
         </div>
@@ -145,7 +128,7 @@ export default function ReuseUniShowcase() {
           <div className="seal-line-top" />
           <div className="seal-badge">
             <Sparkles size={13} className="seal-icon" />
-            <span>EXHIBIT ENTRY</span>
+            <span>{t("projects.reuse.entry")}</span>
           </div>
           <div className="seal-line-bottom" />
         </motion.div>
@@ -162,21 +145,24 @@ export default function ReuseUniShowcase() {
             <div className="ticket-stub">
               <div className="stub-header">
                 <Ticket size={14} className="text-sky-500" />
-                <span>GALLERY PASS</span>
+                <span>{t("projects.reuse.galleryPass")}</span>
               </div>
-              <span className="stub-code">NO. 06-EXHIBITS</span>
+              <span className="stub-code">
+                {t("projects.reuse.exhibitCode")}
+              </span>
             </div>
 
             <div className="ticket-tear-line" />
 
             <div className="ticket-body">
-              <span className="ticket-tagline">CURATED JOURNEY</span>
+              <span className="ticket-tagline">
+                {t("projects.reuse.curatedJourney")}
+              </span>
               <p className="ticket-narrative">
-                Chào mừng bạn đến với triển lãm{" "}
-                <strong>6 bức tranh thực thi</strong> — nơi ghi lại từng nét vẽ
-                định hình sản phẩm của mình trong vai trò{" "}
-                <strong>Product Manager</strong>, từ phác thảo ý tưởng đầu tiên
-                cho đến độ hoàn thiện cuối cùng.
+                <Trans
+                  i18nKey="projects.reuse.ticket"
+                  components={[<strong />, <strong />]}
+                />
               </p>
             </div>
           </div>
@@ -192,7 +178,7 @@ export default function ReuseUniShowcase() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="scroll-side-cue">
-          <span>SCROLL TO EXPLORE</span>
+          <span>{t("projects.reuse.scroll")}</span>
           <span className="side-cue-line" />
         </div>
       </motion.div>
@@ -210,7 +196,9 @@ export default function ReuseUniShowcase() {
             >
               <div className="placard-tag">
                 {item.icon}
-                <span>{item.tag}</span>
+                <span>
+                  {t(`projects.reuse.exhibits.${item.translationKey}.tag`)}
+                </span>
               </div>
 
               <div
@@ -223,13 +211,20 @@ export default function ReuseUniShowcase() {
                 ) : item.isMVP ? (
                   <MVPReuseUni />
                 ) : (
-                  <img src={item.image} alt={item.alt} />
+                  <img
+                    src={item.image}
+                    alt={t(
+                      `projects.reuse.exhibits.${item.translationKey}.alt`,
+                    )}
+                  />
                 )}
               </div>
 
               <div className="frame-placard">
                 <div className="placard-head">
-                  <h3 className="placard-title">{item.title}</h3>
+                  <h3 className="placard-title">
+                    {t(`projects.reuse.exhibits.${item.translationKey}.title`)}
+                  </h3>
                   {item.figmaLink && (
                     <a
                       href={item.figmaLink}
@@ -237,7 +232,7 @@ export default function ReuseUniShowcase() {
                       rel="noreferrer"
                       className="figma-live-btn"
                     >
-                      <span>Trải nghiệm Prototype</span>
+                      <span>{t("projects.reuse.prototype")}</span>
                       <ExternalLink size={13} />
                     </a>
                   )}
@@ -248,14 +243,15 @@ export default function ReuseUniShowcase() {
                       rel="noreferrer"
                       className="figma-live-btn"
                     >
-                      <span>Xem Flow Specs</span>
+                      <span>{t("projects.reuse.flowSpecs")}</span>
                       <ExternalLink size={13} />
                     </a>
                   )}
                 </div>
 
                 <p className="placard-curator-note">
-                  <strong>Ý đồ thực thi:</strong> {item.desc}
+                  <strong>{t("projects.reuse.execution")}</strong>{" "}
+                  {t(`projects.reuse.exhibits.${item.translationKey}.desc`)}
                 </p>
               </div>
             </motion.div>
@@ -276,7 +272,7 @@ export default function ReuseUniShowcase() {
           <div className="seal-line-top" />
           <div className="seal-badge">
             <Sparkles size={13} className="seal-icon" />
-            <span>POST-EXHIBIT IMPACT</span>
+            <span>{t("projects.reuse.impact")}</span>
           </div>
           <div className="seal-line-bottom" />
         </motion.div>
@@ -289,13 +285,8 @@ export default function ReuseUniShowcase() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h3>Trái Ngọt Sau Hành Trình Thực Chiến</h3>
-          <p>
-            Sau chu kỳ 4 Sprint đồng hành và thực chiến cùng đội ngũ, từ việc
-            phác thảo những luồng sản phẩm (User Flows) đầu tiên cho đến khi
-            kiểm thử hoàn thiện bản build trên Cloud, đây là những kết quả và
-            thước đo thực tế mà ReuseUni đã xác lập.
-          </p>
+          <h3>{t("projects.reuse.outcomeTitle")}</h3>
+          <p>{t("projects.reuse.outcomeIntro")}</p>
         </motion.div>
 
         {/* 3 THẺ METRICS GỌN GÀNG */}
@@ -311,15 +302,17 @@ export default function ReuseUniShowcase() {
             <div className="card-top-header">
               <div className="pillar-title-wrap">
                 <span className="pillar-tag">PILLAR 01</span>
-                <h4>Hiệu Năng & Vận Hành</h4>
+                <h4>{t("projects.reuse.outcomes.performance")}</h4>
               </div>
             </div>
             <ul className="pillar-list">
               <li>
-                <strong>Độ trễ API:</strong> 115ms – 370ms.
+                <strong>{t("projects.reuse.outcomes.api")}:</strong>{" "}
+                {t("projects.reuse.outcomes.apiValue")}
               </li>
               <li>
-                <strong>Chuyển màn hình:</strong> ~380ms (&lt; 1s tối ưu).
+                <strong>{t("projects.reuse.outcomes.screen")}:</strong>{" "}
+                {t("projects.reuse.outcomes.screenValue")}
               </li>
             </ul>
           </motion.div>
@@ -335,18 +328,21 @@ export default function ReuseUniShowcase() {
             <div className="card-top-header">
               <div className="pillar-title-wrap">
                 <span className="pillar-tag">PILLAR 02</span>
-                <h4>Trải Nghiệm Người Dùng</h4>
+                <h4>{t("projects.reuse.outcomes.ux")}</h4>
               </div>
             </div>
             <ul className="pillar-list">
               <li>
-                <strong>Điểm trực quan:</strong> &gt; 4.0 / 5.0.
+                <strong>{t("projects.reuse.outcomes.visual")}:</strong>{" "}
+                {t("projects.reuse.outcomes.visualValue")}
               </li>
               <li>
-                <strong>Thao tác mượt mà:</strong> &gt; 90% (khó khăn &lt; 10%).
+                <strong>{t("projects.reuse.outcomes.smooth")}:</strong>{" "}
+                {t("projects.reuse.outcomes.smoothValue")}
               </li>
               <li>
-                <strong>Tương tác:</strong> 5–7 hành vi/phiên (Home → Cart).
+                <strong>{t("projects.reuse.outcomes.interactions")}:</strong>{" "}
+                {t("projects.reuse.outcomes.interactionsValue")}
               </li>
             </ul>
           </motion.div>
@@ -362,16 +358,17 @@ export default function ReuseUniShowcase() {
             <div className="card-top-header">
               <div className="pillar-title-wrap">
                 <span className="pillar-tag">PILLAR 03</span>
-                <h4>Khám Phá & Roadmap</h4>
+                <h4>{t("projects.reuse.outcomes.discovery")}</h4>
               </div>
             </div>
             <ul className="pillar-list">
               <li>
-                <strong>Xác thực .edu.vn:</strong> 100% sinh viên tin tưởng.
+                <strong>{t("projects.reuse.outcomes.verification")}:</strong>{" "}
+                {t("projects.reuse.outcomes.verificationValue")}
               </li>
               <li>
-                <strong>Ưu tiên tiếp theo (P1):</strong> 71.4% yêu cầu Đánh giá
-                uy tín.
+                <strong>{t("projects.reuse.outcomes.next")}:</strong>{" "}
+                {t("projects.reuse.outcomes.nextValue")}
               </li>
             </ul>
           </motion.div>

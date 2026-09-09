@@ -3,16 +3,17 @@ import { Languages, Target, FileText, ArrowUpRight } from "lucide-react";
 import bkuLogo from "../../assets/bku.png";
 import "./Snapshot.css";
 import Sparkles from "../Sparkles";
+import { useTranslation } from "react-i18next";
 
 const snapshotData = [
   {
     id: 1,
     size: "large",
-    icon: <img src={bkuLogo} alt="HCMUT Logo" className="snapshot-logo-img" />,
-    title: "Tốt nghiệp Xuất Sắc",
-    sub: "HCMUT • Khoa Học Máy Tính",
-    details: "GPA: 3.6 / 4.0 (8.32/10)\nTốt nghiệp T11/2026",
-    linkText: "Xem Bảng Điểm",
+    icon: <img src={bkuLogo} alt="" className="snapshot-logo-img" />,
+    titleKey: "snapshot.degree",
+    subKey: "snapshot.degreeSub",
+    detailsKey: "snapshot.degreeDetails",
+    linkKey: "snapshot.transcript",
     linkUrl:
       "https://drive.google.com/file/d/13-fcWCkcF__h7Fv7qSqrjjtk-NJ29sSu/view?usp=sharing",
   },
@@ -20,18 +21,17 @@ const snapshotData = [
     id: 2,
     size: "medium",
     icon: <Languages size={24} strokeWidth={1.5} />,
-    title: "Năng lực Ngoại ngữ",
-    sub: "TOEIC 760 (Listening & Reading)",
-    details: "Giao tiếp tự tin & làm việc hiệu quả trong môi trường quốc tế",
+    titleKey: "snapshot.language",
+    subKey: "snapshot.languageSub",
+    detailsKey: "snapshot.languageDetails",
   },
   {
     id: 3,
     size: "small",
     icon: <Target size={22} strokeWidth={1.5} />,
-    title: "Product Mindset",
-    sub: "Technical Feasibility",
-    details:
-      "Cầu nối giữa kỹ thuật & bài toán kinh doanh, tối ưu hóa thực thi với AI.",
+    titleKey: "snapshot.mindset",
+    subKey: "snapshot.mindsetSub",
+    detailsKey: "snapshot.mindsetDetails",
   },
 ];
 
@@ -53,11 +53,13 @@ const itemVariants: Variants = {
 };
 
 export default function Snapshot() {
+  const { t } = useTranslation();
+
   return (
     <section
       className="snapshot-transition"
       id="about"
-      aria-label="Quick Snapshot"
+      aria-label={t("snapshot.ariaLabel")}
     >
       {/* Hiệu ứng hạt lấp lánh đồng bộ từ Hero */}
       <Sparkles count={8} />
@@ -71,9 +73,9 @@ export default function Snapshot() {
           transition={{ duration: 0.6 }}
         >
           <span className="snapshot-eyebrow">
-            <span className="snapshot-pulse" /> TỔNG QUAN NHANH
+            <span className="snapshot-pulse" /> {t("snapshot.eyebrow")}
           </span>
-          <h2>Đôi Nét Nổi Bật Về Mình</h2>
+          <h2>{t("snapshot.title")}</h2>
         </motion.div>
 
         <motion.div
@@ -92,9 +94,11 @@ export default function Snapshot() {
               <div className="snapshot-icon-float">{item.icon}</div>
 
               <div className="snapshot-text-group">
-                <span className="snapshot-title-clean">{item.title}</span>
-                <span className="snapshot-sub-clean">{item.sub}</span>
-                <span className="snapshot-details-clean">{item.details}</span>
+                <span className="snapshot-title-clean">{t(item.titleKey)}</span>
+                <span className="snapshot-sub-clean">{t(item.subKey)}</span>
+                <span className="snapshot-details-clean">
+                  {t(item.detailsKey)}
+                </span>
 
                 {item.linkUrl && (
                   <a
@@ -103,7 +107,7 @@ export default function Snapshot() {
                     rel="noreferrer"
                     className="transcript-link"
                   >
-                    <FileText size={13} /> {item.linkText}{" "}
+                    <FileText size={13} /> {t(item.linkKey!)}{" "}
                     <ArrowUpRight size={13} />
                   </a>
                 )}

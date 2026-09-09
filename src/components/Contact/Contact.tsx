@@ -3,6 +3,7 @@ import { Mail, ArrowUpRight, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import "./Contact.css";
 import avatarImg from "../../assets/img2.jpg";
+import { useTranslation } from "react-i18next";
 
 // Hiệu ứng container điều phối xuất hiện tuần tự
 const containerVariants: Variants = {
@@ -30,6 +31,7 @@ const itemVariants: Variants = {
 };
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   const email = "trinhthianhthu1808@gmail.com";
 
@@ -45,7 +47,7 @@ export default function Contact() {
       <motion.img
         className="contact-avatar-bg"
         src={avatarImg}
-        alt="Trịnh Thị Anh Thư"
+        alt={t("contact.avatarAlt")}
         initial={{ opacity: 0, scale: 0.96 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -64,26 +66,26 @@ export default function Contact() {
           {/* Badge 1: Status Pill */}
           <motion.div variants={itemVariants} className="status-pill-clean">
             <span className="status-dot-clean" />
-            <span>SẴN SÀNG CHO CƠ HỘI MỚI</span>
+            <span>{t("contact.status")}</span>
           </motion.div>
 
           {/* Badge 2: Tiêu đề chính */}
           <motion.h2 variants={itemVariants} className="contact-title-clean">
-            Let’s build <br />
-            <em>something real.</em>
+            {t("contact.title")} <br />
+            <em>{t("contact.titleAccent")}</em>
           </motion.h2>
 
           {/* Badge 3: Cụm nút CTA & Copy */}
           <motion.div variants={itemVariants} className="contact-actions-clean">
             <a href={`mailto:${email}`} className="btn-primary-clean">
               <Mail size={18} />
-              <span>Gửi email</span>
+              <span>{t("contact.email")}</span>
             </a>
 
             <button
               onClick={handleCopy}
               className="btn-icon-clean"
-              title="Copy Email"
+              title={copied ? t("contact.copied") : t("contact.copyEmail")}
             >
               {copied ? (
                 <Check size={18} className="text-emerald-600" />

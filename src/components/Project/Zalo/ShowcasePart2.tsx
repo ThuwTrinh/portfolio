@@ -1,4 +1,4 @@
-import {
+﻿import {
   Users,
   ListOrdered,
   TrendingUp,
@@ -8,8 +8,17 @@ import {
 import { CommitLayout } from "./ZaloCaseStudy";
 import ZaloRoadmap from "./ZaloRoadmap/ZaloRoadmap";
 import loopDiagram from "../../../assets/loop_diagram.png";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function ShowcasePart2() {
+  const { t, i18n } = useTranslation();
+  const commit6Cards = t("projects.zalo.part2.commit6.cards", {
+    returnObjects: true,
+  }) as Array<{ title: string; tag: string; body: string }>;
+  const personaChats = t("projects.zalo.part2.commit5.personaChats", {
+    returnObjects: true,
+  }) as string[];
+
   return (
     <>
       {/* ================= COMMIT 05: EMPATHIZE ================= */}
@@ -25,103 +34,107 @@ export default function ShowcasePart2() {
           </span>
         }
       >
-        <h2>Reply Anxiety — Đối diện với nỗi đau của chính mình</h2>
+        <h2>{t("projects.zalo.part2.commit5.title")}</h2>
 
         <div className="brief">
           <div className="row">
-            <span className="label">ĐỀ BÀI 02</span>
+            <span className="label">
+              {t("projects.zalo.part2.commit5.promptLabel")}
+            </span>
             <span className="val">
-              Chọn 1 trong 4 nhánh sản phẩm, chứng minh hiệu quả trong 3 tháng
-              với nguồn lực giới hạn.
+              {t("projects.zalo.part2.commit5.prompt")}
             </span>
           </div>
           <div className="row">
-            <span className="label">GIẢI PHÁP</span>
+            <span className="label">
+              {t("projects.zalo.part2.commit5.solutionLabel")}
+            </span>
             <span className="val">
-              <b>Mindful Context Workspace</b> — Quản lý ngữ cảnh hội thoại,
-              giảm quá tải thông báo.
+              <Trans i18nKey="projects.zalo.part2.commit5.solution">
+                <strong />
+              </Trans>
             </span>
           </div>
         </div>
 
-        <p>
-          Đứng trước 4 cánh cửa mở của Zalo, cám dỗ lớn nhất là lao vào làm
-          Social hay Video vì chúng dễ tạo ra những ý tưởng hào nhoáng, dễ
-          viral. Nhưng tư duy Product nhắc mình:{" "}
-          <em>giá trị cốt lõi của Zalo nằm ở Chat</em>.
-        </p>
+        <p>{t("projects.zalo.part2.commit5.intro")}</p>
         <p style={{ color: "var(--ink-soft)" }}>
-          Thay vì tìm một tính năng "cool ngầu", mình nhìn lại trải nghiệm của
-          chính bản thân và bạn bè xung quanh — những người trẻ vừa đi học, vừa
-          đi làm, vừa gánh vác các nhóm dự án. Nỗi đau lớn nhất không phải là
-          thiếu chỗ giải trí, mà là{" "}
-          <strong>
-            áp lực bị bủa vây giữa quá nhiều vai trò trong cùng một hòm thư
-          </strong>
-          .
+          {t("projects.zalo.part2.commit5.insightBefore")}{" "}
+          <Trans i18nKey="projects.zalo.part2.commit5.insightQuestion">
+            <strong />
+          </Trans>{" "}
+          {t("projects.zalo.part2.commit5.insightAfter")}
         </p>
 
         {/* PERSONA CARD */}
         <div className="persona">
           <div className="persona-head">
-            <span className="persona-badge">"THE CONTEXT SWITCHERS"</span>
+            <span className="persona-badge">
+              "{t("projects.zalo.part2.commit5.personaBadge")}"
+            </span>
           </div>
           <p className="persona-sub">
-            Người trẻ phải liên tục chuyển đổi vai trò giữa học tập, công việc,
-            gia đình mỗi ngày.
+            {t("projects.zalo.part2.commit5.personaSub")}
           </p>
           <div className="persona-chats">
-            <span className="persona-chip">🏠 Gia đình</span>
-            <span className="persona-chip">📚 Học tập</span>
-            <span className="persona-chip">💼 Công việc</span>
-            <span className="persona-chip">🎓 Thực tập</span>
+            {personaChats.map((chat) => (
+              <span className="persona-chip" key={chat}>
+                {chat}
+              </span>
+            ))}
           </div>
           <div className="persona-grid">
             <div className="persona-col">
-              <span className="pc-label">HỌ LÀ</span>
+              <span className="pc-label">
+                {t("projects.zalo.part2.commit5.personaLabels.0")}
+              </span>
               <ul>
-                <li>Sinh viên năm cuối</li>
-                <li>Intern / Fresher</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.0.0")}</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.0.1")}</li>
               </ul>
             </div>
             <div className="persona-col">
-              <span className="pc-label">HỌ MUỐN</span>
+              <span className="pc-label">
+                {t("projects.zalo.part2.commit5.personaLabels.1")}
+              </span>
               <ul>
-                <li>Không bỏ sót việc quan trọng</li>
-                <li>Phản hồi đúng lúc</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.1.0")}</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.1.1")}</li>
               </ul>
             </div>
             <div className="persona-col">
-              <span className="pc-label">HỌ LO NGẠI</span>
+              <span className="pc-label">
+                {t("projects.zalo.part2.commit5.personaLabels.2")}
+              </span>
               <ul>
-                <li>Spam notification</li>
-                <li>Bị đánh giá thiếu trách nhiệm</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.2.0")}</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.2.1")}</li>
               </ul>
             </div>
             <div className="persona-col">
-              <span className="pc-label">HỌ KỲ VỌNG</span>
+              <span className="pc-label">
+                {t("projects.zalo.part2.commit5.personaLabels.3")}
+              </span>
               <ul>
-                <li>App nhắc nhẹ, đúng lúc</li>
-                <li>Không xâm phạm riêng tư</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.3.0")}</li>
+                <li>{t("projects.zalo.part2.commit5.personaItems.3.1")}</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <p>
-          Và hệ quả tâm lý lớn nhất của việc liên tục "nhảy ngữ cảnh" chính là{" "}
-          <strong>Reply Anxiety</strong>: tin nhắn càng dồn ứ, người ta càng
-          ngại mở ra, và sự trì hoãn bắt đầu trở thành gánh nặng tâm lý.
-        </p>
+        <p>{t("projects.zalo.part2.commit5.anxiety")}</p>
 
         <div className="zalo-mock">
-          <span className="badge">23</span> tin nhắn chưa đọc — nhìn vào là thấy
-          mệt, và... né luôn.
+          <span className="badge">23</span>{" "}
+          {t("projects.zalo.part2.commit5.unread")}
         </div>
 
-        <div className="loop-image-wrap">
-          <img src={loopDiagram} alt="Vòng lặp tâm lý Reply Anxiety" />
-        </div>
+        {i18n.language !== "en" && (
+          <div className="loop-image-wrap">
+            <img src={loopDiagram} alt="Vòng lặp tâm lý Reply Anxiety" />
+          </div>
+        )}
       </CommitLayout>
 
       {/* ================= COMMIT 06: PLAN ================= */}
@@ -138,61 +151,37 @@ export default function ShowcasePart2() {
           </span>
         }
       >
-        <h2>Nghệ thuật cắt gọt khi nguồn lực chỉ có 3 tháng</h2>
+        <h2>{t("projects.zalo.part2.commit6.title")}</h2>
 
-        <p>
-          Khi nhìn ra bài toán Reply Anxiety, phản xạ tự nhiên của một người làm
-          kỹ thuật là muốn "giải quyết triệt để": vẽ ra cả một hệ sinh thái đồ
-          sộ gồm AI phân loại thông minh, bộ lọc Focus Mode phức tạp và hệ thống
-          nhắc nhở đa tầng.
-        </p>
+        <p>{t("projects.zalo.part2.commit6.intro")}</p>
         <p style={{ color: "var(--ink-soft)" }}>
-          Nhưng đề bài đặt ra một ràng buộc ngặt nghèo:{" "}
-          <strong>3 tháng với nguồn lực giới hạn</strong>. Nếu cố làm tất cả,
-          sản phẩm sẽ không kịp hoàn thiện hoặc ra mắt dở dang. Lúc này, tư duy
-          Product buộc mình phải tự phản biện:{" "}
-          <em>
-            "Đâu là đòn bẩy tạo tác động lớn nhất mà tốn ít chi phí nhất?"
-          </em>
-          .
+          {t("projects.zalo.part2.commit6.constraint")}
         </p>
 
         <p style={{ margin: "18px 0 10px" }}>
-          Sử dụng khung đánh giá{" "}
-          <strong>ICE (Impact - Confidence - Ease)</strong>, mình dũng cảm chia
-          nhỏ bài toán thành 3 nhóm hành động rõ ràng:
+          {t("projects.zalo.part2.commit6.lead")}
         </p>
 
         <div className="card-row">
           <div className="card blue">
-            <span className="card-title">#1 Smart Reply Reminder</span>
-            <span className="card-tag">STRATEGIC BET</span>
-            <p>
-              Đặt cược lớn vào nỗi đau cốt lõi: nhắc nhẹ tin quan trọng bị trôi
-              + nút "Reply Later" gỡ bỏ áp lực phải trả lời ngay.
-            </p>
+            <span className="card-title">{commit6Cards[0].title}</span>
+            <span className="card-tag">{commit6Cards[0].tag}</span>
+            <p>{commit6Cards[0].body}</p>
           </div>
           <div className="card green">
-            <span className="card-title">2. Conversation Organization</span>
-            <span className="card-tag">QUICK WIN</span>
-            <p>
-              Tận dụng tính năng phân loại chat sẵn có từ Desktop đưa lên
-              Mobile, giải phóng hòm thư nhanh nhất với chi phí dev thấp.
-            </p>
+            <span className="card-title">{commit6Cards[1].title}</span>
+            <span className="card-tag">{commit6Cards[1].tag}</span>
+            <p>{commit6Cards[1].body}</p>
           </div>
           <div className="card red">
-            <span className="card-title">3. Focus Mode</span>
-            <span className="card-tag">BETA LATER</span>
-            <p>
-              Chủ động lùi lại, chỉ thử nghiệm nội bộ, gom tin nhắn ồn ào vào
-              bản tóm tắt định kỳ để tránh làm phức tạp hóa MVP ban đầu.
-            </p>
+            <span className="card-title">{commit6Cards[2].title}</span>
+            <span className="card-tag">{commit6Cards[2].tag}</span>
+            <p>{commit6Cards[2].body}</p>
           </div>
         </div>
 
         <p className="wf-flow-lead" style={{ margin: "26px 0 14px" }}>
-          Kế hoạch thực thi 3 tháng: Từ Validate ý tưởng đến Launch &amp; Đo
-          lường.
+          {t("projects.zalo.part2.commit6.roadmapLead")}
         </p>
 
         <div className="roadmap-wrapper-box">
@@ -200,8 +189,7 @@ export default function ShowcasePart2() {
         </div>
 
         <p className="callout-line" style={{ marginTop: "24px" }}>
-          Ba tháng không đủ để làm mọi thứ — nhưng đủ để chứng minh một điều:
-          liệu cắt đúng chỗ có tạo ra khác biệt hay không.
+          {t("projects.zalo.part2.commit6.callout")}
         </p>
       </CommitLayout>
 
@@ -218,37 +206,32 @@ export default function ShowcasePart2() {
           </span>
         }
       >
-        <h2>Cắt gọn phạm vi không có nghĩa là hạ thấp mục tiêu</h2>
+        <h2>{t("projects.zalo.part2.commit7.title")}</h2>
 
-        <p>
-          Chọn làm ít hơn dễ khiến người ta tự thỏa hiệp luôn với một mục tiêu
-          khiêm tốn hơn. Nhưng nếu không có một con số duy nhất để đối chiếu, sẽ
-          không bao giờ biết được liệu cách "cắt" ở commit trước có đúng hay
-          không.
-        </p>
+        <p>{t("projects.zalo.part2.commit7.intro")}</p>
 
         <div className="brief" style={{ marginTop: "16px" }}>
           <div className="row">
-            <span className="label">NORTH STAR</span>
+            <span className="label">
+              {t("projects.zalo.part2.commit7.northStarLabel")}
+            </span>
             <span className="val">
-              <b>+15% – 20% Reply Rate within 24h</b> trên các Hội thoại quan
-              trọng (nhóm công việc, đối tác có trao đổi file/link hoặc cuộc gọi
-              trước đó).
+              <b>+15% – 20% Reply Rate within 24h</b>{" "}
+              {t("projects.zalo.part2.commit7.northStar")}
             </span>
           </div>
           <div className="row">
-            <span className="label">ĐỊNH NGHĨA "HỘI THOẠI QUAN TRỌNG"</span>
+            <span className="label">
+              {t("projects.zalo.part2.commit7.definitionLabel")}
+            </span>
             <span className="val">
-              Thỏa ít nhất 1 trong 2 điều kiện: (1) thuộc thư mục người dùng tự
-              gán nhãn Công việc/Gia đình/Khách hàng, hoặc (2) nằm trong top 15%
-              hội thoại có tần suất tương tác cao nhất 30 ngày gần nhất.
+              {t("projects.zalo.part2.commit7.definition")}
             </span>
           </div>
         </div>
 
         <p style={{ marginTop: "20px" }}>
-          Vì Zalo chưa có baseline nội bộ cho hành vi này, mình neo target vào
-          benchmark ngành thay vì đoán số trên trời:
+          {t("projects.zalo.part2.commit7.benchmark")}
         </p>
 
         <div className="card-row" style={{ marginTop: "16px" }}>
@@ -262,12 +245,10 @@ export default function ShowcasePart2() {
             <p
               style={{ fontWeight: 600, color: "var(--ink)", margin: "4px 0" }}
             >
-              Reply rate sau Gentle Reminder
+              {t("projects.zalo.part2.commit7.cards.0")}
             </p>
             <p style={{ fontSize: "12px", color: "var(--ink-soft)" }}>
-              Benchmark in-app reminder chỉ ~10% (Leanplum). Đặt cao gấp ~2x vì
-              Zalo có captive audience và context cụ thể hơn một prompt chung
-              chung.
+              {t("projects.zalo.part2.commit7.cardBodies.0")}
             </p>
           </div>
           <div className="card blue" style={{ flex: 1 }}>
@@ -280,11 +261,10 @@ export default function ShowcasePart2() {
             <p
               style={{ fontWeight: 600, color: "var(--ink)", margin: "4px 0" }}
             >
-              Retention Reply Later (D28)
+              {t("projects.zalo.part2.commit7.cards.1")}
             </p>
             <p style={{ fontSize: "12px", color: "var(--ink-soft)" }}>
-              Benchmark utility feature ~20% (Mixpanel). Nhỉnh hơn vì giải quyết
-              đúng pain point có tần suất xảy ra hàng ngày.
+              {t("projects.zalo.part2.commit7.cardBodies.1")}
             </p>
           </div>
           <div className="card blue" style={{ flex: 1 }}>
@@ -297,19 +277,16 @@ export default function ShowcasePart2() {
             <p
               style={{ fontWeight: 600, color: "var(--ink)", margin: "4px 0" }}
             >
-              Adoption Focus Mode (D7)
+              {t("projects.zalo.part2.commit7.cards.2")}
             </p>
             <p style={{ fontSize: "12px", color: "var(--ink-soft)" }}>
-              Ngang benchmark ~5% DAU (Mixpanel) — đây là hành vi hoàn toàn mới,
-              không kỳ vọng vượt chuẩn ngay ở tháng đầu.
+              {t("projects.zalo.part2.commit7.cardBodies.2")}
             </p>
           </div>
         </div>
 
         <p className="callout-line" style={{ marginTop: "24px" }}>
-          Một target không dựa trên số liệu nào cả thì cũng chỉ là một lời hứa
-          suông — số liệu ngành, dù không hoàn hảo, vẫn là điểm neo tốt hơn cảm
-          tính.
+          {t("projects.zalo.part2.commit7.callout")}
         </p>
       </CommitLayout>
 
@@ -326,159 +303,36 @@ export default function ShowcasePart2() {
           </span>
         }
       >
-        <h2>Rủi ro cần kiểm soát trước khi Rollout</h2>
+        <h2>{t("projects.zalo.part2.commit8.title")}</h2>
 
-        <p>
-          Làm sản phẩm không chỉ là tối đa hóa chỉ số tăng trưởng, mà còn là bảo
-          vệ trải nghiệm cốt lõi của người dùng không bị tổn hại:
-        </p>
+        <p>{t("projects.zalo.part2.commit8.intro")}</p>
 
-        <div
-          className="risk-matrix"
-          style={{
-            marginTop: "20px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "16px",
-          }}
-        >
-          <div
-            className="risk-card"
-            style={{
-              background: "#fff",
-              border: "1px solid var(--border-subtle)",
-              padding: "16px",
-              borderRadius: "8px",
-            }}
-          >
-            <div
-              className="risk-top"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                marginBottom: "8px",
-              }}
+        <div className="risk-matrix">
+          {[0, 1, 2].map((riskIndex) => (
+            <article
+              className={`risk-card risk-card--${riskIndex}`}
+              key={riskIndex}
             >
-              <span className="risk-name" style={{ fontWeight: 700 }}>
-                1. Gây phiền (Spam Fatigue)
-              </span>
-            </div>
-            <p
-              className="risk-desc"
-              style={{
-                fontSize: "13px",
-                color: "var(--ink-soft)",
-                margin: "0 0 10px 0",
-              }}
-            >
-              <b>Dấu hiệu:</b> Tần suất notification quá dày làm user bực mình.
-            </p>
-            <div
-              className="risk-control"
-              style={{
-                fontSize: "12px",
-                background: "var(--bg-muted)",
-                padding: "8px",
-                borderRadius: "6px",
-              }}
-            >
-              <strong>Kiểm soát:</strong> Giới hạn tối đa 1 nhắc nhở/ngày/hội
-              thoại; tuyệt đối không gửi sau 22:00.
-            </div>
-          </div>
-
-          <div
-            className="risk-card"
-            style={{
-              background: "#fff",
-              border: "1px solid var(--border-subtle)",
-              padding: "16px",
-              borderRadius: "8px",
-            }}
-          >
-            <div
-              className="risk-top"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                marginBottom: "8px",
-              }}
-            >
-              <span className="risk-name" style={{ fontWeight: 700 }}>
-                2. Tăng áp lực (Anxiety)
-              </span>
-            </div>
-            <p
-              className="risk-desc"
-              style={{
-                fontSize: "13px",
-                color: "var(--ink-soft)",
-                margin: "0 0 10px 0",
-              }}
-            >
-              <b>Dấu hiệu:</b> Cảm giác bị theo dõi và ép trả lời.
-            </p>
-            <div
-              className="risk-control"
-              style={{
-                fontSize: "12px",
-                background: "var(--bg-muted)",
-                padding: "8px",
-                borderRadius: "6px",
-              }}
-            >
-              <strong>Kiểm soát:</strong> Copywriting mềm mỏng ("Bạn có muốn xem
-              lại...?"), cung cấp 1-chạm tắt vĩnh viễn tính năng.
-            </div>
-          </div>
-
-          <div
-            className="risk-card"
-            style={{
-              background: "#fff",
-              border: "1px solid var(--border-subtle)",
-              padding: "16px",
-              borderRadius: "8px",
-            }}
-          >
-            <div
-              className="risk-top"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                marginBottom: "8px",
-              }}
-            >
-              <span className="risk-name" style={{ fontWeight: 700 }}>
-                3. Tóm tắt sai ngữ cảnh
-              </span>
-            </div>
-            <p
-              className="risk-desc"
-              style={{
-                fontSize: "13px",
-                color: "var(--ink-soft)",
-                margin: "0 0 10px 0",
-              }}
-            >
-              <b>Dấu hiệu:</b> AI trích xuất nhầm từ các cuộc gọi tán gẫu.
-            </p>
-            <div
-              className="risk-control"
-              style={{
-                fontSize: "12px",
-                background: "var(--bg-muted)",
-                padding: "8px",
-                borderRadius: "6px",
-              }}
-            >
-              <strong>Kiểm soát:</strong> Chỉ kích hoạt khi phát hiện từ khóa
-              hành động (Action Verbs); luôn yêu cầu user duyệt trước khi lưu.
-            </div>
-          </div>
+              <div className="risk-top">
+                <span className="risk-name">
+                  {t(`projects.zalo.part2.commit8.risks.${riskIndex}.name`)}
+                </span>
+              </div>
+              <div className="risk-section">
+                <p className="risk-desc">
+                  {t(`projects.zalo.part2.commit8.risks.${riskIndex}.signal`)}
+                </p>
+              </div>
+              <div className="risk-control">
+                <span className="risk-label">
+                  {i18n.language === "en" ? "CONTROL" : "KIỂM SOÁT"}
+                </span>
+                <p>
+                  {t(`projects.zalo.part2.commit8.risks.${riskIndex}.control`)}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
 
         <div
@@ -489,15 +343,14 @@ export default function ShowcasePart2() {
             background: "rgba(239, 68, 68, 0.04)",
           }}
         >
-          <b style={{ color: "#b91c1c" }}>Guardrail Trigger:</b> Nếu tỷ lệ tắt
-          thông báo (Opt-out Rate) &gt; 25% hoặc điểm CSAT giảm quá 0.3 ở nhóm
-          thử nghiệm, sẵn sàng dừng rollout để tối ưu hóa mô hình AI — dù tỷ lệ
-          phản hồi tin nhắn có tăng.
+          <Trans
+            i18nKey="projects.zalo.part2.commit8.guardrail"
+            components={[<b style={{ color: "#b91c1c" }} />]}
+          />
         </div>
 
         <p className="callout-line" style={{ marginTop: "24px" }}>
-          Vì đôi khi, thứ khó đo nhất trong một sản phẩm lại chính là niềm tin —
-          và nó chỉ mất, không dễ lấy lại.
+          {t("projects.zalo.part2.commit8.callout")}
         </p>
       </CommitLayout>
 
@@ -508,20 +361,20 @@ export default function ShowcasePart2() {
         cmd="merge(identity)"
         tag={
           <span className="tag-wrap">
-            <span>điều đọng lại</span>
+            <span>{t("projects.zalo.part2.commit9.tag")}</span>
             <span className="skill-pill">
               <Lightbulb size={12} /> Product Philosophy
             </span>
           </span>
         }
       >
-        <h2>Định hình bản sắc Technical PM</h2>
+        <h2>{t("projects.zalo.part2.commit9.title")}</h2>
 
         <p>
-          Sau tất cả, điều đọng lại sâu nhất trong mình không nằm ở quy mô của
-          giải pháp, mà ở những khoảng lặng rất nhỏ trong trải nghiệm — không
-          chuông reo dồn dập, không rung bần bật, chỉ một dòng copy nhẹ nhàng
-          "Sẵn sàng phản hồi chưa?" thay vì hối thúc.
+          <Trans
+            i18nKey="projects.zalo.part2.commit9.intro"
+            components={[<strong />]}
+          />
         </p>
 
         <div className="diff">
@@ -530,7 +383,7 @@ export default function ShowcasePart2() {
             <span>
               canWeBuildThis(){" "}
               <span className="code-comment">
-                // đánh giá xem công nghệ có làm được không
+                {t("projects.zalo.part2.commit9.technical")}
               </span>
             </span>
           </div>
@@ -539,15 +392,14 @@ export default function ShowcasePart2() {
             <span>
               howShouldItBeBuilt(){" "}
               <span className="code-comment">
-                // quyết định nó nên được tạo ra như thế nào cho con người
+                {t("projects.zalo.part2.commit9.product")}
               </span>
             </span>
           </div>
         </div>
 
         <blockquote className="pullquote">
-          Kỹ thuật giỏi giúp mình biết một thứ có thể làm được. Chỉ tư duy
-          product mới giúp mình quyết định nó nên được làm như thế nào.
+          {t("projects.zalo.part2.commit9.quote")}
         </blockquote>
 
         <p
@@ -557,7 +409,7 @@ export default function ShowcasePart2() {
             marginTop: "22px",
           }}
         >
-          Vì với người dùng, không có chi tiết nào là nhỏ.
+          {t("projects.zalo.part2.commit9.closing")}
         </p>
       </CommitLayout>
     </>
