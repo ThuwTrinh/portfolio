@@ -19,7 +19,7 @@ const projectsEn = {
     impact: "POST-EXHIBIT IMPACT",
     outcomeTitle: "The Outcome of Hands-on Work",
     outcomeIntro:
-      "After four sprints of working alongside the team, from the first user flows to testing the completed cloud build, these are the practical outcomes and measures ReuseUni established.",
+      "Dorm move-outs waste good stuff, and campus Facebook groups are full of scams. I built a trust moat with .edu.vn email verification — turning ReuseUni into a safe campus marketplace.",
     pillars: [
       "Performance & Operations",
       "User Experience",
@@ -35,31 +35,31 @@ const projectsEn = {
       mvp: {
         tag: "Exhibit 02 • Scope & Trade-offs",
         title: "Exhibit 02 — Defining the MVP & Making Trade-offs",
-        desc: "Cut 60% of secondary features through an Impact/Effort matrix and focused on five core-loop features to validate problem-solution fit after two months.",
+        desc: "Using an Impact/Effort matrix, I cut 60% of nice-to-haves and kept 5 core features — shipped the MVP in 2 months.",
         alt: "MVP scope and trade-off matrix",
       },
       ux: {
         tag: "Exhibit 03 • Product Flow & Edge Cases",
         title: "Exhibit 03 — User Flow Architecture",
-        desc: "Designed five complete logic flows (Auth, Marketplace, Dorm Filters, Chat and Profile) and covered edge cases so over 90% of students could complete the task smoothly on the first try.",
+        desc: "Mapped 5 core flows and covered every edge case — over 90% of students completed key actions on their first try.",
         alt: "User Flow Diagram",
       },
       prototype: {
         tag: "Exhibit 04 • Hi-Fi Prototype & System",
         title: "Exhibit 04 — Design System & Interactive Prototype",
-        desc: "Built a Mobile-First UI/UX system and reduced the clearance-listing journey to three steps, reaching a usability score above 4.0/5.0.",
+        desc: "Built a Mobile-First design system from scratch — cut the listing flow down to 3 steps, scoring 4.0/5.0 in usability testing.",
         alt: "Overview of ReuseUni Figma screens",
       },
       scrum: {
         tag: "Exhibit 05 • Agile & Sprint Management",
         title: "Exhibit 05 — Scrum Operations & Delivery Coordination",
-        desc: "Coordinated delivery through GitHub Projects across four two-week sprints, prioritized P0→P3 work to control technical debt and delivered 100% of committed scope.",
+        desc: "Ran 4 sprints on GitHub Projects — delivered 100% of commitments on time.",
         alt: "GitHub Projects Scrum Board",
       },
       qa: {
         tag: "Exhibit 06 • Quality Assurance & Automation",
         title: "Exhibit 06 — UI Testing & Test Automation",
-        desc: "Built a Jest automation safety net and reached 82.5% line coverage (306/308 tests passing), reducing UI regression risk and keeping the product stable for users.",
+        desc: "Built an automated test suite as a safety net — 306/308 tests passing, 82.5% coverage.",
         alt: "Test Coverage Terminal",
       },
     },

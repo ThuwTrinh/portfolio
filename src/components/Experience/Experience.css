@@ -53,7 +53,7 @@
 .road-header h2 {
   margin: 0;
   color: #0f172a;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: clamp(32px, 4.5vw, 54px);
   font-weight: 800;
   line-height: 1.15;
@@ -300,7 +300,7 @@
 }
 
 .stage-title {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 800;
   color: #0f172a;

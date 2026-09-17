@@ -6,7 +6,7 @@
   max-width: 1200px;
   margin: 100px auto 80px;
   padding: 0 24px;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
 }
 
 .section-head {
@@ -16,7 +16,7 @@
 }
 
 .pill-tag {
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 11px;
   font-weight: 700;
   color: #0284c7;
@@ -128,7 +128,7 @@
 }
 
 .seal-badge span {
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 10px;
   font-weight: 800;
   color: #0284c7;
@@ -179,7 +179,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 10px;
   font-weight: 800;
   color: #0284c7;
@@ -187,7 +187,7 @@
 }
 
 .stub-code {
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 11px;
   font-weight: 800;
   color: #64748b;
@@ -231,7 +231,7 @@
 }
 
 .ticket-tagline {
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 9.5px;
   font-weight: 800;
   color: #0284c7;
@@ -266,7 +266,7 @@
 }
 
 .scroll-side-cue span {
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 11px;
   font-weight: 700;
   color: #64748b;
@@ -333,7 +333,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 11px;
   font-weight: 700;
   color: #0284c7;
@@ -484,7 +484,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 10.5px;
   font-weight: 800;
   color: #475569;
@@ -690,7 +690,7 @@
 }
 
 .pillar-tag {
-  font-family: monospace;
+  font-family: var(--mono, monospace);
   font-size: 11px;
   font-weight: 800;
   color: #0284c7;

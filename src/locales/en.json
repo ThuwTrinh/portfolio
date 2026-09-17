@@ -101,40 +101,40 @@
         "title": "Conversion Funnel Analysis & Anomaly Detection",
         "project": "E-commerce Funnel (GA4)",
         "artifact": "GA4 Funnel & User Journey",
-        "description": "Analyzed the multi-channel purchase journey, identified Mobile Checkout friction around shipping fees and credit cards, and uncovered ~40K anomalous bot sessions to protect data accuracy.",
-        "takeaway": "Quantified experience friction and proposed data-driven improvements to conversion."
+        "description": "Traced the cross-channel purchase journey, spotted the Mobile checkout bottleneck, and filtered out ~40k bot sessions to keep the data clean.",
+        "takeaway": "Optimization recommendations grounded in real user behavior, not guesswork."
       },
       "powerbi": {
         "category": "Data Visualization & BI",
         "title": "Data Visualization & Product Mix Analysis",
         "project": "CompanyX BI System",
         "artifact": "Power BI Dashboard",
-        "description": "Used SQL to explore data and define extraction requirements for the Data team. Built a Power BI dashboard to visualize revenue, profit, and performance across product lines.",
-        "takeaway": "Enabled data-driven decisions: scale the strong-performing Standard line while reducing focus on the less effective Tourist line."
+        "description": "Used SQL to mine raw data and built a Power BI dashboard to reveal revenue and performance across product lines.",
+        "takeaway": "Recommended scaling the Standard line and cutting the underperforming Tourist line — a data-driven call, not a gut call."
       },
       "prd": {
         "category": "Product Requirement & Delivery",
         "title": "PRDs, User Stories & Use Case Specifications",
         "project": "HCMUT_SSPS",
         "artifact": "Use Case & Flow Specs",
-        "description": "Translated user problems into PRDs, broke down the backlog into User Stories with clear Acceptance Criteria, and bridged business logic with engineering.",
-        "takeaway": "Create shared understanding between Business and Engineering before development begins."
+        "description": "Turned user problems into clear PRDs and User Stories with acceptance criteria, bridging Business and Engineering.",
+        "takeaway": "Made sure both sides shared the same logic before a single line of code was written."
       },
       "sql": {
         "category": "Business Intelligence & SQL",
         "title": "Data Queries & Business Performance Analysis",
         "project": "Restaurant Management DB",
         "artifact": "SQL Query Metrics",
-        "description": "Built multi-table SQL queries to extract revenue by branch and key operational KPIs, enabling independent performance analysis.",
-        "takeaway": "Leverage structured data to generate quantitative insights without relying entirely on the data team."
+        "description": "Wrote multi-table SQL queries to measure revenue and operational KPIs per branch.",
+        "takeaway": "Ran the analysis independently, without waiting on a data team."
       },
       "erd": {
         "category": "System & Logic Design",
         "title": "Business Flow & Database Modeling",
         "project": "Restaurant Management DB",
         "artifact": "E-ERD Database Model",
-        "description": "Designed a normalized E-ERD and modeled automated business rules for membership points, promotions, and inventory updates to maintain system integrity.",
-        "takeaway": "Understand the data foundation to collaborate effectively with Backend and Solution Architecture teams."
+        "description": "Designed the E-ERD and automation rules (loyalty points, promotions, inventory) to keep the system consistent.",
+        "takeaway": "Spoke the same language as Backend and Solution Architects from day one."
       }
     }
   }

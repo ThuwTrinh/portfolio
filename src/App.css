@@ -7,7 +7,7 @@
   --cyan: #38bdf8;
   --lavender: #dbeafe;
   --yellow: #fff1b8;
-  --mono: "Space Mono", monospace;
+  --mono: "JetBrains Mono", monospace;
 }
 .site-shell {
   max-width: 1240px;
@@ -157,7 +157,7 @@ h1 {
 }
 h1 em,
 h2 em {
-  font-family: "Playfair Display", serif;
+  font-family: var(--mono, monospace);
   font-weight: 500;
 }
 h1 strong,
@@ -322,7 +322,7 @@ h2 strong {
 }
 .amp {
   color: #0284c7;
-  font-family: "Playfair Display", serif;
+  font-family: var(--mono, monospace);
   font-style: italic;
 }
 .skill-list {

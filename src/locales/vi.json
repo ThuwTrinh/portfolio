@@ -101,40 +101,40 @@
         "title": "Phân tích Phễu Chuyển Đổi & Phát Hiện Bất Thường Dữ Liệu",
         "project": "E-commerce Funnel (GA4)",
         "artifact": "GA4 Funnel & User Journey",
-        "description": "Phân tích hành trình đặt hàng đa kênh, bóc tách điểm nghẽn Checkout trên Mobile (ma sát phí ship & thẻ tín dụng); đồng thời nhận diện và bóc tách ~40k phiên bot traffic bất thường để bảo vệ độ chuẩn xác của dữ liệu.",
-        "takeaway": "Định lượng ma sát trải nghiệm và đề xuất giải pháp tối ưu chuyển đổi dựa trên dữ liệu hành vi thực tế."
+        "description": "Soi hành trình mua hàng đa kênh, phát hiện điểm nghẽn ở bước Checkout trên Mobile — đồng thời lọc ra ~40k phiên bot để dữ liệu không bị nhiễu.",
+        "takeaway": "Đề xuất tối ưu chuyển đổi dựa trên hành vi thực tế, không dựa trên phỏng đoán."
       },
       "powerbi": {
         "category": "Data Visualization & BI",
         "title": "Trực quan hóa Dữ liệu & Phân tích Product Mix",
         "project": "CompanyX BI System",
         "artifact": "Power BI Dashboard",
-        "description": "Dùng SQL khám phá dữ liệu và lên yêu cầu trích xuất (Data Requirements) cho team Data. Xây dựng Power BI Dashboard để trực quan hóa doanh thu, lợi nhuận và hiệu quả của từng dòng sản phẩm.",
-        "takeaway": "Đưa ra quyết định dựa trên dữ liệu (Data-driven): Đề xuất đẩy mạnh sản xuất dòng Standard đang bán chạy và hạn chế dòng Tourist kém hiệu quả."
+        "description": "Dùng SQL khai thác dữ liệu thô, dựng Power BI Dashboard để nhìn rõ doanh thu và hiệu quả từng dòng sản phẩm.",
+        "takeaway": "Đề xuất đẩy mạnh dòng Standard, cắt giảm dòng Tourist kém hiệu quả — quyết định đến từ số liệu, không cảm tính."
       },
       "prd": {
         "category": "Product Requirement & Delivery",
         "title": "Đặc tả PRD, User Stories & Kịch bản Use Case",
         "project": "HCMUT_SSPS",
         "artifact": "Use Case & Flow Specs",
-        "description": "Chuyển hóa bài toán người dùng thành tài liệu PRD, phân rã backlog thành User Stories với tiêu chuẩn nghiệm thu (Acceptance Criteria) rõ ràng, làm cầu nối truyền đạt logic nghiệp vụ cho đội ngũ kỹ thuật.",
-        "takeaway": "Đảm bảo sự thấu hiểu đồng nhất giữa Business và Engineering trước khi bước vào giai đoạn phát triển."
+        "description": "Chuyển bài toán người dùng thành PRD và User Stories rõ ràng, kèm tiêu chuẩn nghiệm thu — làm cầu nối giữa Business và Engineering.",
+        "takeaway": "Đảm bảo cả hai bên cùng hiểu một logic trước khi bắt tay code."
       },
       "sql": {
         "category": "Business Intelligence & SQL",
         "title": "Truy vấn Dữ liệu & Bóc tách Hiệu quả Kinh doanh",
         "project": "Restaurant Management DB",
         "artifact": "SQL Query Metrics",
-        "description": "Chủ động xây dựng câu lệnh SQL đa bảng, trích xuất và đo lường doanh thu theo từng chi nhánh cùng các chỉ số KPI vận hành, phục vụ việc đánh giá hiệu suất kinh doanh độc lập.",
-        "takeaway": "Chủ động khai thác dữ liệu có cấu trúc để đưa ra các phân tích định lượng mà không phụ thuộc data team."
+        "description": "Tự viết SQL đa bảng để đo doanh thu và KPI vận hành theo từng chi nhánh.",
+        "takeaway": "Tự phân tích được dữ liệu, không phải chờ đội Data."
       },
       "erd": {
         "category": "System & Logic Design",
         "title": "Mô hình hóa Luồng Nghiệp vụ & Cơ sở Dữ liệu",
         "project": "Restaurant Management DB",
         "artifact": "E-ERD Database Model",
-        "description": "Thiết kế sơ đồ quan hệ E-ERD chuẩn hóa và xây dựng quy tắc tự động hóa luồng nghiệp vụ (tính điểm thành viên, áp dụng khuyến mãi, cập nhật tồn kho) nhằm đảm bảo tính toàn vẹn hệ thống.",
-        "takeaway": "Thấu hiểu kiến trúc dữ liệu nền tảng để phối hợp trơn tru cùng đội ngũ Backend và Solution Architect."
+        "description": "Thiết kế E-ERD và luật tự động hóa (tính điểm, khuyến mãi, tồn kho) để hệ thống vận hành nhất quán.",
+        "takeaway": "Nói cùng ngôn ngữ với Backend và Solution Architect ngay từ đầu."
       }
     }
   }

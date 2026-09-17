@@ -68,7 +68,7 @@
 
 .toolbox-header h2 {
   margin: 0 0 10px 0;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 800;
   color: #0f172a;
@@ -160,7 +160,7 @@
 }
 
 .toolbox-item-title {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: 18px;
   font-weight: 800;
   color: #0f172a;

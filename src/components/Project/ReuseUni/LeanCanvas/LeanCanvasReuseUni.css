@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 40px auto;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
 }
 
 .canvas-header {

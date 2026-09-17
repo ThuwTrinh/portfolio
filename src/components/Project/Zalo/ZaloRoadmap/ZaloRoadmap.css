@@ -7,7 +7,7 @@
   max-width: 1100px;
   margin: 60px auto;
   padding: 0 20px;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
 }
 
 .roadmap-header {

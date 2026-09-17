@@ -62,7 +62,7 @@
 
 .snapshot-header h2 {
   margin: 0;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 800;
   color: #0f172a;
@@ -155,7 +155,7 @@
 
 .snapshot-title-clean {
   color: #0f172a;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: 17px;
   font-weight: 800;
   letter-spacing: -0.01em;

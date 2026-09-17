@@ -32,11 +32,7 @@
     transparent 100%
   );
   color: var(--ink);
-  font-family:
-    "IBM Plex Sans",
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+  font-family: var(--mono, monospace);
   font-size: 16.5px;
   line-height: 1.6;
   padding: 40px 0 0;
@@ -56,7 +52,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 11.5px;
   letter-spacing: 0.05em;
   color: var(--blue);
@@ -66,7 +62,7 @@
   margin-bottom: 20px;
 }
 .zalo-hero h1 {
-  font-family: "Fraunces", serif;
+  font-family: var(--mono, monospace);
   font-weight: 600;
   font-size: clamp(30px, 5.4vw, 44px);
   line-height: 1.16;
@@ -94,7 +90,7 @@
   flex-wrap: wrap;
 }
 .btn {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: 13px;
   font-weight: 600;
   padding: 9px 18px;
@@ -192,7 +188,7 @@
   gap: 8px;
 }
 .hash-line {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 12px;
   color: var(--ink-soft);
   display: flex;
@@ -216,7 +212,7 @@
   background: var(--mint);
 }
 .tag {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 10.5px;
   letter-spacing: 0.04em;
   background: var(--blue-dim);
@@ -227,7 +223,7 @@
 }
 
 .commit h2 {
-  font-family: "Fraunces", serif;
+  font-family: var(--mono, monospace);
   font-weight: 600;
   font-size: 24px;
   margin: 0 0 14px;
@@ -257,7 +253,6 @@
   margin-bottom: 0;
 }
 .brief .label {
-  font-family: "IBM Plex Mono", monospace;
   font-size: 10.5px;
   color: var(--ink-faint);
   flex-shrink: 0;
@@ -284,7 +279,7 @@
   box-shadow: 0 2px 8px rgba(16, 19, 28, 0.02);
 }
 .icon-pill {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 12px;
   background: var(--paper);
   border-radius: 999px;
@@ -295,7 +290,7 @@
   white-space: nowrap;
 }
 .icon-gap {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 16px;
   font-weight: 700;
   width: 34px;
@@ -310,7 +305,7 @@
 }
 
 .callout-line {
-  font-family: "Fraunces", serif;
+  font-family: var(--mono, monospace);
   font-size: 18px;
   font-weight: 500;
   color: var(--ink);
@@ -319,7 +314,7 @@
 
 /* DIFF */
 .diff {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 13px;
   border-radius: 10px;
   overflow: hidden;
@@ -378,7 +373,7 @@
   display: block;
 }
 .card .card-tag {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 9px;
   letter-spacing: 0.04em;
   padding: 2px 7px;
@@ -465,7 +460,7 @@
   color: var(--risk-color);
   border: 1px solid color-mix(in srgb, var(--risk-color) 35%, white);
   border-radius: 8px;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 11px;
   font-weight: 700;
 }
@@ -482,7 +477,7 @@
 .risk-label {
   display: block;
   margin-bottom: 5px;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -548,7 +543,7 @@
 .wf-step-badge {
   background: var(--blue, #2f6fed);
   color: #ffffff;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 10px;
   font-weight: 700;
   padding: 2px 6px;
@@ -639,7 +634,7 @@
 .zalo-mock .badge {
   background: var(--red-diff);
   color: white;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 11px;
   font-weight: 700;
   padding: 2px 7px;
@@ -663,7 +658,7 @@
   flex-wrap: wrap;
 }
 .persona-badge {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 10px;
   letter-spacing: 0.05em;
   background: var(--ink);
@@ -673,7 +668,7 @@
   font-weight: 600;
 }
 .persona-title {
-  font-family: "Fraunces", serif;
+  font-family: var(--mono, monospace);
   font-weight: 600;
   font-size: 17px;
 }
@@ -706,7 +701,7 @@
   font-size: 11.5px;
 }
 .persona-col .pc-label {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 9.5px;
   color: var(--ink-faint);
   letter-spacing: 0.03em;
@@ -755,7 +750,7 @@
 
 /* PULLQUOTE */
 blockquote.pullquote {
-  font-family: "Fraunces", serif;
+  font-family: var(--mono, monospace);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.45;
@@ -769,7 +764,7 @@ blockquote.pullquote {
 .zalo-wrap footer {
   border-top: 1px solid var(--line);
   padding: 36px 0 60px;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--mono, monospace);
   font-size: 12px;
   color: var(--ink-soft);
   text-align: center;

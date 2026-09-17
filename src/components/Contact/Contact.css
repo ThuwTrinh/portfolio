@@ -93,7 +93,7 @@
 .contact-title-clean {
   margin: 0;
   color: #0f172a;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: clamp(48px, 6vw, 82px);
   font-weight: 800;
   line-height: 1.05;
@@ -123,7 +123,7 @@
   border-radius: 8px;
   background: #151e32;
   color: #ffffff;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
@@ -172,7 +172,7 @@
   align-items: center;
   gap: 4px;
   color: #475569;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--mono, monospace);
   font-size: 14.5px;
   font-weight: 700;
   text-decoration: none;
