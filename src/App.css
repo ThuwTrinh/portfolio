@@ -1321,6 +1321,12 @@ footer {
   grid-row: 1;
   max-width: 650px;
 }
+#hero-title {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.2;
+  font-weight: 700;
+  }
+
 .hero-section .eyebrow {
   width: fit-content;
   padding: 9px 13px;

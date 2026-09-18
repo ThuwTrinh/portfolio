@@ -19,7 +19,7 @@
       "Biến insight người dùng thành ưu tiên phát triển",
       "Xây dựng sản phẩm có chủ đích & tạo giá trị thật"
     ],
-    "intro": "Đi lên từ nền tảng kỹ thuật tới tư duy sản phẩm — mình thích gỡ rối những bài toán mơ hồ và biến chúng thành trải nghiệm số đơn giản, hữu ích.",
+    "intro": "Từ kỹ thuật đến tư duy sản phẩm — mình thích gỡ rối bài toán mơ hồ thành trải nghiệm số đơn giản, hữu ích.",
     "explore": "Khám phá hành trình",
     "featuredProjects": "Dự án tiêu biểu",
     "cv": "Xem CV",
@@ -56,28 +56,28 @@
       "tag": "GỐC RỄ TƯ DUY",
       "title": "Những bài toán không có đáp án mẫu",
       "lens": "Chuyên Toán • THPT Chuyên Quang Trung",
-      "desc": "Những năm tháng học chuyên Toán rèn cho em thói quen không ngại bài toán khó. Khi đối mặt với sự mơ hồ, phản xạ đầu tiên là đào sâu tìm bản chất chứ không học vẹt công thức.",
-      "takeaway": "Tư duy gốc rễ: Luôn bóc tách vấn đề về những điều cơ bản nhất trước khi tìm lời giải."
+      "desc": "Những năm học chuyên Toán rèn mình thói quen không ngại bài khó — luôn đào sâu bản chất, không học vẹt công thức.",
+      "takeaway": "Luôn bóc tách vấn đề về những điều cơ bản nhất trước khi tìm lời giải."
     },
     "stage2": {
       "tag": "NỀN TẢNG KỸ THUẬT",
       "title": "Làm chủ dòng code & Hệ thống",
       "lens": "Computer Science • Bách Khoa HCMUT",
-      "desc": "Những đêm debug đồ án lớn ở Bách Khoa cho em cái nhìn thực tế về cách phần mềm vận hành: code chạy được là một chuyện, hệ thống chịu tải tốt và dễ bảo trì hay không lại là chuyện khác.",
+      "desc": "Những đêm debug đồ án lớn cho mình thấy: code chạy được là một chuyện, hệ thống chịu tải tốt và dễ bảo trì lại là chuyện khác.",
       "takeaway": "Hiểu sâu về kỹ thuật để biết rõ giới hạn công nghệ và nói cùng ngôn ngữ với Dev."
     },
     "stage3": {
       "tag": "BƯỚC NGOẶT THỰC TẾ",
       "title": "Khi tính năng tâm huyết bị ngó lơ",
       "lens": "Mobile App • Interlink Labs",
-      "desc": "Làm app thực tế, nhìn người dùng drop-off ở những tính năng mình mất cả tháng để viết code, em mới vỡ lẽ: Code xịn đến đâu mà giải sai nhu cầu thì sản phẩm vẫn bị bỏ xó.",
-      "takeaway": "Chuyển dịch tư duy: Đừng chỉ hỏi 'làm như thế nào', hãy luôn tự hỏi 'tại sao người ta phải dùng?'."
+      "desc": "Nhìn người dùng drop-off ở tính năng mình mất cả tháng để viết code, mình vỡ lẽ: code xịn đến đâu mà giải sai nhu cầu thì sản phẩm vẫn bị bỏ xó.",
+      "takeaway": "Chuyển dịch tư duy: Đừng chỉ hỏi \"làm như thế nào\", hãy luôn tự hỏi \"tại sao người ta phải dùng?\"."
     },
     "stage4": {
       "tag": "ĐÍCH ĐẾN HIỆN TẠI",
       "title": "Làm chủ sản phẩm từ đầu đến cuối",
       "lens": "Product Management & AI",
-      "desc": "Em kết hợp logic toán học, nền tảng kỹ thuật và làn sóng AI để nhận trọn trách nhiệm cho sản phẩm—từ lúc bóc tách ý tưởng sơ khai cho đến trải nghiệm cuối cùng trên tay người dùng.",
+      "desc": "Mình kết hợp logic toán học, nền tảng kỹ thuật và làn sóng AI để nhận trọn trách nhiệm sản phẩm — từ ý tưởng đến trải nghiệm cuối cùng.",
       "takeaway": "Biến những công nghệ phức tạp thành trải nghiệm số đơn giản và tạo ra giá trị thật."
     }
   },

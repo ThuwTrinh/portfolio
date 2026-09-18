@@ -44,14 +44,27 @@ function App() {
         </nav>
       </header>
       <main id="top">
-        <Hero />
-        <Snapshot />
-        <Experience />
-        <ZaloCaseStudy />
-        <ReuseUniShowcase />
-        <TechnicalToolbox />
-
-        <Contact />
+        <div id="section-hero">
+          <Hero />
+        </div>
+        <div id="section-snapshot">
+          <Snapshot />
+        </div>
+        <div id="section-experience">
+          <Experience />
+        </div>
+        <div id="section-zalo">
+          <ZaloCaseStudy />
+        </div>
+        <div id="section-reuseuni">
+          <ReuseUniShowcase />
+        </div>
+        <div id="section-toolbox">
+          <TechnicalToolbox />
+        </div>
+        <div id="section-contact">
+          <Contact />
+        </div>
       </main>
       <footer>
         <span>© 2024 {t("hero.name")}</span>

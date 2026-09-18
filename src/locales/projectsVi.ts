@@ -19,7 +19,7 @@ const projectsVi = {
     impact: "POST-EXHIBIT IMPACT",
     outcomeTitle: "Trái Ngọt Sau Hành Trình Thực Chiến",
     outcomeIntro:
-      "Sau chu kỳ 4 Sprint đồng hành và thực chiến cùng đội ngũ, từ việc phác thảo những luồng sản phẩm (User Flows) đầu tiên cho đến khi kiểm thử hoàn thiện bản build trên Cloud, đây là những kết quả và thước đo thực tế mà ReuseUni đã xác lập.",
+      "Sau chu kỳ 4 Sprint đồng hành và thực chiến cùng đội ngũ, đây là những kết quả và thước đo thực tế mà ReuseUni đã xác lập.",
     pillars: [
       "Hiệu Năng & Vận Hành",
       "Trải Nghiệm Người Dùng",
@@ -206,14 +206,14 @@ const projectsVi = {
   zalo: {
     eyebrow: "⑂ case study · zalo pmt 2026",
     title: "Bước ngoặt: khoảnh khắc mình tìm thấy tư duy Product",
-    lede: "Từ một người quen nhìn thế giới qua dòng lệnh, đến lúc nhận ra: công nghệ chỉ có ý nghĩa khi tháo gỡ được một nỗi đau có thật.",
+    lede: "Mình từng nhìn thế giới qua dòng lệnh — cho đến khi nhận ra công nghệ chỉ có ý nghĩa khi tháo gỡ được một nỗi đau có thật.",
     video: "Xem video thuyết trình",
     assignment: "Tài liệu Assignment (PDF)",
     footer: "Case Study · Zalo Product Management Trainee 2026",
     part1: {
       commit1: {
         tag: "điểm chạm",
-        title: "Khi 'chạy đúng' không còn là thước đo duy nhất",
+        title: 'Khi "chạy đúng" không còn là thước đo duy nhất',
         intro:
           "Xuất phát điểm là dân kỹ thuật, mình từng tin sản phẩm tốt đơn giản là code mượt, thuật toán tối ưu. Đúng — là đủ.",
         setup:
@@ -245,7 +245,7 @@ const projectsVi = {
         subtitle: "Subtitle",
         translate: "Dịch tin",
         callout:
-          "Hóa ra khoảng trống không nằm ở những phút giây trò chuyện, mà bắt đầu ngay khoảnh khắc tiếng 'tút' vừa dứt.",
+          'Hóa ra khoảng trống không nằm ở những phút giây trò chuyện, mà bắt đầu ngay khoảnh khắc tiếng "tút" vừa dứt.',
       },
       commit3: {
         title: "Cân bằng giữa dữ liệu và niềm tin",
@@ -257,10 +257,10 @@ const projectsVi = {
           "<0>AI Call Note</0> — tóm tắt cuộc gọi, gửi thẳng vào khung chat kèm nút đặt lịch 1-chạm.",
         intro:
           "Tìm ra khoảng trống là nửa dễ. Nửa khó là bài toán lòng tin: một AI can thiệp vào cuộc trò chuyện riêng tư chỉ có giá trị khi người dùng thực sự cảm thấy an tâm.",
-        diffBefore: "// càng nhiều dữ liệu càng 'chuẩn'",
+        diffBefore: '// càng nhiều dữ liệu càng "chuẩn"',
         diffAfter: "// niềm tin trước, tối ưu sau",
         setup:
-          "Thay vì tối ưu độ 'xịn' của công nghệ bằng cách thu thập tối đa dữ liệu, mình đặt ra 3 ranh giới thiết kế để đặt sự riêng tư lên hàng đầu:",
+          'Thay vì tối ưu độ "xịn" của công nghệ bằng cách thu thập tối đa dữ liệu, mình đặt ra 3 ranh giới thiết kế để đặt sự riêng tư lên hàng đầu:',
         card1Title: "1. Từ chối Full Recording",
         card1Body:
           "Chỉ bóc tách text thời gian thực và hủy dữ liệu sau cuộc gọi, tuyệt đối không lưu file âm thanh để triệt tiêu nỗi sợ bị ghi âm lén.",
@@ -272,37 +272,30 @@ const projectsVi = {
           'Đóng gói ngắn gọn dưới dạng thẻ trong khung chat kèm nút "Đặt lịch ngay" điền sẵn thông tin, không bắt user mở app/tab phụ.',
         flowLead:
           "Toàn bộ nguyên tắc này được cụ thể hóa qua luồng trải nghiệm 4 bước:",
-        step1Title: "Bật AI Call Note trong cuộc gọi",
-        step1Body:
-          "Người dùng chủ động bật tính năng trong giao diện cuộc gọi.",
+        step1Title: "Bật AI Call Note",
         step1a: "Nút đặt cạnh các nút điều khiển cuộc gọi.",
         step1b: "Chỉ báo hiển thị khi AI đang hoạt động để đảm bảo minh bạch.",
         step2Title: "Các thành viên đồng ý",
-        step2Body: "Tất cả thành viên xác nhận đồng ý sử dụng tính năng.",
         step2a:
           "Nếu có người từ chối hoặc không phản hồi sau 1 phút, tính năng không bắt đầu.",
-        step3Title: "Summary Card trong khung chat",
-        step3Body:
-          "Sau khi cuộc gọi kết thúc, AI gửi Summary Card vào khung chat.",
+        step3Title: "Summary Card trong Chat",
         step3a: "Hiển thị tóm tắt và thông tin quan trọng được trích xuất.",
         step4Title: "User nhấn Đặt lịch ngay",
-        step4Body: "Zalo tự động điền sẵn thông tin nhắc hẹn.",
         step4a: "Người dùng chỉ cần kiểm tra và bấm Lưu.",
         callout:
           'Bốn bước này không phải để "cho đẹp demo" — mỗi bước đều là một lần hỏi lại: liệu người dùng có đang cảm thấy an toàn ở bước này không?',
       },
       commit4: {
         title:
-          "Một tính năng 'chạy được' chưa chắc là một tính năng 'đáng tin'",
+          'Một tính năng "chạy được" chưa chắc là một tính năng "đáng tin"',
         intro:
           "Thiết kế xong 4 bước là lúc phản xạ kỹ thuật trong mình muốn dừng lại — mọi thứ đã hoạt động đúng. Nhưng tư duy product hỏi tiếp một câu khó hơn: làm sao biết người dùng có thực sự tin và dùng lại tính năng này, hay chỉ bấm thử một lần rồi thôi?",
         northStar:
-          "% người mở xem hoặc chỉnh sửa Note sau khi cuộc gọi kết thúc. Đây là North Star, không phải Adoption, vì mở lại xem mới chứng minh nội dung tóm tắt thực sự hữu ích.",
-        adoption:
-          "% cuộc gọi thoại có tất cả thành viên đồng ý bật AI Call Note.",
+          "% người mở/chỉnh sửa Note sau cuộc gọi — chỉ số cho thấy nội dung tóm tắt thực sự hữu ích, không chỉ dừng ở việc bật tính năng.",
+        adoption: "% cuộc gọi có tất cả thành viên đồng ý bật AI Call Note.",
         conversion: "% bấm Đặt lịch ngay và lưu thành công vào Lịch Zalo.",
         guardrail:
-          "Tỷ lệ từ chối bật tính năng hoặc gạt bỏ thông báo. Vượt ngưỡng này nghĩa là cơ chế xin quyền đang có vấn đề — dừng lại xem trước khi mở rộng.",
+          "Tỷ lệ từ chối/gạt bỏ tính năng. Vượt ngưỡng này nghĩa là cơ chế xin quyền có vấn đề — cần dừng lại trước khi mở rộng.",
         callout:
           "Vì với một tính năng đụng vào lòng tin, con số quan trọng nhất không phải là bao nhiêu người bấm thử, mà là bao nhiêu người quay lại lần thứ hai.",
       },
@@ -377,8 +370,7 @@ const projectsVi = {
         intro:
           "Chọn làm ít hơn dễ khiến người ta tự thỏa hiệp luôn với một mục tiêu khiêm tốn hơn. Nhưng nếu không có một con số duy nhất để đối chiếu, sẽ không bao giờ biết được liệu cách cắt ở commit trước có đúng hay không.",
         northStarLabel: "NORTH STAR",
-        northStar:
-          "trên các Hội thoại quan trọng (nhóm công việc, đối tác có trao đổi file/link hoặc cuộc gọi trước đó).",
+        northStar: "trên các Hội thoại quan trọng.",
         definitionLabel: 'ĐỊNH NGHĨA "HỘI THOẠI QUAN TRỌNG"',
         definition:
           "Thỏa ít nhất 1 trong 2 điều kiện: (1) thuộc thư mục người dùng tự gán nhãn Công việc/Gia đình/Khách hàng, hoặc (2) nằm trong top 15% hội thoại có tần suất tương tác cao nhất 30 ngày gần nhất.",
@@ -390,9 +382,9 @@ const projectsVi = {
           "Adoption Focus Mode (D7)",
         ],
         cardBodies: [
-          "Benchmark in-app reminder chỉ ~10% (Leanplum). Đặt cao gấp ~2x vì Zalo có captive audience và context cụ thể hơn một prompt chung chung.",
-          "Benchmark utility feature ~20% (Mixpanel). Nhỉnh hơn vì giải quyết đúng pain point có tần suất xảy ra hàng ngày.",
-          "Ngang benchmark ~5% DAU (Mixpanel) — đây là hành vi hoàn toàn mới, không kỳ vọng vượt chuẩn ngay ở tháng đầu.",
+          "Gấp ~2x benchmark reminder thông thường (~10%), nhờ context cụ thể hơn và lợi thế captive audience của Zalo.",
+          "Nhỉnh hơn benchmark utility feature (~20%) vì giải đúng pain point xảy ra hàng ngày.",
+          "Ngang benchmark ~5% DAU — hành vi hoàn toàn mới, chưa kỳ vọng bứt phá ngay tháng đầu.",
         ],
         callout:
           "Một target không dựa trên số liệu nào cả thì cũng chỉ là một lời hứa suông — số liệu ngành, dù không hoàn hảo, vẫn là điểm neo tốt hơn cảm tính.",

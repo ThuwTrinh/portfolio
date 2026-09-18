@@ -64,7 +64,7 @@ export default function ZaloCaseStudy() {
 
         {/* FOOTER */}
         <footer>
-          <div className="merge">merge branch 'product-mindset' into main</div>
+          <div className="merge">merge branch "product-mindset" into main</div>
           <div>{t("projects.zalo.footer")}</div>
         </footer>
       </div>

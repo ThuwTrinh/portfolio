@@ -1,26 +1,26 @@
 {
-  "language": { "switchTo": "Vietnamese", "current": "EN" },
+  "language": { "switchTo": "Tiếng Việt", "current": "EN" },
   "nav": {
     "backToTop": "Back to top",
     "main": "Main navigation",
     "about": "About",
-    "work": "Projects",
+    "work": "Work",
     "experience": "Journey",
     "contact": "Contact"
   },
   "footer": { "builtWith": "Built with curiosity & care" },
   "hero": {
-    "eyebrow": "OPEN TO PRODUCT OPPORTUNITIES · HO CHI MINH CITY",
+    "eyebrow": "OPEN TO PRODUCT OPPORTUNITIES · Ho Chi Minh City",
     "greeting": "Hi, I'm",
     "name": "Anh Thu",
     "role": "Product Management",
     "typewriter": [
-      "Untangling problems hidden in ambiguity",
-      "Turning user insights into product priorities",
-      "Building with purpose & creating real value"
+      "Untangling ambiguous problems",
+      "Turning user insight into product priorities",
+      "Building intentional products that create real value"
     ],
-    "intro": "From a technical foundation to a product mindset — I enjoy untangling ambiguous problems and turning them into simple, useful digital experiences.",
-    "explore": "Explore my journey",
+    "intro": "From engineering to product thinking — I turn ambiguous problems into simple, useful digital experiences.",
+    "explore": "Explore the journey",
     "featuredProjects": "Featured projects",
     "cv": "View CV",
     "visualLabel": "Product management visual",
@@ -32,69 +32,69 @@
   "snapshot": {
     "ariaLabel": "Quick snapshot",
     "eyebrow": "QUICK SNAPSHOT",
-    "title": "A Snapshot of Me",
-    "degree": "Outstanding Graduate",
+    "title": "A Few Highlights About Me",
+    "degree": "Graduated with Distinction",
     "degreeSub": "HCMUT • Computer Science",
     "degreeDetails": "GPA: 3.6 / 4.0 (8.32/10)\nGraduating Nov 2026",
-    "transcript": "View transcript",
-    "language": "English Proficiency",
+    "transcript": "View Transcript",
+    "language": "Language Proficiency",
     "languageSub": "TOEIC 760 (Listening & Reading)",
-    "languageDetails": "Confident communication & effective collaboration in international environments",
+    "languageDetails": "Confident communicator, effective in international settings",
     "mindset": "Product Mindset",
     "mindsetSub": "Technical Feasibility",
-    "mindsetDetails": "Bridging technical constraints with business needs, with AI-powered execution",
-    "logoAlt": "HCMUT logo"
+    "mindsetDetails": "Bridging engineering and business problems, optimizing execution with AI",
+    "logoAlt": "HCMUT Logo"
   },
   "experience": {
     "badge": "THE PRODUCT ODYSSEY",
     "title": "The Shift",
     "titleAccent": "From Code to Product",
-    "intro": "Four milestones that shaped the way I think about products.",
+    "intro": "A step-by-step journey shaping my product instinct through 4 milestones.",
     "station": "STATION {{number}}",
     "km": "KM {{distance}}",
     "stage1": {
-      "tag": "ROOTS OF THINKING",
-      "title": "Problems without a template",
-      "lens": "Math • Quang Trung High School for the Gifted",
-      "desc": "Years of studying advanced Mathematics taught me not to shy away from hard problems. When faced with ambiguity, my first instinct is to dig deeper and find the underlying logic—not memorize a formula.",
-      "takeaway": "Think from first principles: Break problems down to their fundamentals before looking for answers."
+      "tag": "ROOT OF THE MINDSET",
+      "title": "Problems Without a Sample Answer",
+      "lens": "Math Major • Quang Trung High School for the Gifted",
+      "desc": "Years in a specialized math program taught me to embrace difficult problems, start from first principles, and understand rather than memorize formulas.",
+      "takeaway": "Always break a problem down to its most fundamental parts before solving it."
     },
     "stage2": {
       "tag": "TECHNICAL FOUNDATION",
-      "title": "Learning how code & systems work",
+      "title": "Mastering Code & Systems",
       "lens": "Computer Science • HCMUT",
-      "desc": "Long nights debugging major projects at HCMUT gave me a practical view of how software works: getting code to run is one thing; building systems that scale and stay maintainable is another.",
-      "takeaway": "Understand technology deeply to know its limits and speak the same language as engineers."
+      "desc": "Long nights debugging capstone projects taught me that getting code to run is one thing — building a system that scales and stays maintainable is another.",
+      "takeaway": "Deep technical understanding to know the limits of the tech and speak the same language as engineers."
     },
     "stage3": {
-      "tag": "THE REALITY CHECK",
-      "title": "When a feature gets ignored",
+      "tag": "THE REAL-WORLD TURNING POINT",
+      "title": "When a Feature I Cared About Got Ignored",
       "lens": "Mobile App • Interlink Labs",
-      "desc": "Building a real-world app and watching users drop off from features I spent weeks coding taught me a hard lesson: great code means little if it solves the wrong problem.",
-      "takeaway": "Shift the question: Don't just ask 'how do we build it?' Ask 'why would people use it?'"
+      "desc": "Watching users drop off from a feature I spent a month coding taught me a hard lesson: no matter how polished the code, a product gets abandoned if it solves the wrong need.",
+      "takeaway": "The mindset shift: don't just ask \"how do I build this,\" always ask \"why would anyone use this?\""
     },
     "stage4": {
-      "tag": "WHERE I AM TODAY",
-      "title": "Owning the product end to end",
+      "tag": "WHERE I AM NOW",
+      "title": "Owning Products End-to-End",
       "lens": "Product Management & AI",
-      "desc": "I bring together mathematical thinking, technical foundations, and AI to take ownership of the product journey—from shaping a rough idea to crafting the final experience.",
-      "takeaway": "Turn complex technology into simple digital experiences that create real value."
+      "desc": "I combine mathematical thinking, technical depth, and AI to take a product from idea to user experience — and take full ownership along the way.",
+      "takeaway": "Turning complex technology into simple digital experiences that create real value."
     }
   },
   "contact": {
     "status": "OPEN TO NEW OPPORTUNITIES",
-    "title": "Let’s build",
+    "title": "Let's build",
     "titleAccent": "something real.",
-    "email": "Send me an email",
+    "email": "Send an email",
     "copyEmail": "Copy email",
     "copied": "Email copied",
     "avatarAlt": "Trinh Thi Anh Thu"
   },
   "toolbox": {
-    "ariaLabel": "Skills showcase",
+    "ariaLabel": "Skill showcase",
     "eyebrow": "SKILL SHOWCASE",
     "title": "Supporting Skills",
-    "intro": "Practical skills demonstrated through real products and hands-on projects.",
+    "intro": "Other hands-on skills proven through real products and real work.",
     "items": {
       "ga4": {
         "category": "Product & Data Analytics",
@@ -114,7 +114,7 @@
       },
       "prd": {
         "category": "Product Requirement & Delivery",
-        "title": "PRDs, User Stories & Use Case Specifications",
+        "title": "PRD, User Stories & Use Case Specs",
         "project": "HCMUT_SSPS",
         "artifact": "Use Case & Flow Specs",
         "description": "Turned user problems into clear PRDs and User Stories with acceptance criteria, bridging Business and Engineering.",
@@ -122,7 +122,7 @@
       },
       "sql": {
         "category": "Business Intelligence & SQL",
-        "title": "Data Queries & Business Performance Analysis",
+        "title": "Data Querying & Business Performance Breakdown",
         "project": "Restaurant Management DB",
         "artifact": "SQL Query Metrics",
         "description": "Wrote multi-table SQL queries to measure revenue and operational KPIs per branch.",
@@ -130,7 +130,7 @@
       },
       "erd": {
         "category": "System & Logic Design",
-        "title": "Business Flow & Database Modeling",
+        "title": "Business Logic & Database Modeling",
         "project": "Restaurant Management DB",
         "artifact": "E-ERD Database Model",
         "description": "Designed the E-ERD and automation rules (loyalty points, promotions, inventory) to keep the system consistent.",

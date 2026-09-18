@@ -1,25 +1,25 @@
 const projectsEn = {
   reuse: {
     tag: "PROJECT CASE STUDY",
-    title: "ReuseUni — Campus Exchange Marketplace",
+    title: "ReuseUni — Dorm Marketplace",
     intro:
-      "A hyperlocal C2C marketplace for university village students, solving graduation-season waste and trust issues in social groups.",
-    pdf: "Detailed document (PDF)",
+      "A hyperlocal C2C e-commerce platform built exclusively for students at the University Village — solving the waste of usable items every graduation season and the scam risk on social media groups.",
+    pdf: "Full Document (PDF)",
     github: "GitHub Organization / Board",
     entry: "EXHIBIT ENTRY",
     galleryPass: "GALLERY PASS",
     exhibitCode: "NO. 06-EXHIBITS",
     curatedJourney: "CURATED JOURNEY",
     ticket:
-      "Welcome to an exhibition of <0>six execution frames</0>, capturing how I shaped a product as a <1>Product Manager</1> from the first sketch to the final build.",
+      "Welcome to an exhibition of <0>6 execution paintings</0> — a record of every brushstroke that shaped this product in my role as <1>Product Manager</1>, from the first sketch of an idea to the final polish.",
     scroll: "SCROLL TO EXPLORE",
-    prototype: "Try the prototype",
-    flowSpecs: "View flow specs",
+    prototype: "Try the Prototype",
+    flowSpecs: "View Flow Specs",
     execution: "Execution intent:",
     impact: "POST-EXHIBIT IMPACT",
-    outcomeTitle: "The Outcome of Hands-on Work",
+    outcomeTitle: "The Fruits of a Real Execution Journey",
     outcomeIntro:
-      "Dorm move-outs waste good stuff, and campus Facebook groups are full of scams. I built a trust moat with .edu.vn email verification — turning ReuseUni into a safe campus marketplace.",
+      "After 4 sprints working alongside the team, here are the real results and metrics ReuseUni has achieved.",
     pillars: [
       "Performance & Operations",
       "User Experience",
@@ -28,132 +28,128 @@ const projectsEn = {
     exhibits: {
       strategy: {
         tag: "Exhibit 01 • Business Strategy & Moat",
-        title: "Exhibit 01 — Lean Canvas & Building a Defensible Moat",
-        desc: "Mapped the problem space and market gap; built a Trust Moat through .edu.vn email verification and a hyperlocal marketplace in the university dorms with zero delivery cost.",
+        title: "Chapter 01 — Lean Canvas & Building the Moat",
+        desc: "From wasted secondhand goods and social-media scams, I built a trust moat with .edu.vn email verification — turning ReuseUni into a safe campus marketplace.",
         alt: "Lean Canvas strategy framework",
       },
       mvp: {
         tag: "Exhibit 02 • Scope & Trade-offs",
-        title: "Exhibit 02 — Defining the MVP & Making Trade-offs",
+        title: "Chapter 02 — Defining the MVP & Trade-offs",
         desc: "Using an Impact/Effort matrix, I cut 60% of nice-to-haves and kept 5 core features — shipped the MVP in 2 months.",
         alt: "MVP scope and trade-off matrix",
       },
       ux: {
         tag: "Exhibit 03 • Product Flow & Edge Cases",
-        title: "Exhibit 03 — User Flow Architecture",
+        title: "Chapter 03 — Mapping the User Flows",
         desc: "Mapped 5 core flows and covered every edge case — over 90% of students completed key actions on their first try.",
-        alt: "User Flow Diagram",
+        alt: "User flow diagram",
       },
       prototype: {
         tag: "Exhibit 04 • Hi-Fi Prototype & System",
-        title: "Exhibit 04 — Design System & Interactive Prototype",
+        title: "Chapter 04 — Design System & Interactive Prototype",
         desc: "Built a Mobile-First design system from scratch — cut the listing flow down to 3 steps, scoring 4.0/5.0 in usability testing.",
-        alt: "Overview of ReuseUni Figma screens",
+        alt: "Figma screens overview for ReuseUni",
       },
       scrum: {
         tag: "Exhibit 05 • Agile & Sprint Management",
-        title: "Exhibit 05 — Scrum Operations & Delivery Coordination",
+        title: "Chapter 05 — Running Scrum & Driving Execution",
         desc: "Ran 4 sprints on GitHub Projects — delivered 100% of commitments on time.",
-        alt: "GitHub Projects Scrum Board",
+        alt: "GitHub Projects Scrum board",
       },
       qa: {
         tag: "Exhibit 06 • Quality Assurance & Automation",
-        title: "Exhibit 06 — UI Testing & Test Automation",
+        title: "Chapter 06 — Testing & Automation",
         desc: "Built an automated test suite as a safety net — 306/308 tests passing, 82.5% coverage.",
-        alt: "Test Coverage Terminal",
+        alt: "Test coverage terminal output",
       },
     },
     outcomes: {
       performance: "Performance & Operations",
       ux: "User Experience",
       discovery: "Discovery & Roadmap",
-      api: "API latency",
-      screen: "Screen transition",
-      visual: "Usability score",
-      smooth: "Smooth completion",
+      api: "API Latency",
+      screen: "Screen Transition",
+      visual: "Visual Score",
+      smooth: "Smooth Interactions",
       interactions: "Interactions",
-      verification: "Verified .edu.vn",
-      next: "Next priority (P1)",
+      verification: "「.edu.vn」 Verification",
+      next: "Next Priority (P1)",
       apiValue: "115ms – 370ms.",
-      screenValue: "~380ms (< 1s optimized).",
+      screenValue: "~380ms (optimized under 1s).",
       visualValue: "> 4.0 / 5.0.",
-      smoothValue: "> 90% (difficulty < 10%).",
+      smoothValue: "> 90% (friction < 10%).",
       interactionsValue: "5–7 actions/session (Home → Cart).",
       verificationValue: "100% student trust.",
-      nextValue: "71.4% requested a trust rating.",
+      nextValue: "71.4% requested a Trust Score feature.",
     },
   },
-
   lean: {
     tag: "STRATEGIC FRAMEWORK",
     title: "Lean Canvas • ReuseUni",
-    subtitle: "A lean product strategy model",
+    subtitle: "Modeling a lean product strategy",
     problem: [
-      "Students have limited budgets and need affordable second-hand goods.",
-      "Usable items are discarded when students move or graduate.",
-      "Social groups contain spam and scams with weak location filtering.",
+      "Budget-constrained students need affordable secondhand goods.",
+      "Good items get thrown out when students move out or graduate.",
+      "Social media groups are full of spam and scams, hard to filter by area.",
     ],
     solution: [
-      "Campus marketplace: buy, sell, give away or swap.",
-      "100% verification through university .edu.vn email.",
-      "Hyperlocal dorm filters and in-app chat.",
+      "Internal campus marketplace: Buy, Sell, Donate, Swap.",
+      "100% verification via .edu.vn school email.",
+      "Hyperlocal filter (by dorm) & in-app chat.",
     ],
-    uvp: "A hyperlocal second-hand marketplace: verified campus email and safe pickup within a five-minute walk.",
-    concept: "A safer Chotot for campus",
+    uvp: "A hyperlocal secondhand marketplace: verified school email, safe pickup within a 5-minute walk.",
+    concept: "A Safe Marketplace for Campus",
     customerSegments: [
-      "Students living or studying in the university village.",
+      "Students living/studying at the University Village.",
       "Students moving out or graduating.",
-      "Freshmen furnishing their first room.",
+      "First-year students furnishing their room.",
     ],
-    earlyAdopters:
-      "<0>Early Adopters:</0> Volunteer clubs and student associations.",
+    earlyAdopters: "<0>Early Adopters:</0> Volunteer Clubs, Student Union.",
     metrics: [
-      "<0>North Star:</0> weekly swaps or transactions.",
+      "<0>North Star:</0> Weekly swaps/transactions.",
       "<0>Retention:</0> D7 / D30 retention rate.",
-      "<0>Conversion:</0> listing-to-transaction rate.",
+      "<0>Conversion:</0> Listing-to-transaction rate.",
     ],
     advantage: [
-      "<0>Trust Moat:</0> .edu.vn verification creates trust that large marketplaces struggle to replicate.",
-      "<0>Hyperlocal Density:</0> dense dorm-radius transactions enable direct pickup without shipping.",
+      "<0>Trust Moat:</0> .edu.vn verification builds a level of trust big marketplaces can't replicate.",
+      "<0>Hyperlocal Density:</0> Dense transaction volume within dorm radius, direct pickup with no shipping needed.",
     ],
     channels: [
-      "<0>Partnership:</0> dorm management and student associations",
+      "<0>Partnership:</0> Dorm Management, Student Union",
       "<0>Events:</0> Swap Day booths",
-      "<0>Organic:</0> campus TikTok and Reels",
+      "<0>Organic:</0> Campus TikTok, Reels",
     ],
     cost: [
-      "<0>Internal development:</0> internal development cost",
-      "<0>Cloud Hosting:</0> free tier",
-      "<0>Offline booth operations:</0> offline booth operations",
+      "<0>Internal development:</0> In-house dev cost",
+      "<0>Cloud Hosting:</0> Free tier",
+      "<0>Offline booth operations:</0> Offline booth running cost",
     ],
     revenue: [
-      "<0>Promoted Ads:</0> promoted listing fees",
-      "<0>Seller Pro:</0> packages for accessory shops",
+      "<0>Promoted Ads:</0> Featured listing fee",
+      "<0>Seller Pro:</0> Package for accessory shops",
       "<0>Service fee:</0> 2–5% in-app payment",
     ],
   },
-
   mvp: {
     loop: [
       "Verify SSO",
       "List Item",
-      "Filter Dorm",
+      "Filter by Dorm",
       "Chat Deal",
       "Meet & Pickup",
     ],
-    feature: "Core feature",
+    feature: "Core Feature",
     priority: "Priority",
     impact: "Impact vs Effort",
-    tradeoff: "MVP trade-off decision",
+    tradeoff: "Trade-off Decision (Scope Cut)",
   },
-
   roadmap: {
-    title: "Three-Month Execution Roadmap",
-    subtitle: "From Idea Validation to Release & Optimization",
+    title: "3-Month Execution Roadmap",
+    subtitle: "From Idea Validation to Launch & Optimization",
     months: ["Month 1", "Month 2", "Month 3"],
     monthSubtitles: [
       "Validate & Build",
-      "Release & Measure",
+      "Launch & Measure",
       "Optimize & Scale",
     ],
     categories: {
@@ -165,290 +161,270 @@ const projectsEn = {
             m1: ["Define trigger logic", "Internal testing"],
             m2: ["Run A/B test with 10–20% of users"],
             m3: [
-              "Roll out to 50%+ if quality criteria are met",
-              "Tune the trigger threshold",
+              "Roll out to 50%+ (if metrics hold)",
+              "Fine-tune activation threshold",
             ],
           },
           replyLater: {
             name: "B. Reply Later",
-            m1: ["Build the experience flow and business logic"],
-            m2: ["Develop the feature and run internal tests"],
-            m3: ["Open a beta experiment to users"],
+            m1: ["Build the flow & business logic"],
+            m2: ["Develop feature & internal testing"],
+            m3: ["Open beta test to users"],
           },
         },
       },
-
       focusMode: {
         title: "Focus Mode",
         tracks: {
           main: {
             name: "",
-            m1: ["Design wireframes and shape the UX"],
-            m2: ["Build the MVP experiment"],
-            m3: ["Start mobile A/B testing"],
+            m1: ["Wireframe & define UX"],
+            m2: ["Build MVP"],
+            m3: ["Start mobile A/B test"],
           },
         },
       },
-
       smartOrg: {
         title: "Smart Conv. Org",
         tracks: {
           main: {
             name: "",
             m1: [
-              "Design onboarding guidance banners",
-              "Ship an existing feature as a quick win",
+              "Design onboarding banner",
+              "Ship quick-win with existing feature",
             ],
-            m2: ["Measure banner interaction effectiveness"],
-            m3: ["Refine the copywriting"],
+            m2: ["Measure banner engagement"],
+            m3: ["Refine copywriting"],
           },
         },
       },
     },
   },
-
   zalo: {
     eyebrow: "⑂ case study · zalo pmt 2026",
-    title: "The turning point: finding my Product mindset",
-    lede: "From seeing the world through code to realizing that technology only matters when it removes a real pain point.",
-    video: "Watch presentation",
-    assignment: "Assignment document (PDF)",
+    title: "Where Product Thinking Clicked",
+    lede: "I used to see the world through code — until I realized tech only matters when it solves a real problem.",
+    video: "Watch the Presentation",
+    assignment: "Assignment Document (PDF)",
     footer: "Case Study · Zalo Product Management Trainee 2026",
-
     part1: {
       commit1: {
-        tag: "touchpoint",
-        title: "When 'working correctly' is no longer the only measure",
+        tag: "the spark",
+        title: 'Beyond "It Works"',
         intro:
-          "Coming from an engineering background, I used to believe a good product simply meant smooth code and optimized algorithms. Correct meant enough.",
+          "Coming from a technical background, I believed a good product just meant clean code and optimized algorithms. Correct was enough.",
         setup:
-          "The two Zalo PMT 2026 problems did not ask whether the system worked. They tested two complementary layers of capability:",
-        assignment1: "Product Sense · Seeing the right problem:",
+          "The two Zalo PMT 2026 assignments asked for something else entirely — two complementary capabilities:",
+        assignment1: "Product Sense · Seeing the real problem:",
         assignment1Body:
-          "Sharply observing a smoothly operating system to find an overlooked experience gap.",
-        assignment2:
-          "Critical Thinking & Creativity · Solving a feasible problem:",
+          "spotting the experience gap hidden inside a system that already runs smoothly.",
+        assignment2: "Critical Thinking & Creativity · Solving it feasibly:",
         assignment2Body:
-          "Building a new context from an open space, challenging assumptions and weighing trade-offs to prove impact in three months.",
+          "building a new context from an open-ended prompt, weighing trade-offs to prove impact in 3 months.",
         realization: "That was the first time I realized:",
         realizationStrong:
-          "Engineering thinking looks for errors in systems — product thinking looks for gaps in human experience.",
-        technicalComment: "// engineering view: optimize for a correct system",
-        productComment: "// product view: remove a real user pain point",
+          "Technical thinking hunts for bugs in the system — product thinking hunts for gaps in the human experience.",
+        technicalComment:
+          "// technical lens: optimize so the system runs correctly",
+        productComment: "// product lens: solve a real pain point for the user",
       },
-
       commit2: {
         tag: "assignment 01",
-        title: "Finding a gap in a system that already feels complete",
-        briefLabel: "ASSIGNMENT 01",
+        title: "Finding the User Gap",
+        briefLabel: "PROMPT 01",
         brief:
           "Observe Zalo's AI features and propose an optimization or a new feature.",
         intro:
-          "When I first read the prompt, I felt... blank. Zalo was already mature, with no obvious flaw to point at. I felt dropped into a complete system without knowing where to begin.",
+          "I froze when I first read the brief. Zalo is already mature, so there were no obvious problems to fix. I realized I had to look beyond bugs — and start with users.",
         insight:
-          "Instead of inspecting a feature list, I followed the user's real journey and asked: Is there something they are still handling alone that the product could make easier? It turned out AI supported the conversation smoothly, but the experience stopped the moment the call ended, leaving users to remember and take notes themselves.",
+          "I followed the user journey instead: what happens after the call? AI helps during the conversation, but once it ends, users are back to remembering and writing everything down.",
         voice: "Voice-to-text",
         subtitle: "Subtitle",
-        translate: "Translate message",
+        translate: "Translate",
         callout:
-          "The gap was not in the minutes of conversation. It began the moment the beep ended.",
+          "Turns out the gap wasn't in the conversation itself — it started the moment the call ended.",
       },
-
       commit3: {
-        title: "Balancing data and trust",
+        title: "Balancing Trust & Data",
         promptLabel: "PROMPT",
         prompt:
-          "Propose a new AI feature based on Zalo's existing AI ecosystem.",
+          "Observe Zalo's AI features and propose an optimization or a new feature.",
         solutionLabel: "SOLUTION",
         solution:
-          "<0>AI Call Note</0> — summarize calls, send the result directly into chat and include a one-tap scheduling action.",
+          "<0>AI Call Note</0> — summarizes the call, drops it straight into the chat with a one-tap scheduling button.",
         intro:
-          "Finding the gap was the easy half. The harder half was trust: an AI that enters a private conversation only creates value when people genuinely feel safe.",
-        diffBefore: "// more data means a more accurate result",
+          "Finding the gap was the easy half. The hard half was trust: an AI listening into a private conversation only has value if the user genuinely feels safe.",
+        diffBefore: '// more data = "better"',
         diffAfter: "// trust first, optimization second",
         setup:
-          "Instead of maximizing the technology's sophistication by collecting as much data as possible, I set three design boundaries to put privacy first:",
-        card1Title: "1. Reject full recording",
+          'Instead of chasing how "smart" the tech looked by hoarding as much data as possible, I set 3 design boundaries that put privacy first:',
+        card1Title: "1. No Full Recording",
         card1Body:
-          "Extract real-time text only and discard it after the call. Never store audio, removing the fear of being recorded without consent.",
-        card2Title: "2. 100% consent principle",
+          "Pulls live text, drops the audio the moment the call ends — no recording, no fear of being secretly taped.",
+        card2Title: "2. 100% Consent Rule",
         card2Body:
-          "AI activates only when every participant taps Agree, building trust before thinking about adoption.",
-        card3Title: "3. MVP summary card",
+          'AI only turns on once everyone taps "Agree" — trust first, adoption second.',
+        card3Title: "3. MVP Summary Card",
         card3Body:
-          "Package the summary as a compact chat card with a pre-filled Book now action, without forcing users into another app or tab.",
-        flowLead: "These principles became a four-step experience flow:",
-        step1Title: "Enable AI Call Note during the call",
-        step1Body:
-          "The user actively enables the feature from the call interface.",
-        step1a: "The button sits alongside the call controls.",
-        step1b:
-          "An indicator stays visible while AI is active for transparency.",
-        step2Title: "Participants give consent",
-        step2Body: "Every participant confirms they agree to use the feature.",
-        step2a:
-          "If anyone declines or does not respond within one minute, the feature does not start.",
-        step3Title: "Summary card in chat",
-        step3Body:
-          "After the call ends, AI sends a summary card into the chat.",
-        step3a:
-          "The card shows the extracted summary and important information.",
-        step4Title: "The user taps Book now",
-        step4Body: "Zalo pre-fills the reminder details automatically.",
-        step4a: "The user only needs to review and tap Save.",
+          'Lands right in the chat with a one-tap "Schedule Now" button — no extra app, no extra tab.',
+        flowLead: "These principles came to life through a 4-step experience:",
+        step1Title: "Turn On",
+        step1a: "Placed next to the call controls",
+        step1b: "Clear indicator when AI is active",
+        step2Title: "Get consent",
+        step2a: "If anyone declines, the feature stays off",
+        step3Title: "Summarize",
+        step3a: "Key points and action items are extracted",
+        step3b: "Users can review the full note",
+        step4Title: "Take action",
+        step4a: "Key details are pre-filled",
+        step4b: "Saved directly to Zalo Calendar",
         callout:
-          "These four steps are not there to make a pretty demo. Each one asks again: does the user feel safe at this point?",
+          'These four steps weren\'t built "for a nice demo" — each one is a re-check: does the user still feel safe here?',
       },
-
       commit4: {
-        title: "A feature that works is not necessarily a feature people trust",
+        title: "From Working to Trusted",
         intro:
-          "After designing the four steps, my engineering instinct wanted to stop — everything worked correctly. But product thinking asks a harder question: how do we know people genuinely trust and reuse the feature instead of trying it once and leaving?",
-        northStar:
-          "% of people who open or edit the Note after the call. This is the North Star, not Adoption: reopening it proves the summary is genuinely useful.",
-        adoption:
-          "% of voice calls where every participant agrees to enable AI Call Note.",
-        conversion:
-          "% of users who tap Book now and successfully save it to Zalo Calendar.",
-        guardrail:
-          "The rate of users declining the feature or dismissing the notification. Crossing this threshold means the consent mechanism needs review before expansion.",
+          "The flow worked, but I didn't stop there. Product thinking made me ask: will users trust it, use it again, or simply tap it once and leave?",
+        northStar: "Users open or edit the summary",
+        adoption: "Calls where all participants enable it",
+        conversion: "Users who save a reminder",
+        guardrail: "Users who turn it off or dismiss it",
         callout:
-          "For a feature that touches trust, the most important number is not how many people try it, but how many come back a second time.",
+          "For a trust-based feature, success isn't just getting users to try it once — it's getting them to come back.",
       },
     },
-
     part2: {
       commit5: {
-        title: "Reply Anxiety — facing a pain I know myself",
-        promptLabel: "ASSIGNMENT 02",
+        title: "Finding Reply Anxiety",
+        promptLabel: "PROMPT 02",
         prompt:
-          "Choose one of four product branches and prove its impact in three months with limited resources.",
+          "Pick one of 4 product tracks and prove its impact within 3 months on limited resources.",
         solutionLabel: "SOLUTION",
         solution:
-          "<0>Mindful Context Workspace</0> — manage conversation context and reduce notification overload.",
+          "<0>Mindful Context Workspace</0> — managing conversation context to reduce notification overload.",
         intro:
-          "Standing before four open doors at Zalo, the strongest temptation was to build Social or Video because they invite flashy, viral ideas. But product thinking reminded me: Zalo's core value lives in Chat.",
+          "With 4 tracks to choose from, I focused on where Zalo creates the most everyday value: Chat.",
         insightBefore:
-          'Instead of looking for a "cool" feature to build, I looked back at my own experiences and those of the friends around me — young people who are studying, working, and taking on the responsibilities of project teams all at once. The biggest pain point wasn’t the lack of ways to have fun, but the',
+          "I looked at my own experience and those around me. We were juggling school, work, and family — all in one inbox.",
         insightQuestion:
-          "<0>pressure of being pulled in too many directions, with too many roles packed into the same inbox.</0>",
+          "<0>The pain wasn't more entertainment; it was managing too many roles at once.</0>",
         insightAfter: "",
         personaBadge: "THE CONTEXT SWITCHERS",
         personaChats: ["🏠 Family", "📚 Study", "💼 Work", "🎓 Internship"],
         personaSub:
-          "Young people constantly switch between study, work and family every day.",
+          "Young people constantly switching roles between study, work, and family every day.",
         personaLabels: [
           "WHO THEY ARE",
           "WHAT THEY WANT",
-          "WHAT THEY FEAR",
+          "WHAT WORRIES THEM",
           "WHAT THEY EXPECT",
         ],
         personaItems: [
-          ["Final-year student", "Intern / Fresher"],
-          ["Never miss an important task", "Reply at the right time"],
-          ["Notification spam", "Being judged irresponsible"],
-          ["A gentle, timely nudge", "Privacy respected"],
+          ["Final-year students", "Interns / Freshers"],
+          ["Not missing anything important", "Replying at the right time"],
+          ["Notification spam", "Being seen as irresponsible"],
+          ["Gentle, well-timed nudges", "No privacy intrusion"],
         ],
         anxiety:
-          "The biggest psychological consequence of constant context switching is Reply Anxiety: the more messages pile up, the harder they are to open, and delay becomes a mental burden.",
-        unread: "unread messages — exhausting to look at, so you avoid them.",
+          "This overload creates a hidden pain: Reply Anxiety. The more messages pile up, the harder it feels to open and reply.",
+        unread:
+          "unread messages — just looking at it is exhausting, so you avoid it.",
       },
-
       commit6: {
-        title: "The art of cutting scope when you only have three months",
+        title: "Prioritizing Under Constraints",
         intro:
-          "Once I saw the Reply Anxiety problem, my engineering instinct wanted to solve it completely: design a large ecosystem with smart AI classification, a complex Focus Mode and multi-layer reminders.",
+          "Once I spotted Reply Anxiety, I wanted to build the full solution — AI categorization, Focus Mode, and multi-tier reminders. But product thinking made me step back and prioritize.",
         constraint:
-          "But the brief came with a hard constraint: three months with limited resources. Trying to do everything would leave the product unfinished or half-launched. Product thinking forced a sharper question: What is the highest-impact lever at the lowest cost?",
-        lead: "Using the ICE (Impact - Confidence - Ease) framework, I broke the problem into three clear action groups:",
+          "With only 3 months and limited resources, I couldn't build everything. So I stepped back: what's the highest-impact, lowest-cost lever?",
+        lead: "Using the ICE framework, I broke the problem into 3 clear tracks:",
+        roadmapLead:
+          "3-month execution plan: from validating the idea to launch & measurement.",
+        callout:
+          "Three months isn't enough to do everything — but it's enough to prove one thing: whether cutting in the right place actually makes a difference.",
         cards: [
           {
             title: "#1 Smart Reply Reminder",
             tag: "STRATEGIC BET",
-            body: 'Bet on the core pain: gently remind users about an important message and use "Reply Later" to remove the pressure to answer now.',
+            body: "Addresses the core pain with a gentle nudge and “Reply Later” — reducing the pressure to reply instantly.",
           },
           {
             title: "2. Conversation Organization",
             tag: "QUICK WIN",
-            body: "Bring the existing desktop chat classification to mobile, clearing the inbox quickly with low development cost.",
+            body: "Brings existing Desktop chat categories to Mobile — a low-cost way to declutter the inbox.",
           },
           {
             title: "3. Focus Mode",
             tag: "BETA LATER",
-            body: "Hold it for an internal experiment, grouping noisy messages into periodic summaries instead of complicating the first MVP.",
+            body: "Held for later testing to avoid adding complexity to the initial MVP.",
           },
         ],
-        roadmapLead:
-          "Three-month execution plan: from idea validation to launch and measurement.",
-        callout:
-          "Three months is not enough to do everything — but it is enough to prove whether cutting in the right place can make a difference.",
       },
-
       commit7: {
-        title: "A smaller scope does not mean a smaller ambition",
+        title: "Build Less, Prove More",
         intro:
-          "Doing less can tempt us to compromise on a more modest goal. Without one number to anchor on, we can never know whether the cut in the previous commit was right.",
+          "I cut features to keep the MVP focused. Now I needed one clear metric to prove it was solving the right problem.",
         northStarLabel: "NORTH STAR",
-        northStar:
-          "+15% – 20% Reply Rate within 24h on important conversations (work groups, partners who exchanged files or links, or had a previous call).",
-        definitionLabel: 'DEFINITION OF "IMPORTANT CONVERSATION"',
+        northStar: "on Important Conversations.",
+        definitionLabel: 'DEFINING "IMPORTANT CONVERSATION"',
         definition:
-          "Meet at least one condition: (1) the user labels it Work, Family or Customer, or (2) it falls within the top 15% of highest-frequency conversations over the last 30 days.",
+          "Meets at least 1 of 2 conditions: (1) tagged by the user under Work/Family/Client, or (2) in the top 15% most active conversations over the last 30 days.",
         benchmark:
-          "Because Zalo has no internal baseline for this behavior, I anchored the target to industry benchmarks instead of guessing:",
+          "Without a Zalo baseline, I wouldn't guess the number. I'd start with a testable target and validate it through an experiment.",
         cards: [
           "Reply rate after Gentle Reminder",
-          "Retention Reply Later (D28)",
+          "Reply Later Retention (D28)",
           "Focus Mode Adoption (D7)",
         ],
         cardBodies: [
-          "In-app reminder benchmarks are around 10% (Leanplum). I set the target near 2x because Zalo has a more captive audience and specific context.",
-          "Utility feature benchmarks are around 20% (Mixpanel). The target is higher because it addresses a daily pain point.",
-          "Around the 5% DAU benchmark (Mixpanel): this is a new behavior, so there is no expectation to exceed the benchmark in month one.",
+          "~2× the typical reminder benchmark (~10%), reflecting the value of more relevant context.",
+          "Slightly above the utility-feature benchmark (~20%), as this addresses a daily pain point.",
+          "In line with the ~5% DAU benchmark, as this is a new behavior unlikely to spike early.",
         ],
         callout:
-          "A target without evidence is just a promise. Industry data, even imperfect data, is a better anchor than intuition.",
+          "A target with no data behind it is just a hollow promise — industry benchmarks, imperfect as they are, still beat a gut guess.",
       },
-
       commit8: {
-        title: "Risks to control before rollout",
+        title: "Managing Rollout Risks",
         intro:
-          "Product work is not only about maximizing growth metrics. It is also about protecting the user's core experience from harm.",
+          "Building a product isn't just about maximizing growth metrics — it's also about protecting the core experience from harm:",
         risks: [
           {
-            name: "1. Spam fatigue",
-            signal: "Signal: notification frequency frustrates users.",
+            name: "1. Spam Fatigue",
+            signal:
+              "Signal: Notification frequency is too high, annoying users.",
             control:
-              "limit to one reminder per conversation per day; never send after 10 PM.",
+              "Cap at 1 reminder/day/conversation; never send after 10 PM.",
           },
           {
-            name: "2. Anxiety",
-            signal: "Signal: users feel watched and pressured to reply.",
-            control: "use gentle copy and provide a one-tap permanent opt-out.",
+            name: "2. Rising Anxiety",
+            signal:
+              "Signal: A feeling of being watched and pressured to reply.",
+            control:
+              "Gentle copy + one-tap option to turn off the feature permanently.",
           },
           {
-            name: "3. Wrong-context summary",
-            signal: "Signal: AI extracts content from casual calls.",
+            name: "3. Wrong-context Summaries",
+            signal: "Signal: AI misreads casual chit-chat as action items.",
             control:
-              "activate only on action verbs and require user approval before saving.",
+              "Only suggests action items when clear keywords are detected. Users review before saving.",
           },
         ],
         guardrail:
-          "<0>Guardrail Trigger:</0> If Opt-out Rate exceeds 25% or CSAT drops by more than 0.3 in the test group, stop the rollout and optimize the AI model even if reply rate increases.",
+          "<0>Guardrail Trigger:</0> If opt-out exceeds 25% or CSAT drops by more than 0.3 in the test group, pause the rollout and refine the AI model — even if reply rates are rising.",
         callout:
-          "Sometimes the hardest thing to measure in a product is trust — and once lost, it is difficult to regain.",
+          "Because trust is hard to measure — and even harder to win back.",
       },
-
       commit9: {
-        tag: "the takeaway",
-        title: "Shaping the identity of a Technical PM",
+        tag: "what stayed with me",
+        title: "Growing as a Technical PM",
         intro:
-          'What stayed with me was not the scale of the solution, but the small quiet moments in an experience — no barrage of bells, no relentless vibration, just a gentle line of copy: <0>"Ready to reply?"</0>',
-        technical: "// assess whether the technology can do it",
-        product: "// decide how it should be built for people",
+          'In the end, what stayed with me most wasn\'t the scale of the solution — it was the smallest moments in the experience: no blaring notifications, no aggressive vibration, just one gentle line of copy — <0>"Ready to reply?"</0> — instead of a push.',
+        technical: "// assessing whether the technology is even possible",
+        product: "// deciding how it should be built for real people",
         quote:
-          "Strong engineering helps me know whether something can be built. Product thinking helps me decide how it should be built.",
-        closing: "For users, no detail is too small.",
+          "Technical skill tells me what's possible to build. Only product thinking tells me how it should be built.",
+        closing: "Because to users, no detail is ever too small.",
       },
     },
   },

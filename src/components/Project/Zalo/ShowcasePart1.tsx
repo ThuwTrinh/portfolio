@@ -304,7 +304,15 @@ export default function ShowcasePart1() {
               />
             </div>
             <div className="wf-card-note single-text">
-              <p>{t("projects.zalo.part1.commit3.step3a")}</p>
+              <ul>
+                {t("projects.zalo.part1.commit3.step3a") && (
+                  <li>{t("projects.zalo.part1.commit3.step3a")}</li>
+                )}
+
+                {t("projects.zalo.part1.commit3.step3b") && (
+                  <li>{t("projects.zalo.part1.commit3.step3b")}</li>
+                )}
+              </ul>
             </div>
           </div>
 
@@ -324,7 +332,15 @@ export default function ShowcasePart1() {
               />
             </div>
             <div className="wf-card-note single-text">
-              <p>{t("projects.zalo.part1.commit3.step4a")}</p>
+              <ul>
+                {t("projects.zalo.part1.commit3.step4a") && (
+                  <li>{t("projects.zalo.part1.commit3.step4a")}</li>
+                )}
+
+                {t("projects.zalo.part1.commit3.step4b") && (
+                  <li>{t("projects.zalo.part1.commit3.step4b")}</li>
+                )}
+              </ul>
             </div>
           </div>
         </div>
